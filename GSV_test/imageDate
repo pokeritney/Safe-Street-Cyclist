@@ -1,0 +1,9 @@
+var sv = new google.maps.StreetViewService();
+var berkeley = new google.maps.LatLng(37.869085,-122.254775);
+sv.getPanoramaByLocation(berkeley, 50, function(data) {
+    console.log(data.imageDate);
+});
+
+#data.imageDate will contain the date in YYYY-MM format.
+
+#You can use StreetViewService's both getPanoramaById and getPanoramaByLocation methods to obtain this data. 
