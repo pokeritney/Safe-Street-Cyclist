@@ -19,28 +19,31 @@
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
+    <layer-tree-layer providerKey="ogr" id="export_23664baa_de6f_43a3_ac37_657b13b1e4a9" source="./export.csv|layername=export" name="export" checked="Qt::Checked" expanded="1">
+      <customproperties/>
+    </layer-tree-layer>
     <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_cty_2ab2383b_e24f_4b3b_94c8_49de2d57715b" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_cty&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_cty" checked="Qt::Checked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer providerKey="postgres" id="vw_geo_st_sgmt_trnsprtn_a328afd8_713c_4b5a_b6ac_3c994f4546db" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='sgmt_trnsprtn_pkey' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_st_sgmt_trnsprtn&quot; (geom) sql=" name="vw_geo_st_sgmt_trnsprtn" checked="Qt::Checked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" id="vw_geo_st_sgmt_infrstcr_fba21466_cb3c_4468_919f_d648cf793459" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='sgmt_infrstcr_pkey' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_st_sgmt_infrstcr&quot; (geom) sql=" name="vw_geo_st_sgmt_infrstcr" checked="Qt::Checked" expanded="1">
+    <layer-tree-layer providerKey="postgres" id="vw_geo_st_sgmt_infrstcr_fba21466_cb3c_4468_919f_d648cf793459" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='sgmt_infrstcr_pkey' srid=3857 type=MultiLineString checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_st_sgmt_infrstcr&quot; (geom) sql=" name="vw_geo_st_sgmt_infrstcr" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prty_vctm_frwy_b59fc22c_bca2_4d2b_9ff5_a9177d0880af" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prty_vctm_frwy&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_frwy" checked="Qt::Checked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty_69b60568_1153_4e08_a27f_970976189da7" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prty_vctm_cty&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty" checked="Qt::Checked" expanded="1">
+    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty_69b60568_1153_4e08_a27f_970976189da7" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prty_vctm_cty&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prties_all_frwy&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prties_all_frwy" checked="Qt::Checked" expanded="1">
+    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prties_all_frwy&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prties_all_frwy" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prties_all_cty&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prties_all_cty" checked="Qt::Checked" expanded="1">
+    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_prties_all_cty&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_prties_all_cty" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_frwy&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_frwy" checked="Qt::Checked" expanded="1">
+    <layer-tree-layer providerKey="postgres" id="vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f" source="dbname='transbase_public' host=www.transbasesf.org port=5432 user='opendata' sslmode=disable key='unique_id' srid=3857 type=Point checkPrimaryKeyUnicity='0' table=&quot;public&quot;.&quot;vw_geo_switrs_all_types_cyc_col_frwy&quot; (geom) sql=" name="vw_geo_switrs_all_types_cyc_col_frwy" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
     <custom-order enabled="0">
@@ -52,6 +55,7 @@
       <item>vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed</item>
       <item>vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855</item>
       <item>vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f</item>
+      <item>export_23664baa_de6f_43a3_ac37_657b13b1e4a9</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings tolerance="12" type="1" mode="2" unit="1" intersection-snapping="0" enabled="0">
@@ -70,10 +74,10 @@
   <mapcanvas name="theMapCanvas" annotationsVisible="1">
     <units>meters</units>
     <extent>
-      <xmin>-13632256.25732835009694099</xmin>
-      <ymin>4543546.82231796253472567</ymin>
-      <xmax>-13619329.18335296586155891</xmax>
-      <ymax>4552796.99026164878159761</ymax>
+      <xmin>-13630447.75956936180591583</xmin>
+      <ymin>4543977.17862833570688963</ymin>
+      <xmax>-13623984.22258166968822479</xmax>
+      <ymax>4548602.2626001788303256</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -93,6 +97,11 @@
   </mapcanvas>
   <projectModels/>
   <legend updateDrawingOrder="true">
+    <legendlayer open="true" name="export" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile layerid="export_23664baa_de6f_43a3_ac37_657b13b1e4a9" isInOverview="0" visible="1"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_cty" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_cty_2ab2383b_e24f_4b3b_94c8_49de2d57715b" isInOverview="0" visible="1"/>
@@ -103,9 +112,9 @@
         <legendlayerfile layerid="vw_geo_st_sgmt_trnsprtn_a328afd8_713c_4b5a_b6ac_3c994f4546db" isInOverview="0" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" name="vw_geo_st_sgmt_infrstcr" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+    <legendlayer open="true" name="vw_geo_st_sgmt_infrstcr" drawingOrder="-1" checked="Qt::Unchecked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="vw_geo_st_sgmt_infrstcr_fba21466_cb3c_4468_919f_d648cf793459" isInOverview="0" visible="1"/>
+        <legendlayerfile layerid="vw_geo_st_sgmt_infrstcr_fba21466_cb3c_4468_919f_d648cf793459" isInOverview="0" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_frwy" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
@@ -113,24 +122,24 @@
         <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prty_vctm_frwy_b59fc22c_bca2_4d2b_9ff5_a9177d0880af" isInOverview="0" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty" drawingOrder="-1" checked="Qt::Unchecked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty_69b60568_1153_4e08_a27f_970976189da7" isInOverview="0" visible="1"/>
+        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prty_vctm_cty_69b60568_1153_4e08_a27f_970976189da7" isInOverview="0" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prties_all_frwy" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prties_all_frwy" drawingOrder="-1" checked="Qt::Unchecked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed" isInOverview="0" visible="1"/>
+        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed" isInOverview="0" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prties_all_cty" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_prties_all_cty" drawingOrder="-1" checked="Qt::Unchecked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855" isInOverview="0" visible="1"/>
+        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855" isInOverview="0" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_frwy" drawingOrder="-1" checked="Qt::Checked" showFeatureCount="0">
+    <legendlayer open="true" name="vw_geo_switrs_all_types_cyc_col_frwy" drawingOrder="-1" checked="Qt::Unchecked" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f" isInOverview="0" visible="1"/>
+        <legendlayerfile layerid="vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f" isInOverview="0" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -209,6 +218,1108 @@
     <expressionContextScope/>
   </mapcanvas>
   <projectlayers>
+    <maplayer minScale="1e+08" refreshOnNotifyEnabled="0" wkbType="NoGeometry" hasScaleBasedVisibilityFlag="0" styleCategories="AllStyleCategories" type="vector" maxScale="0" autoRefreshEnabled="0" geometry="No geometry" autoRefreshTime="0" refreshOnNotifyMessage="" readOnly="0">
+      <id>export_23664baa_de6f_43a3_ac37_657b13b1e4a9</id>
+      <datasource>./export.csv|layername=export</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>export</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4></proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym></projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <customproperties/>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="unique_id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="gc_switrs_col_pkey">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cnn_intrsctn_fkey">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cnn_sgmt_fkey">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tb_latitude">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tb_longitude">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="geocode_source">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="geocode_location">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="case_id_pkey">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="accident_year">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="proc_date">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="juris">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="collision_date">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="collision_time">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="time_cat">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="officer_id">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="reporting_district">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="day_of_week">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="chp_shift">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="population">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="cnty_city_loc">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="special_cond">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="beat_type">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="chp_beat_type">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="city_division_lapd">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="chp_beat_class">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="beat_number">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="primary_rd">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="secondary_rd">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="distance">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="direction">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="intersection">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="weather_1">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="weather_2">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="state_hwy_ind">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="caltrans_county">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="caltrans_district">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="state_route">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="route_suffix">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="postmile_prefix">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="postmile">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="location_type">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ramp_intersection">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="side_of_hwy">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="tow_away">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="collision_severity">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="number_killed">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="number_injured">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="party_count">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="primary_coll_factor">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="pcf_code_of_viol">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="pcf_viol_category">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="pcf_violation">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="pcf_viol_subsection">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="hit_and_run">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="type_of_collision">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="mviw">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ped_action">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="road_surface">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="road_cond_1">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="road_cond_2">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="lighting">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="control_device">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="chp_road_type">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="pedestrian_accident">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="bicycle_accident">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="motorcycle_accident">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="truck_accident">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="not_private_property">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="alcohol_involved">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="stwd_vehtype_at_fault">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="chp_vehtype_at_fault">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_severe_inj">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_visible_inj">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_complaint_pain">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_ped_killed">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_ped_injured">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_bicyclist_killed">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_bicyclist_injured">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_mc_killed">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="count_mc_injured">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="primary_ramp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="secondary_ramp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="latitude_switrs">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="longitude_switrs">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="mv_involved">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="mv_only_one">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="col_comb">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="dph_col_type">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="dph_col_grp">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="street_view">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="unique_id"/>
+        <alias index="1" name="" field="gc_switrs_col_pkey"/>
+        <alias index="2" name="" field="cnn_intrsctn_fkey"/>
+        <alias index="3" name="" field="cnn_sgmt_fkey"/>
+        <alias index="4" name="" field="tb_latitude"/>
+        <alias index="5" name="" field="tb_longitude"/>
+        <alias index="6" name="" field="geocode_source"/>
+        <alias index="7" name="" field="geocode_location"/>
+        <alias index="8" name="" field="case_id_pkey"/>
+        <alias index="9" name="" field="accident_year"/>
+        <alias index="10" name="" field="proc_date"/>
+        <alias index="11" name="" field="juris"/>
+        <alias index="12" name="" field="collision_date"/>
+        <alias index="13" name="" field="collision_time"/>
+        <alias index="14" name="" field="time_cat"/>
+        <alias index="15" name="" field="officer_id"/>
+        <alias index="16" name="" field="reporting_district"/>
+        <alias index="17" name="" field="day_of_week"/>
+        <alias index="18" name="" field="chp_shift"/>
+        <alias index="19" name="" field="population"/>
+        <alias index="20" name="" field="cnty_city_loc"/>
+        <alias index="21" name="" field="special_cond"/>
+        <alias index="22" name="" field="beat_type"/>
+        <alias index="23" name="" field="chp_beat_type"/>
+        <alias index="24" name="" field="city_division_lapd"/>
+        <alias index="25" name="" field="chp_beat_class"/>
+        <alias index="26" name="" field="beat_number"/>
+        <alias index="27" name="" field="primary_rd"/>
+        <alias index="28" name="" field="secondary_rd"/>
+        <alias index="29" name="" field="distance"/>
+        <alias index="30" name="" field="direction"/>
+        <alias index="31" name="" field="intersection"/>
+        <alias index="32" name="" field="weather_1"/>
+        <alias index="33" name="" field="weather_2"/>
+        <alias index="34" name="" field="state_hwy_ind"/>
+        <alias index="35" name="" field="caltrans_county"/>
+        <alias index="36" name="" field="caltrans_district"/>
+        <alias index="37" name="" field="state_route"/>
+        <alias index="38" name="" field="route_suffix"/>
+        <alias index="39" name="" field="postmile_prefix"/>
+        <alias index="40" name="" field="postmile"/>
+        <alias index="41" name="" field="location_type"/>
+        <alias index="42" name="" field="ramp_intersection"/>
+        <alias index="43" name="" field="side_of_hwy"/>
+        <alias index="44" name="" field="tow_away"/>
+        <alias index="45" name="" field="collision_severity"/>
+        <alias index="46" name="" field="number_killed"/>
+        <alias index="47" name="" field="number_injured"/>
+        <alias index="48" name="" field="party_count"/>
+        <alias index="49" name="" field="primary_coll_factor"/>
+        <alias index="50" name="" field="pcf_code_of_viol"/>
+        <alias index="51" name="" field="pcf_viol_category"/>
+        <alias index="52" name="" field="pcf_violation"/>
+        <alias index="53" name="" field="pcf_viol_subsection"/>
+        <alias index="54" name="" field="hit_and_run"/>
+        <alias index="55" name="" field="type_of_collision"/>
+        <alias index="56" name="" field="mviw"/>
+        <alias index="57" name="" field="ped_action"/>
+        <alias index="58" name="" field="road_surface"/>
+        <alias index="59" name="" field="road_cond_1"/>
+        <alias index="60" name="" field="road_cond_2"/>
+        <alias index="61" name="" field="lighting"/>
+        <alias index="62" name="" field="control_device"/>
+        <alias index="63" name="" field="chp_road_type"/>
+        <alias index="64" name="" field="pedestrian_accident"/>
+        <alias index="65" name="" field="bicycle_accident"/>
+        <alias index="66" name="" field="motorcycle_accident"/>
+        <alias index="67" name="" field="truck_accident"/>
+        <alias index="68" name="" field="not_private_property"/>
+        <alias index="69" name="" field="alcohol_involved"/>
+        <alias index="70" name="" field="stwd_vehtype_at_fault"/>
+        <alias index="71" name="" field="chp_vehtype_at_fault"/>
+        <alias index="72" name="" field="count_severe_inj"/>
+        <alias index="73" name="" field="count_visible_inj"/>
+        <alias index="74" name="" field="count_complaint_pain"/>
+        <alias index="75" name="" field="count_ped_killed"/>
+        <alias index="76" name="" field="count_ped_injured"/>
+        <alias index="77" name="" field="count_bicyclist_killed"/>
+        <alias index="78" name="" field="count_bicyclist_injured"/>
+        <alias index="79" name="" field="count_mc_killed"/>
+        <alias index="80" name="" field="count_mc_injured"/>
+        <alias index="81" name="" field="primary_ramp"/>
+        <alias index="82" name="" field="secondary_ramp"/>
+        <alias index="83" name="" field="latitude_switrs"/>
+        <alias index="84" name="" field="longitude_switrs"/>
+        <alias index="85" name="" field="mv_involved"/>
+        <alias index="86" name="" field="mv_only_one"/>
+        <alias index="87" name="" field="col_comb"/>
+        <alias index="88" name="" field="dph_col_type"/>
+        <alias index="89" name="" field="dph_col_grp"/>
+        <alias index="90" name="" field="street_view"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" field="unique_id" expression=""/>
+        <default applyOnUpdate="0" field="gc_switrs_col_pkey" expression=""/>
+        <default applyOnUpdate="0" field="cnn_intrsctn_fkey" expression=""/>
+        <default applyOnUpdate="0" field="cnn_sgmt_fkey" expression=""/>
+        <default applyOnUpdate="0" field="tb_latitude" expression=""/>
+        <default applyOnUpdate="0" field="tb_longitude" expression=""/>
+        <default applyOnUpdate="0" field="geocode_source" expression=""/>
+        <default applyOnUpdate="0" field="geocode_location" expression=""/>
+        <default applyOnUpdate="0" field="case_id_pkey" expression=""/>
+        <default applyOnUpdate="0" field="accident_year" expression=""/>
+        <default applyOnUpdate="0" field="proc_date" expression=""/>
+        <default applyOnUpdate="0" field="juris" expression=""/>
+        <default applyOnUpdate="0" field="collision_date" expression=""/>
+        <default applyOnUpdate="0" field="collision_time" expression=""/>
+        <default applyOnUpdate="0" field="time_cat" expression=""/>
+        <default applyOnUpdate="0" field="officer_id" expression=""/>
+        <default applyOnUpdate="0" field="reporting_district" expression=""/>
+        <default applyOnUpdate="0" field="day_of_week" expression=""/>
+        <default applyOnUpdate="0" field="chp_shift" expression=""/>
+        <default applyOnUpdate="0" field="population" expression=""/>
+        <default applyOnUpdate="0" field="cnty_city_loc" expression=""/>
+        <default applyOnUpdate="0" field="special_cond" expression=""/>
+        <default applyOnUpdate="0" field="beat_type" expression=""/>
+        <default applyOnUpdate="0" field="chp_beat_type" expression=""/>
+        <default applyOnUpdate="0" field="city_division_lapd" expression=""/>
+        <default applyOnUpdate="0" field="chp_beat_class" expression=""/>
+        <default applyOnUpdate="0" field="beat_number" expression=""/>
+        <default applyOnUpdate="0" field="primary_rd" expression=""/>
+        <default applyOnUpdate="0" field="secondary_rd" expression=""/>
+        <default applyOnUpdate="0" field="distance" expression=""/>
+        <default applyOnUpdate="0" field="direction" expression=""/>
+        <default applyOnUpdate="0" field="intersection" expression=""/>
+        <default applyOnUpdate="0" field="weather_1" expression=""/>
+        <default applyOnUpdate="0" field="weather_2" expression=""/>
+        <default applyOnUpdate="0" field="state_hwy_ind" expression=""/>
+        <default applyOnUpdate="0" field="caltrans_county" expression=""/>
+        <default applyOnUpdate="0" field="caltrans_district" expression=""/>
+        <default applyOnUpdate="0" field="state_route" expression=""/>
+        <default applyOnUpdate="0" field="route_suffix" expression=""/>
+        <default applyOnUpdate="0" field="postmile_prefix" expression=""/>
+        <default applyOnUpdate="0" field="postmile" expression=""/>
+        <default applyOnUpdate="0" field="location_type" expression=""/>
+        <default applyOnUpdate="0" field="ramp_intersection" expression=""/>
+        <default applyOnUpdate="0" field="side_of_hwy" expression=""/>
+        <default applyOnUpdate="0" field="tow_away" expression=""/>
+        <default applyOnUpdate="0" field="collision_severity" expression=""/>
+        <default applyOnUpdate="0" field="number_killed" expression=""/>
+        <default applyOnUpdate="0" field="number_injured" expression=""/>
+        <default applyOnUpdate="0" field="party_count" expression=""/>
+        <default applyOnUpdate="0" field="primary_coll_factor" expression=""/>
+        <default applyOnUpdate="0" field="pcf_code_of_viol" expression=""/>
+        <default applyOnUpdate="0" field="pcf_viol_category" expression=""/>
+        <default applyOnUpdate="0" field="pcf_violation" expression=""/>
+        <default applyOnUpdate="0" field="pcf_viol_subsection" expression=""/>
+        <default applyOnUpdate="0" field="hit_and_run" expression=""/>
+        <default applyOnUpdate="0" field="type_of_collision" expression=""/>
+        <default applyOnUpdate="0" field="mviw" expression=""/>
+        <default applyOnUpdate="0" field="ped_action" expression=""/>
+        <default applyOnUpdate="0" field="road_surface" expression=""/>
+        <default applyOnUpdate="0" field="road_cond_1" expression=""/>
+        <default applyOnUpdate="0" field="road_cond_2" expression=""/>
+        <default applyOnUpdate="0" field="lighting" expression=""/>
+        <default applyOnUpdate="0" field="control_device" expression=""/>
+        <default applyOnUpdate="0" field="chp_road_type" expression=""/>
+        <default applyOnUpdate="0" field="pedestrian_accident" expression=""/>
+        <default applyOnUpdate="0" field="bicycle_accident" expression=""/>
+        <default applyOnUpdate="0" field="motorcycle_accident" expression=""/>
+        <default applyOnUpdate="0" field="truck_accident" expression=""/>
+        <default applyOnUpdate="0" field="not_private_property" expression=""/>
+        <default applyOnUpdate="0" field="alcohol_involved" expression=""/>
+        <default applyOnUpdate="0" field="stwd_vehtype_at_fault" expression=""/>
+        <default applyOnUpdate="0" field="chp_vehtype_at_fault" expression=""/>
+        <default applyOnUpdate="0" field="count_severe_inj" expression=""/>
+        <default applyOnUpdate="0" field="count_visible_inj" expression=""/>
+        <default applyOnUpdate="0" field="count_complaint_pain" expression=""/>
+        <default applyOnUpdate="0" field="count_ped_killed" expression=""/>
+        <default applyOnUpdate="0" field="count_ped_injured" expression=""/>
+        <default applyOnUpdate="0" field="count_bicyclist_killed" expression=""/>
+        <default applyOnUpdate="0" field="count_bicyclist_injured" expression=""/>
+        <default applyOnUpdate="0" field="count_mc_killed" expression=""/>
+        <default applyOnUpdate="0" field="count_mc_injured" expression=""/>
+        <default applyOnUpdate="0" field="primary_ramp" expression=""/>
+        <default applyOnUpdate="0" field="secondary_ramp" expression=""/>
+        <default applyOnUpdate="0" field="latitude_switrs" expression=""/>
+        <default applyOnUpdate="0" field="longitude_switrs" expression=""/>
+        <default applyOnUpdate="0" field="mv_involved" expression=""/>
+        <default applyOnUpdate="0" field="mv_only_one" expression=""/>
+        <default applyOnUpdate="0" field="col_comb" expression=""/>
+        <default applyOnUpdate="0" field="dph_col_type" expression=""/>
+        <default applyOnUpdate="0" field="dph_col_grp" expression=""/>
+        <default applyOnUpdate="0" field="street_view" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="unique_id" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="gc_switrs_col_pkey" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="cnn_intrsctn_fkey" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="cnn_sgmt_fkey" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="tb_latitude" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="tb_longitude" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="geocode_source" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="geocode_location" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="case_id_pkey" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="accident_year" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="proc_date" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="juris" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="collision_date" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="collision_time" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="time_cat" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="officer_id" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="reporting_district" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="day_of_week" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="chp_shift" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="population" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="cnty_city_loc" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="special_cond" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="beat_type" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="chp_beat_type" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="city_division_lapd" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="chp_beat_class" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="beat_number" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="primary_rd" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="secondary_rd" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="distance" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="direction" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="intersection" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="weather_1" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="weather_2" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="state_hwy_ind" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="caltrans_county" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="caltrans_district" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="state_route" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="route_suffix" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="postmile_prefix" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="postmile" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="location_type" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="ramp_intersection" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="side_of_hwy" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="tow_away" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="collision_severity" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="number_killed" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="number_injured" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="party_count" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="primary_coll_factor" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="pcf_code_of_viol" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="pcf_viol_category" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="pcf_violation" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="pcf_viol_subsection" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="hit_and_run" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="type_of_collision" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="mviw" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="ped_action" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="road_surface" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="road_cond_1" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="road_cond_2" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="lighting" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="control_device" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="chp_road_type" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="pedestrian_accident" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="bicycle_accident" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="motorcycle_accident" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="truck_accident" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="not_private_property" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="alcohol_involved" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="stwd_vehtype_at_fault" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="chp_vehtype_at_fault" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_severe_inj" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_visible_inj" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_complaint_pain" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_ped_killed" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_ped_injured" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_bicyclist_killed" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_bicyclist_injured" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_mc_killed" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="count_mc_injured" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="primary_ramp" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="secondary_ramp" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="latitude_switrs" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="longitude_switrs" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="mv_involved" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="mv_only_one" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="col_comb" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="dph_col_type" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="dph_col_grp" notnull_strength="0"/>
+        <constraint unique_strength="0" constraints="0" exp_strength="0" field="street_view" notnull_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint desc="" exp="" field="unique_id"/>
+        <constraint desc="" exp="" field="gc_switrs_col_pkey"/>
+        <constraint desc="" exp="" field="cnn_intrsctn_fkey"/>
+        <constraint desc="" exp="" field="cnn_sgmt_fkey"/>
+        <constraint desc="" exp="" field="tb_latitude"/>
+        <constraint desc="" exp="" field="tb_longitude"/>
+        <constraint desc="" exp="" field="geocode_source"/>
+        <constraint desc="" exp="" field="geocode_location"/>
+        <constraint desc="" exp="" field="case_id_pkey"/>
+        <constraint desc="" exp="" field="accident_year"/>
+        <constraint desc="" exp="" field="proc_date"/>
+        <constraint desc="" exp="" field="juris"/>
+        <constraint desc="" exp="" field="collision_date"/>
+        <constraint desc="" exp="" field="collision_time"/>
+        <constraint desc="" exp="" field="time_cat"/>
+        <constraint desc="" exp="" field="officer_id"/>
+        <constraint desc="" exp="" field="reporting_district"/>
+        <constraint desc="" exp="" field="day_of_week"/>
+        <constraint desc="" exp="" field="chp_shift"/>
+        <constraint desc="" exp="" field="population"/>
+        <constraint desc="" exp="" field="cnty_city_loc"/>
+        <constraint desc="" exp="" field="special_cond"/>
+        <constraint desc="" exp="" field="beat_type"/>
+        <constraint desc="" exp="" field="chp_beat_type"/>
+        <constraint desc="" exp="" field="city_division_lapd"/>
+        <constraint desc="" exp="" field="chp_beat_class"/>
+        <constraint desc="" exp="" field="beat_number"/>
+        <constraint desc="" exp="" field="primary_rd"/>
+        <constraint desc="" exp="" field="secondary_rd"/>
+        <constraint desc="" exp="" field="distance"/>
+        <constraint desc="" exp="" field="direction"/>
+        <constraint desc="" exp="" field="intersection"/>
+        <constraint desc="" exp="" field="weather_1"/>
+        <constraint desc="" exp="" field="weather_2"/>
+        <constraint desc="" exp="" field="state_hwy_ind"/>
+        <constraint desc="" exp="" field="caltrans_county"/>
+        <constraint desc="" exp="" field="caltrans_district"/>
+        <constraint desc="" exp="" field="state_route"/>
+        <constraint desc="" exp="" field="route_suffix"/>
+        <constraint desc="" exp="" field="postmile_prefix"/>
+        <constraint desc="" exp="" field="postmile"/>
+        <constraint desc="" exp="" field="location_type"/>
+        <constraint desc="" exp="" field="ramp_intersection"/>
+        <constraint desc="" exp="" field="side_of_hwy"/>
+        <constraint desc="" exp="" field="tow_away"/>
+        <constraint desc="" exp="" field="collision_severity"/>
+        <constraint desc="" exp="" field="number_killed"/>
+        <constraint desc="" exp="" field="number_injured"/>
+        <constraint desc="" exp="" field="party_count"/>
+        <constraint desc="" exp="" field="primary_coll_factor"/>
+        <constraint desc="" exp="" field="pcf_code_of_viol"/>
+        <constraint desc="" exp="" field="pcf_viol_category"/>
+        <constraint desc="" exp="" field="pcf_violation"/>
+        <constraint desc="" exp="" field="pcf_viol_subsection"/>
+        <constraint desc="" exp="" field="hit_and_run"/>
+        <constraint desc="" exp="" field="type_of_collision"/>
+        <constraint desc="" exp="" field="mviw"/>
+        <constraint desc="" exp="" field="ped_action"/>
+        <constraint desc="" exp="" field="road_surface"/>
+        <constraint desc="" exp="" field="road_cond_1"/>
+        <constraint desc="" exp="" field="road_cond_2"/>
+        <constraint desc="" exp="" field="lighting"/>
+        <constraint desc="" exp="" field="control_device"/>
+        <constraint desc="" exp="" field="chp_road_type"/>
+        <constraint desc="" exp="" field="pedestrian_accident"/>
+        <constraint desc="" exp="" field="bicycle_accident"/>
+        <constraint desc="" exp="" field="motorcycle_accident"/>
+        <constraint desc="" exp="" field="truck_accident"/>
+        <constraint desc="" exp="" field="not_private_property"/>
+        <constraint desc="" exp="" field="alcohol_involved"/>
+        <constraint desc="" exp="" field="stwd_vehtype_at_fault"/>
+        <constraint desc="" exp="" field="chp_vehtype_at_fault"/>
+        <constraint desc="" exp="" field="count_severe_inj"/>
+        <constraint desc="" exp="" field="count_visible_inj"/>
+        <constraint desc="" exp="" field="count_complaint_pain"/>
+        <constraint desc="" exp="" field="count_ped_killed"/>
+        <constraint desc="" exp="" field="count_ped_injured"/>
+        <constraint desc="" exp="" field="count_bicyclist_killed"/>
+        <constraint desc="" exp="" field="count_bicyclist_injured"/>
+        <constraint desc="" exp="" field="count_mc_killed"/>
+        <constraint desc="" exp="" field="count_mc_injured"/>
+        <constraint desc="" exp="" field="primary_ramp"/>
+        <constraint desc="" exp="" field="secondary_ramp"/>
+        <constraint desc="" exp="" field="latitude_switrs"/>
+        <constraint desc="" exp="" field="longitude_switrs"/>
+        <constraint desc="" exp="" field="mv_involved"/>
+        <constraint desc="" exp="" field="mv_only_one"/>
+        <constraint desc="" exp="" field="col_comb"/>
+        <constraint desc="" exp="" field="dph_col_type"/>
+        <constraint desc="" exp="" field="dph_col_grp"/>
+        <constraint desc="" exp="" field="street_view"/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" refreshOnNotifyEnabled="0" autoRefreshTime="0" simplifyLocal="1" simplifyDrawingHints="1" readOnly="0" simplifyMaxScale="1" labelsEnabled="0" simplifyDrawingTol="1" type="vector" autoRefreshEnabled="0" geometry="Line" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0" wkbType="MultiLineString" minScale="1e+08">
       <extent>
         <xmin>-13638153.42839059978723526</xmin>
@@ -283,9 +1394,9 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="145,82,45,255"/>
+              <prop k="line_color" v="219,30,42,255"/>
               <prop k="line_style" v="solid"/>
-              <prop k="line_width" v="0.26"/>
+              <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
               <prop k="offset" v="0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
@@ -1386,7 +2497,11 @@
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <customproperties/>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"street_view"</value>
+        </property>
+      </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
@@ -2413,8 +3528,101 @@
       <attributeactions>
         <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
-        <columns/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="&quot;geocode_source&quot;">
+        <columns>
+          <column type="field" name="unique_id" width="-1" hidden="0"/>
+          <column type="field" name="gc_switrs_col_pkey" width="-1" hidden="0"/>
+          <column type="field" name="cnn_intrsctn_fkey" width="-1" hidden="0"/>
+          <column type="field" name="cnn_sgmt_fkey" width="-1" hidden="0"/>
+          <column type="field" name="tb_latitude" width="-1" hidden="0"/>
+          <column type="field" name="tb_longitude" width="-1" hidden="0"/>
+          <column type="field" name="geocode_source" width="121" hidden="0"/>
+          <column type="field" name="geocode_location" width="-1" hidden="0"/>
+          <column type="field" name="case_id_pkey" width="-1" hidden="0"/>
+          <column type="field" name="accident_year" width="-1" hidden="0"/>
+          <column type="field" name="proc_date" width="-1" hidden="0"/>
+          <column type="field" name="juris" width="-1" hidden="0"/>
+          <column type="field" name="collision_date" width="-1" hidden="0"/>
+          <column type="field" name="collision_time" width="-1" hidden="0"/>
+          <column type="field" name="time_cat" width="-1" hidden="0"/>
+          <column type="field" name="officer_id" width="-1" hidden="0"/>
+          <column type="field" name="reporting_district" width="-1" hidden="0"/>
+          <column type="field" name="day_of_week" width="-1" hidden="0"/>
+          <column type="field" name="chp_shift" width="-1" hidden="0"/>
+          <column type="field" name="population" width="-1" hidden="0"/>
+          <column type="field" name="cnty_city_loc" width="-1" hidden="0"/>
+          <column type="field" name="special_cond" width="-1" hidden="0"/>
+          <column type="field" name="beat_type" width="-1" hidden="0"/>
+          <column type="field" name="chp_beat_type" width="-1" hidden="0"/>
+          <column type="field" name="city_division_lapd" width="-1" hidden="0"/>
+          <column type="field" name="chp_beat_class" width="-1" hidden="0"/>
+          <column type="field" name="beat_number" width="-1" hidden="0"/>
+          <column type="field" name="primary_rd" width="-1" hidden="0"/>
+          <column type="field" name="secondary_rd" width="-1" hidden="0"/>
+          <column type="field" name="distance" width="-1" hidden="0"/>
+          <column type="field" name="direction" width="-1" hidden="0"/>
+          <column type="field" name="intersection" width="-1" hidden="0"/>
+          <column type="field" name="weather_1" width="-1" hidden="0"/>
+          <column type="field" name="weather_2" width="-1" hidden="0"/>
+          <column type="field" name="state_hwy_ind" width="-1" hidden="0"/>
+          <column type="field" name="caltrans_county" width="-1" hidden="0"/>
+          <column type="field" name="caltrans_district" width="-1" hidden="0"/>
+          <column type="field" name="state_route" width="-1" hidden="0"/>
+          <column type="field" name="route_suffix" width="-1" hidden="0"/>
+          <column type="field" name="postmile_prefix" width="-1" hidden="0"/>
+          <column type="field" name="postmile" width="-1" hidden="0"/>
+          <column type="field" name="location_type" width="-1" hidden="0"/>
+          <column type="field" name="ramp_intersection" width="-1" hidden="0"/>
+          <column type="field" name="side_of_hwy" width="-1" hidden="0"/>
+          <column type="field" name="tow_away" width="-1" hidden="0"/>
+          <column type="field" name="collision_severity" width="-1" hidden="0"/>
+          <column type="field" name="number_killed" width="-1" hidden="0"/>
+          <column type="field" name="number_injured" width="-1" hidden="0"/>
+          <column type="field" name="party_count" width="-1" hidden="0"/>
+          <column type="field" name="primary_coll_factor" width="-1" hidden="0"/>
+          <column type="field" name="pcf_code_of_viol" width="-1" hidden="0"/>
+          <column type="field" name="pcf_viol_category" width="-1" hidden="0"/>
+          <column type="field" name="pcf_violation" width="-1" hidden="0"/>
+          <column type="field" name="pcf_viol_subsection" width="-1" hidden="0"/>
+          <column type="field" name="hit_and_run" width="-1" hidden="0"/>
+          <column type="field" name="type_of_collision" width="-1" hidden="0"/>
+          <column type="field" name="mviw" width="-1" hidden="0"/>
+          <column type="field" name="ped_action" width="-1" hidden="0"/>
+          <column type="field" name="road_surface" width="-1" hidden="0"/>
+          <column type="field" name="road_cond_1" width="-1" hidden="0"/>
+          <column type="field" name="road_cond_2" width="-1" hidden="0"/>
+          <column type="field" name="lighting" width="-1" hidden="0"/>
+          <column type="field" name="control_device" width="-1" hidden="0"/>
+          <column type="field" name="chp_road_type" width="-1" hidden="0"/>
+          <column type="field" name="pedestrian_accident" width="-1" hidden="0"/>
+          <column type="field" name="bicycle_accident" width="-1" hidden="0"/>
+          <column type="field" name="motorcycle_accident" width="-1" hidden="0"/>
+          <column type="field" name="truck_accident" width="-1" hidden="0"/>
+          <column type="field" name="not_private_property" width="-1" hidden="0"/>
+          <column type="field" name="alcohol_involved" width="-1" hidden="0"/>
+          <column type="field" name="stwd_vehtype_at_fault" width="-1" hidden="0"/>
+          <column type="field" name="chp_vehtype_at_fault" width="-1" hidden="0"/>
+          <column type="field" name="count_severe_inj" width="-1" hidden="0"/>
+          <column type="field" name="count_visible_inj" width="-1" hidden="0"/>
+          <column type="field" name="count_complaint_pain" width="-1" hidden="0"/>
+          <column type="field" name="count_ped_killed" width="-1" hidden="0"/>
+          <column type="field" name="count_ped_injured" width="-1" hidden="0"/>
+          <column type="field" name="count_bicyclist_killed" width="-1" hidden="0"/>
+          <column type="field" name="count_bicyclist_injured" width="-1" hidden="0"/>
+          <column type="field" name="count_mc_killed" width="-1" hidden="0"/>
+          <column type="field" name="count_mc_injured" width="-1" hidden="0"/>
+          <column type="field" name="primary_ramp" width="-1" hidden="0"/>
+          <column type="field" name="secondary_ramp" width="-1" hidden="0"/>
+          <column type="field" name="latitude_switrs" width="-1" hidden="0"/>
+          <column type="field" name="longitude_switrs" width="-1" hidden="0"/>
+          <column type="field" name="mv_involved" width="-1" hidden="0"/>
+          <column type="field" name="mv_only_one" width="-1" hidden="0"/>
+          <column type="field" name="col_comb" width="-1" hidden="0"/>
+          <column type="field" name="dph_col_type" width="-1" hidden="0"/>
+          <column type="field" name="dph_col_grp" width="-1" hidden="0"/>
+          <column type="field" name="street_view" width="-1" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
       </attributetableconfig>
       <conditionalstyles>
         <rowstyles/>
@@ -2430,7 +3638,7 @@
       <editable/>
       <labelOnTop/>
       <widgets/>
-      <previewExpression></previewExpression>
+      <previewExpression>"street_view"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer simplifyAlgorithm="0" refreshOnNotifyEnabled="0" autoRefreshTime="0" simplifyLocal="1" simplifyDrawingHints="1" readOnly="0" simplifyMaxScale="1" labelsEnabled="0" simplifyDrawingTol="1" type="vector" autoRefreshEnabled="0" geometry="Point" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0" wkbType="Point" minScale="1e+08">
@@ -3556,7 +4764,9 @@
         <constraint desc="" exp="" field="street_view"/>
       </constraintExpressions>
       <expressionfields/>
-      <attributeactions/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
       <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns/>
       </attributetableconfig>
@@ -5052,7 +6262,9 @@
         <constraint desc="" exp="" field="street_view"/>
       </constraintExpressions>
       <expressionfields/>
-      <attributeactions/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
       <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns/>
       </attributetableconfig>
@@ -9716,7 +10928,9 @@
         <constraint desc="" exp="" field="street_view"/>
       </constraintExpressions>
       <expressionfields/>
-      <attributeactions/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
       <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns/>
       </attributetableconfig>
@@ -9747,6 +10961,7 @@
     <layer id="vw_geo_switrs_all_types_cyc_col_prties_all_frwy_3065e936_bf84_4ad5_92fd_49e4c6f30fed"/>
     <layer id="vw_geo_switrs_all_types_cyc_col_prties_all_cty_9996c99c_b1ad_4eb6_8301_6888fc51b855"/>
     <layer id="vw_geo_switrs_all_types_cyc_col_frwy_f530652d_f221_4284_b51c_20d40fda4a3f"/>
+    <layer id="export_23664baa_de6f_43a3_ac37_657b13b1e4a9"/>
   </layerorder>
   <properties>
     <Gui>
