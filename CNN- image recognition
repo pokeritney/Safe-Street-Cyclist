@@ -1,0 +1,82 @@
+import numpy as np
+import pandas as pd
+from keras.layers import Input, Dense, Activation, ZeroPadding2D, Flatten, Conv2D
+from keras.layers import MaxPooling2D
+from keras.models import Model
+from keras.preprocessing import image
+from keras.models import load_model
+from keras import metrics
+from sklearn.model_selection import train_test_split
+from keras.applications.imagenet_utils import preprocess_input
+from IPython.display import SVG
+from keras.utils.vis_utils import model_to_dot
+from keras.utils import plot_model
+from PIL import Image
+import keras.backend as K
+import tensorflow as tf
+import keras
+from keras.wrappers.scikit_learn import KerasClassifier
+import csv
+K.set_image_data_format('channels_last')
+from matplotlib.pyplot import imshow
+import os
+
+#######################################################################################################################
+modelSavePath = 'my_model3.h5'
+numOfTestPoints = 2
+batchSize = 16
+numOfEpoches = 10
+#######################################################################################################################
+
+image_train_path = "/home/CSE6242/ML/googleview/train/images/"
+feats_train_path = "/home/CSE6242/ML/googleview/train/feats_train.csv"
+image_test_path = "/home/CSE6242/ML/googleview/test/images/"
+feats_test_path = "/home/CSE6242/ML/googleview/test/feats.csv"
+classes = 4
+img_width = 512
+img_height = 512
+VECTOR_SIZE = 0
+features_SIZE = 7
+BATCH_SIZE = 4
+EPOCHS = 1000
+TRAIN_EXAMPLES = 100
+TEST_EXAMPLES = 100
+LR = 0.0001
+def mean_pred(y_true, y_pred):
+    return K.mean(y_pred)
+
+
+# Crop and rotate image, return 12 images
+def getCropImgs(img, needRotations=False):
+    # img = img.convert('L')
+    z = np.asarray(img, dtype=np.int8)
+    c = []
+    for i in range(3):
+        for j in range(4):
+            crop = z[512 * i:512 * (i + 1), 512 * j:512 * (j + 1), :]
+
+            c.append(crop)
+            if needRotations:
+                c.append(np.rot90(np.rot90(crop)))
+
+    # os.system('cls')
+    # print("Crop imgs", c[2].shape)
+
+    return c
+
+# Get the softmax from folder name
+def getAsSoftmax(fname):
+    if (fname == 'b'):
+        return [1, 0, 0, 0]
+    elif (fname == 'is'):
+        return [0, 1, 0, 0]
+    elif (fname == 'iv'):
+        return [0, 0, 1, 0]
+    else:
+        return [0, 0, 0, 1]
+
+
+# Return all images as numpy array, labels
+def get_imgs_frm_folder(path):
+    # x = np.empty(shape=[19200,512,512,3],dtype=np.int8)
+    # y = np.empty(shape=[400],dtype=np.int8)
