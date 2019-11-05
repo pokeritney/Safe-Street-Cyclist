@@ -1,5 +1,8 @@
 # DVA Group Project
 
-An example of Google street view API is uploaded in GSV_test folder. Please feel free to update it as the sampling task goes.
+1. Data - Collision data
+2. GSV_API - Google street view data
+3. Image_detect - Image detection data
+4. Metric LR - References for our linear regression model
 
 Note: Please submit a **PULL REQUEST** when significant changes are to be made. Thanks!
