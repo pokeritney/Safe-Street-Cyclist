@@ -1,4 +1,0 @@
-<!DOCTYPE connections>
-<qgsPgConnections version="1.0">
-    <postgis port="5432" saveUsername="true" password="opendata" savePassword="true" sslmode="1" service="" username="opendata" host="www.transbasesf.org" database="transbase_public" name="postgis_connection_TransBASE" estimatedMetadata="false"/>
-</qgsPgConnections>
