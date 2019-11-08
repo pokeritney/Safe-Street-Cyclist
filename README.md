@@ -1,14 +1,15 @@
 # DVA Group Project
 
 1. Data
- -download - GSV pictures
- -data for models
+a. -download - GSV pictures
+b. -data for models
+
 2. Database - original collision data
-2. GSV_API - Google street view code
-3. Image_detect - CNN and object detection
-4. Metric LR - References for our linear regression model
-5. Script - codes
-6. Viz - frontend
-7. Web-stack - frontend example
+3. GSV_API - Google street view code
+4. Image_detect - CNN and object detection
+5. Metric LR - References for our linear regression model
+6. Script - codes
+7. Viz - frontend
+8. Web-stack - frontend example
 
 Note: Please submit a **PULL REQUEST** when significant changes are to be made. Thanks!
