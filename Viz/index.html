@@ -1,0 +1,118 @@
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+<style>
+
+  em{
+      color: red;
+      font-weight: bold;
+  }
+
+  body {
+      padding: 0;
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-style: bold;
+    line-height: 18px;
+    color:black;
+  }
+
+  html, body, #map {
+      height: 100%;
+  }
+
+  circle:hover {
+      stroke: red;
+      fill-opacity:.1;
+      fill:white;
+      stroke-width: 3px;
+      cursor: crosshair;
+  }
+
+  line {
+    stroke:#A7A9AB;
+    stroke-opacity:0;
+    stroke-width: 1.0px;
+    z-index:3;
+  }
+
+  div.tooltip{
+    padding: 6px;
+    background: white;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+  }
+  p.tooltip-text{
+    margin: 0px;
+    padding: 0px;
+    color:black;
+  }
+
+  div.menu{
+      position: fixed;
+      margin: 15px;
+      padding: 20px;
+      top: 0px;
+      left: 0px;
+      width: 200px;
+      height: 700px;
+      background: rgba(255,255,255,.8);
+  }
+</style>
+
+
+<<body>
+  <div id='map' style='width: 100%; height: 100%;'></div>
+<script>
+
+  // mapbox initialization
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaXZyaWVsNTAxIiwiYSI6ImNqeW9uejl4dTE2dTkzY2xpdjkyZ2VpdHUifQ.OY_j0gmu8ib1A3wS6bsEHQ';
+  var map = new mapboxgl.Map({
+    container: 'map', //container id
+    style: 'mapbox://styles/mapbox/dark-v10',
+    center:[-122.358600, 37.748874],
+    zoom:11.5
+  });
+    //mapbox + d3 connection
+
+    // overlay d3 on the map
+  	var svg = d3.select(map.getPanes().overlayPane)
+              .append("svg");
+  	var g = svg.append("g")
+              .attr("class", "leaflet-zoom-hide")
+  		        .attr("id","g");
+  	var g_line = svg.append("g").attr("class", "leaflet-zoom-hide").attr("id","g_line");
+    //project function
+    //Project any point to map's current state
+  	function projectPoint(lat, lng) {
+  		return map.project(new mapboxgl.LngLat(lng, lat));
+  		}
+
+  	function projectStream(lng, lat) {
+  		var point = projectPoint(lng,lat);
+  		this.stream.point(point.x, point.y);
+  		}
+
+  	var transform = d3.geo.transform({point: projectStream});
+  	var path = d3.geo.path().projection(transform);
+
+
+    //D3 Stuff
+    
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
