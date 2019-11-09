@@ -80,3 +80,128 @@ def getAsSoftmax(fname):
 def get_imgs_frm_folder(path):
     # x = np.empty(shape=[19200,512,512,3],dtype=np.int8)
     # y = np.empty(shape=[400],dtype=np.int8)
+    
+    x_image = []
+    y_image = []
+
+    cnt = 0
+    for foldname in os.listdir(path):
+        for filename in os.listdir(os.path.join(path, foldname)):
+            image_path = os.path.join(os.path.join(path, foldname), filename)
+            img = Image.open(image_path)
+            img = img.resize((img_width, img_height),Image.ANTIALIAS)
+            img = img.convert('L')
+            img = np.asarray(img, np.float16)
+
+            '''
+            if len(img.shape) == 2:
+                img = np.concatenate((img, img, img), axis=-1)
+                #img = np.reshape(img,(min_width,min_height,1))
+            print
+            '''
+            x_image.append(np.divide(img, 255.))
+            y_image.append(foldname)
+            cnt += 1
+            '''
+            crpImgs = getCropImgs(img)
+            cnt += 1
+            if cnt % 10 == 0:
+                print(str(cnt) + " Images loaded")
+            for im in crpImgs:
+                x.append(np.divide(np.asarray(im, np.float16), 255.))
+                # Image.fromarray(np.divide(np.asarray(im, np.float16), 255.), 'RGB').show()
+                y.append( (foldname))
+                # print(getAsSoftmax(foldname))
+            '''
+    print("Images cropped")
+    print("Loading as array")
+
+    return x_image, y_image, cnt
+
+# Load the dataset
+def load_dataset(image_path,feats_path):
+    print("Loading images..")
+
+    train_set_x_orig, train_set_y_orig, cnt = get_imgs_frm_folder(image_path)
+
+    feats_train = pd.read_csv(feats_path)
+    feats_train = feats_train.join(pd.get_dummies(feats_train.我们需要的feature))
+    X_img = []
+    X_fea = []
+    Y = []
+    ID = []
+    for i in range(len(train_set_y_orig)):
+        sample = []
+        X_img.append(train_set_x_orig[i])
+        ID.append(train_set_y_orig[i])
+        sample.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])]['age'].values)
+        sample.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])][0].values)
+        sample.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])][1].values)
+        sample.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])][2].values)
+        sample.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])][3].values)
+        if feats_train[feats_train['id'].isin([train_set_y_orig[i]])]['P53'].values == True:
+            sample.append(1)
+            sample.append(0)
+        else:
+            sample.append(0)
+            sample.append(1)
+        Y.append(feats_train[feats_train['id'].isin([train_set_y_orig[i]])]['我们需要的feature2'].values)
+        X_fea.append(sample)
+    Y = np.array(Y)
+    Y = Y-1
+    Y = (np.arange(4)==Y[:None]).astype(np.integer)
+    print("Y.shape:",Y.shape)
+    X_fea = np.array(X_fea)
+    X_fea[:,0] = X_fea[:,0]/X_fea[:,0].max()
+    '''
+    llen = Y.shape[0]
+    cnt1 = 0
+    cnt2 = 0
+    cnt3 = 0
+    cnt4 = 0
+    for i in range(llen):
+        if Y[i][0] == 1:
+            cnt1 += 1
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            Y = np.row_stack((Y,Y[i]))
+        if Y[i][1] == 1:
+            cnt2 += 1
+        if Y[i][2] == 1:
+            cnt3 += 1
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            Y = np.row_stack((Y,Y[i]))
+            Y = np.row_stack((Y,Y[i]))
+        if Y[i][3] == 1:
+            cnt4 += 1
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+            X_fea = np.row_stack((X_fea,X_fea[i]))
+
+            Y = np.row_stack((Y,Y[i]))
+            Y = np.row_stack((Y,Y[i]))
+            Y = np.row_stack((Y,Y[i]))
+            Y = np.row_stack((Y,Y[i]))
+            Y = np.row_stack((Y,Y[i]))
+    print("1:",cnt1)
+    print("2:",cnt2)
+    print("3:",cnt3)
+    print("4:",cnt4)
+    '''
+    from imblearn.over_sampling import RandomOverSampler,SMOTE, ADASYN
+ 
+    X_resampled, y_resampled = SMOTE().fit_sample(X_fea, Y)
+    #X_resampled, y_resampled = ros.fit_sample(X_fea, Y)
+    x_img_train, x_img_test = train_test_split(X_img, train_size=0.70, random_state=33)
+    y_train, y_test = train_test_split(y_resampled,train_size=0.70, random_state=33)
+    x_fea_train, x_fea_test = train_test_split(X_resampled, train_size=0.70, random_state=33)
+    TRAIN_EXAMPLES = len(x_fea_train)
+    TEST_EXAMPLES = len(x_fea_test)
+
+    
+    print("Data load complete")
+
+    return x_img_train, x_img_test, y_train, y_test, x_fea_train, x_fea_test,ID
+
