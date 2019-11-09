@@ -1,71 +1,74 @@
 
+<head>
+  <!-- mapbox GL -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
 
-<script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
 
-<style>
+    em{
+        color: red;
+        font-weight: bold;
+    }
 
-  em{
-      color: red;
-      font-weight: bold;
-  }
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-style: bold;
+      line-height: 18px;
+      color:black;
+    }
 
-  body {
-      padding: 0;
-      margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-style: bold;
-    line-height: 18px;
-    color:black;
-  }
+    html, body, #map {
+        height: 100%;
+    }
 
-  html, body, #map {
-      height: 100%;
-  }
+    circle:hover {
+        stroke: red;
+        fill-opacity:.1;
+        fill:white;
+        stroke-width: 3px;
+        cursor: crosshair;
+    }
 
-  circle:hover {
-      stroke: red;
-      fill-opacity:.1;
-      fill:white;
-      stroke-width: 3px;
-      cursor: crosshair;
-  }
+    line {
+      stroke:#A7A9AB;
+      stroke-opacity:0;
+      stroke-width: 1.0px;
+      z-index:3;
+    }
 
-  line {
-    stroke:#A7A9AB;
-    stroke-opacity:0;
-    stroke-width: 1.0px;
-    z-index:3;
-  }
+    div.tooltip{
+      padding: 6px;
+      background: white;
+      visibility: hidden;
+      position: absolute;
+      z-index: 10;
+    }
+    p.tooltip-text{
+      margin: 0px;
+      padding: 0px;
+      color:black;
+    }
 
-  div.tooltip{
-    padding: 6px;
-    background: white;
-    visibility: hidden;
-    position: absolute;
-    z-index: 10;
-  }
-  p.tooltip-text{
-    margin: 0px;
-    padding: 0px;
-    color:black;
-  }
-
-  div.menu{
-      position: fixed;
-      margin: 15px;
-      padding: 20px;
-      top: 0px;
-      left: 0px;
-      width: 200px;
-      height: 700px;
-      background: rgba(255,255,255,.8);
-  }
-</style>
-
-
-<<body>
+    div.menu{
+        position: fixed;
+        margin: 15px;
+        padding: 20px;
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 700px;
+        background: rgba(255,255,255,.8);
+    }
+  </style>
+</head>
+<body>
   <div id='map' style='width: 100%; height: 100%;'></div>
 <script>
 
@@ -80,12 +83,21 @@
     //mapbox + d3 connection
 
     // overlay d3 on the map
-  	var svg = d3.select(map.getPanes().overlayPane)
-              .append("svg");
-  	var g = svg.append("g")
-              .attr("class", "leaflet-zoom-hide")
-  		        .attr("id","g");
-  	var g_line = svg.append("g").attr("class", "leaflet-zoom-hide").attr("id","g_line");
+    //Get mapbox map canvas container
+		var canvas = map.getCanvasContainer();
+
+		//Overlay D3 on the map
+		var svg = d3.select(canvas).append("svg");
+
+    //project function
+    var transform = d3.geoTransform({point: projectStream});
+  	var path = d3.geoPath().projection(transform);
+
+    //load collision data
+    queue()
+      .defer(d3.json,'data/sample_transbase_collisions_11082019.json')
+      .await(drawData);
+
     //project function
     //Project any point to map's current state
   	function projectPoint(lat, lng) {
@@ -97,12 +109,13 @@
   		this.stream.point(point.x, point.y);
   		}
 
-  	var transform = d3.geo.transform({point: projectStream});
-  	var path = d3.geo.path().projection(transform);
+
 
 
     //D3 Stuff
-    
+
+
+
 
 
 
