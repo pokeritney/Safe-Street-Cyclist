@@ -12,9 +12,25 @@ category = ["Day of Week", "Weather", "Collision Severity", "Primary Collision F
 "Violation Category", "Road Condition"]
 
 def filter_collision(col_name = "day_of_week", select = "Sunday"):
-    query = 'SELECT * FROM collision WHERE' + col_name + '=' + select
+    query = 'SELECT * FROM collision WHERE ' + col_name + '=' + select
     collision_filtered = pd.read_sql_query(query, collision)
     return collision_filtered
+
+
+def multiple_filter(a):
+    '''input a - a list of strings; user's selection
+    e.g., a = [day, weather]and day = All, weather = cloudy
+    return SQL stmt with multiple filter'''
+    category = [day_of_week, weather]
+    #get rid of WHERE?
+    query = 'SELECT * FROM collision WHERE '
+    for c in category:
+        if c != "All":
+            val = a[category.index(c)]
+            c_filter = c + '=' + val
+            query += c_filter
+    return query
+
 
 #For collision_time
 time_category = ["6:00am to 8:59am", "9:00am to 11:59am", "12:00pm to 14:59pm", "15:00pm to 17:59pm", 
