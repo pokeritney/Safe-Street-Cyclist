@@ -8,7 +8,7 @@
 5. Metric LR - References for our model
 6. Script - codes
 7. Viz - frontend
-   <br/> &nbsp; A. data -store temporary csv
+   <br/> &nbsp; A. data -store temporary data files
    <br/> &nbsp; B. Lib - js file
    <br/> &nbsp; C. templates - html file
 
