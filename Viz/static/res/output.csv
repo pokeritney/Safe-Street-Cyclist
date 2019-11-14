@@ -1,0 +1,498 @@
+case_id_pkey,tb_latitude,tb_longitude,collision_date,collision_time,day_of_week,primary_rd,secondary_rd,distance,direction,weather_1,collision_severity,pcf_viol_category,road_cond_1
+3309837,37.75062668,-122.4182866,20070720,1312,Friday,MISSION ST,25TH ST,5,South,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+4254864,37.78781143,-122.4201272,20090529,854,Friday,POLK ST,SUTTER ST,20,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+5208154,37.75358266,-122.4024691,20110520,1900,Friday,KANSAS ST,24TH ST,127,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+2022667,37.79173199,-122.3950797,20050513,1706,Friday,MISSION ST,MAIN ST,57,West,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+2187358,37.77749871,-122.4181444,20050812,1450,Friday,HAYES ST,POLK ST,30,West,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+3319369,37.78814872,-122.4168213,20070810,1030,Friday,HYDE ST,SUTTER ST,11,South,Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+4717646,37.77530626,-122.4652615,20100528,1749,Friday,CABRILLO ST,7TH AV,92,West,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+5334737,37.78071918,-122.4153156,20110902,820,Friday,MCALLISTER ST,HYDE ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+5383981,37.77188564,-122.4233968,20110930,1801,Friday,MARKET ST,OCTAVIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5477556,37.7635716,-122.4173324,20111216,1642,Friday,17TH ST,SOUTH VAN NESS,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5689879,37.77073088,-122.4487679,20120427,2152,Friday,PAGE ST,CLAYTON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+1988055,37.76046068,-122.4099951,20050121,652,Friday,BRYANT ST,19TH ST,9,South,Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+1988551,37.76216276,-122.4284385,20050325,1700,Friday,CHURCH ST,DORLAND ST,27,North,Clear,Injury (Severe),Following Too Closely,No Unusual Condition
+1992304,37.7858929,-122.4197387,20050225,1510,Friday,POLK ST,GEARY ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+1994560,37.78071605,-122.4304249,20050121,1455,Friday,WEBSTER ST,TURK ST,6,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+1995005,37.7905803,-122.4206713,20050408,2050,Friday,CALIFORNIA ST,POLK ST,5,East,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+1995806,37.77034852,-122.4097359,20050204,1803,Friday,10TH ST,BRYANT ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2008123,37.80113617,-122.4093237,20050415,2100,Friday,STOCKTON ST,FILBERT ST,86,South,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+2008170,37.76615579,-122.4305147,20050325,923,Friday,MARKET ST,15TH ST,100,East,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+2019220,37.76036702,-122.4170258,20050429,1210,Friday,SOUTH VAN NESS,19TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2022686,37.77551666,-122.4155992,20050506,1148,Friday,MISSION ST,10TH ST,126,East,Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+2023788,37.80516965,-122.4172262,20050506,1110,Friday,COLUMBUS,BAY,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Not Stated,No Unusual Condition
+2036469,37.74310999,-122.4756759,20050422,1245,Friday,19TH AV,TARAVAL ST,25,North,Clear,Injury (Other Visible),Impeding Traffic,No Unusual Condition
+2072471,37.77207565,-122.4457157,20050610,2214,Friday,MASONIC AV,OAK ST,2,South,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2100035,37.79022454,-122.3938989,20050624,1635,Friday,HOWARD ST,BEALE ST,154,East,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+2105953,37.71409294,-122.4521838,20050603,1510,Friday,SAN JOSE AV,FARALLONES ST,5,South,Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+2106352,37.769502,-122.4133852,20050610,1932,Friday,HARRISON ST,13TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+2112274,37.79815206,-122.4070829,20050708,2015,Friday,COLUMBUS AV,GRANT AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+2112291,37.78279445,-122.4140538,20050701,912,Friday,LEAVENWORTH ST,TURK ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+2116164,37.76505853,-122.4174747,20050603,959,Friday,SOUTH VAN NESS,16TH ST,45,South,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2146594,37.76797727,-122.4248958,20050715,1707,Friday,14TH ST,GUERRERO ST,140,West,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2159355,37.77291416,-122.4220074,20050722,1352,Friday,MARKET ST,GOUGH ST,51,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+2160574,37.76787776,-122.4265481,20050722,1035,Friday,14TH ST,DOLORES,42,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+2183788,37.72371646,-122.4374391,20050812,1405,Friday,OCEAN AV,ALEMANY BL,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+2183811,37.79865861,-122.4004301,20050812,2247,Friday,BROADWAY,BATTERY,182,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+2238800,37.77802076,-122.4215207,20050916,1035,Friday,FRANKLIN ST,GROVE ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+2307476,37.72654289,-122.4179548,20050916,1429,Friday,FELTON ST,CAMBRIDGE ST,137,East,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+2308709,37.79078805,-122.4190362,20050930,900,Friday,CALIFORNIA ST,LARKIN ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2311750,37.77262031,-122.4339222,20050930,2307,Friday,PAGE ST,PIERCE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+2345180,37.77656838,-122.3987554,20051014,916,Friday,BRANNAN ST,5TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+2415091,37.76654458,-122.3950605,20051202,1745,Friday,16TH ST,7TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,Other
+2415119,37.7149845,-122.45607269999999,20051111,1855,Friday,PLYMOUTH AV,LOBOS ST,29,North,Clear,Injury (Complaint of Pain),Following Too Closely,No Unusual Condition
+2457369,37.78153507,-122.4239221,20060106,1735,Friday,TURK ST,GOUGH ST,1,West,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+2484871,37.7714395,-122.4134949,20060203,2211,Friday,11TH ST,FOLSOM ST,218,South,Clear,Injury (Complaint of Pain),Other Improper Driving,No Unusual Condition
+2484921,37.77191507,-122.4015327,20060203,903,Friday,TOWNSEND ST,7TH ST,51,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+2566255,37.77930712,-122.501871,20060120,1916,Friday,GEARY BL,41ST AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2571408,37.77152958,-122.4020207,20060127,1238,Friday,TOWNSEND ST,7TH ST,148,West,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+2624805,37.71575345,-122.4415543,20060317,800,Friday,MISSION ST,ROLPH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2628814,37.7769096,-122.4036151,20060428,1625,Friday,6TH ST,AHERN ST,100,North,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2632132,37.7998475,-122.3983781,20060421,815,Friday,EMBARCADERO,BROADWAY ST,300,North,Clear,Injury (Other Visible),Not Stated,Not Stated
+2635782,37.78858659,-122.4135391,20060113,1928,Friday,JONES ST,SUTTER ST,4,South,Clear,Injury (Other Visible),Not Stated,Other
+2636754,37.77922201,-122.4109235,20060421,135,Friday,MISSION ST,7TH ST,5,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+2638512,37.78899526,-122.4406236,20060224,1138,Friday,SACRAMENTO ST,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+2639808,37.77551415,-122.406296,20060210,402,Friday,7TH ST,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+4279128,37.7421936,-122.4265273,20090605,848,Friday,CHURCH ST,30TH ST,35,North,Clear,Injury (Complaint of Pain),Other Improper Driving,Other
+2657220,37.76835372,-122.4078135,20060526,2310,Friday,POTRERO AV,ALAMEDA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2657344,37.78872115,-122.4020657,20060526,815,Friday,MARKET ST,NEW MONTGOMERY ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2658719,37.74976047,-122.3962749,20060310,730,Friday,CONNECTICUT,CESAR CHAVEZ,5,North,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+2699962,37.79191257,-122.4024647,20060609,348,Friday,PINE ST,MONTGOMERY ST,31,East,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+2699964,37.75745285,-122.4211701,20060616,1647,Friday,VALENCIA ST,LIBERTY ST,91,South,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2699968,37.73174709,-122.471901,20060602,858,Friday,JUNIPERO SERRA BL,OCEAN AV,260,North,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+2700066,37.80634563,-122.4360214,20060630,2017,Friday,MARINA BL,WEBSTER ST,120,West,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+2704336,37.78633862,-122.3977045,20060602,1348,Friday,2ND ST,TEHAMA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2704364,37.77021017,-122.445345,20060609,227,Friday,HAIGHT ST,MASONIC AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+2705406,37.77117368,-122.4302608,20060630,2005,Friday,FILLMORE ST,WALLER ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+2705426,37.76824602,-122.4533523,20060106,1020,Friday,STANYAN ST,WALLER ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2718679,37.7698677,-122.4223648,20060707,1735,Friday,DUBOCE ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2730370,37.73628014,-122.3916336,20060721,1020,Friday,NEWCOMB AV,NEWHALL ST,5,East,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+2775872,37.77299541,-122.4459024,20060811,1439,Friday,FELL,MASONIC,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2775875,37.7876636,-122.413354,20060818,1735,Friday,POST ST,JONES ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+2789123,37.78446477,-122.4075354,20060915,1754,Friday,MARKET ST,5TH ST,230,East,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+2789900,37.76864813,-122.4029268,20060915,1216,Friday,ALAMEDA,RHODE ISLAND,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+2789919,37.75254468,-122.3926394,20060915,2200,Friday,PENNSYLVANIA AV,25TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+2802487,37.77863826,-122.4317144,20060915,1450,Friday,MCALLISTER ST,FILLMORE ST,14,East,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+2817936,37.76981508,-122.4177532,20060922,1805,Friday,13TH ST,S VAN NESS AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+2829472,37.7704455,-122.4098575,20061006,1633,Friday,10TH ST,BRYANTS,50,North,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+2829498,37.7863442,-122.4021482,20060915,1200,Friday,3RD ST,MISSION ST,50,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+2829510,37.75278067,-122.4093769,20060929,1215,Friday,24TH ST,BRYANT ST,72,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+2841812,37.76977179,-122.4040104,20061013,754,Friday,DIVISION ST,HENRY ADAMS,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,"Holes, Deep Ruts"
+2862419,37.76439539,-122.4535159,20061020,1920,Friday,PARNASSUS AV,WOODLAND AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+2862430,37.77114193,-122.4455353,20061020,1940,Friday,MASONIC AV,PAGE ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2862434,37.77288398,-122.418613,20061020,830,Friday,SOUTH VAN NESS AV,MISSION ST,63,South,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+2883832,37.79027126,-122.4005601,20061020,1340,Friday,SANSOME ST,SUTTER ST,9,North,Clear,Injury (Complaint of Pain),Not Stated,No Unusual Condition
+2894338,37.76316782,-122.4239592,20061110,2137,Friday,17TH ST,GUERRERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2896253,37.73448353,-122.4296612,20061027,930,Friday,SAN JOSE AV,MILTON ST,5,South,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+2900409,37.7851265,-122.4635346,20061117,1558,Friday,CALIFORNIA ST,5TH AV,9,West,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2947922,37.71647847,-122.4410254,20061215,2008,Friday,GENEVA AV,MISSION ST,8,West,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+2967379,37.76502803,-122.4200548,20061229,1342,Friday,16TH ST,MISSION ST,112,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+2978385,37.79573711,-122.4234131,20061124,1950,Friday,VAN NESS AV,BROADWAY,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3020578,37.76189547,-122.4372987,20070126,1538,Friday,MARKET ST,DIAMOND ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3020917,37.78621073,-122.4053188,20070202,1837,Friday,MARKET ST,4TH ST,225,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+3020925,37.7698677,-122.4223648,20070202,2057,Friday,VALENCIA ST,DUBOCE AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3024051,37.77290912,-122.4221864,20070202,755,Friday,MARKET ST,GOUGH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3042012,37.78202427,-122.4011597,20070216,1004,Friday,FOLSOM ST,4TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3042048,37.77150059,-122.4051664,20070216,1715,Friday,BRANNAN ST,8TH ST,105,East,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+3049647,37.71642647,-122.4312795,20070223,1615,Friday,MOSCOW ST,FRANCE ST,71,South,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3049667,37.7717791,-122.4405462,20070223,1845,Friday,PAGE ST,BAKER ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3123325,37.77604429,-122.4295541,20070323,1719,Friday,HAYES ST,WEBSTER ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+3123908,37.78170479,-122.4189013,20070323,900,Friday,POLK ST,ELM ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+3124028,37.76933882,-122.4310782,20070330,2234,Friday,DUBOCE ST,STEINER ST,143,East,Clear,Injury (Severe),Driving or Bicycling Under the Influence of Alcohol or Drug,No Unusual Condition
+3124068,37.76953479,-122.4506416,20070316,1403,Friday,HAIGHT ST,COLE ST,20,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3124071,37.78749364,-122.397353,20070316,1509,Friday,HOWARD ST,2ND ST,369,East,Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+3179519,37.76118879,-122.4300222,20070406,1834,Friday,18TH ST,SANCHEZ ST,160,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3179521,37.77733708,-122.4494283,20070427,833,Friday,GOLDEN GATE AV,ROSELYN TER,42,East,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3179535,37.76981508,-122.4177532,20070406,2100,Friday,SOUTH VAN NESS,13TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+3179571,37.73555356,-122.5035865,20070427,1235,Friday,SLOAT BL,45TH AV,140,West,Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+3180415,37.7555025,-122.417659,20070413,2133,Friday,22ND ST,CAPP ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3182148,37.78047034,-122.4169476,20070420,2305,Friday,MCALLISTER ST,LARKIN ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3199952,37.74470267,-122.4204633,20070427,2302,Friday,MISSION ST,29TH ST,272,North,Clear,Injury (Other Visible),Following Too Closely,No Unusual Condition
+3216676,37.76425159,-122.4113302,20070511,1250,Friday,17TH ST,FLORIDA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+3216729,37.78682753,-122.4199279,20070504,1945,Friday,POLK ST,POST ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Unsafe Lane Change,No Unusual Condition
+3217894,37.76813968,-122.4221992,20070518,138,Friday,14TH ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3218027,37.79573345,-122.4234416,20070525,840,Friday,BROADWAY ST,VAN NESS AV,8,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3250885,37.75050583,-122.420507,20070622,711,Friday,25TH ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3250923,37.76640577,-122.4242581,20070622,50,Friday,15TH ST,GUERRERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3253463,37.76746975,-122.4289674,20070622,1128,Friday,MARKET ST,CHURCH ST,15,West,Clear,Injury (Other Visible),Pedestrian Violation,No Unusual Condition
+3268253,37.7828199,-122.4214025,20070713,1354,Friday,EDDY ST,VAN NESS AV,171,West,Clear,Injury (Other Visible),Following Too Closely,No Unusual Condition
+3282603,37.76939778,-122.4156061,20070119,1401,Friday,FOLSOM ST,13TH ST,71,South,Clear,Injury (Other Visible),Unsafe Speed,"Holes, Deep Ruts"
+3306740,37.77432529,-122.4171041,20070720,909,Friday,11TH ST,MISSION ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+3306878,37.78462091,-122.4688397,20070720,1227,Friday,CALIFORNIA ST,10TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3309803,37.7786512,-122.4169537,20070713,902,Friday,GROVE ST,LARKIN ST,109,West,Clear,Injury (Other Visible),Unsafe Starting or Backing,Other
+3334014,37.78431867,-122.4396847,20070817,920,Friday,DIVISADERO ST,POST ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+3336135,37.78434927,-122.4093092,20070817,1643,Friday,MASON ST,EDDY ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3342361,37.77603932,-122.4025241,20070831,1942,Friday,BRYANT ST,6TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Not Stated,Other
+3342590,37.72660983,-122.5023319,20070824,1255,Friday,HARDING RD,SKYLINE BL,51,East,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+6059107,37.76955451,-122.406085,20121012,1700,Friday,DIVISION,9TH ST,50,East,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+4788462,37.74871566,-122.4149686,20100604,2008,Friday,SHOTWELL ST,CESAR CHAVEZ ST,177,North,Clear,Injury (Severe),Wrong Side of Road,No Unusual Condition
+3348099,37.77293016,-122.4458891,20070817,1646,Friday,MASONIC AV,FELL ST,24,South,Clear,Injury (Complaint of Pain),Other Hazardous Violation,Not Stated
+3358438,37.79706459,-122.4055129,20070907,743,Friday,PACIFIC AV,COLUMBUS AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+3362831,37.76437351,-122.4308822,20070907,2320,Friday,SANCHEZ ST,16TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3369395,37.77716566,-122.4104129,20070831,948,Friday,HOWARD ST,RAUSH ST,38,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3381711,37.75908406,-122.4115798,20070907,2213,Friday,20TH ST,ALABAMA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3381747,37.75063965,-122.4182879,20070914,2238,Friday,25TH ST,MISSION ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+3389275,37.77330383,-122.4680239,20070914,2258,Friday,FULTON ST,10TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3389302,37.80597737,-122.4183807,20070914,855,Friday,NORTHPOINT ST,COLUMBUS AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+3389333,37.77999354,-122.486878,20070914,2040,Friday,GEARY BL,27TH AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3400046,37.77947326,-122.4167456,20071005,2236,Friday,LARKIN ST,FULTON ST,41,South,Clear,Injury (Complaint of Pain),Not Stated,No Unusual Condition
+3416506,37.77746987,-122.4162617,20070921,1557,Friday,9TH ST,MARKET ST,12,South,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3416553,37.76853618,-122.4156337,20070921,1217,Friday,14TH ST,FOLSOM ST,6,West,Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3421326,37.75756949,-122.4233672,20070921,2300,Friday,LIBERTY,GUERRERO,2,West,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+3436845,37.76128957,-122.4283541,20071005,1953,Friday,18TH ST,CHURCH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3439368,37.7729956,-122.4459008,20071005,1829,Friday,MASONIC ST,FELL ST,18,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3467848,37.7635595,-122.4771741,20071026,1900,Friday,19TH AV,IRVING ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3469236,37.77273494,-122.4458495,20071109,1316,Friday,MASONIC AV,FELL ST,96,South,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+3493729,37.77181713,-122.4016567,20071130,1355,Friday,TOWNSEND ST,7TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3493744,37.77281216,-122.4128242,20071123,734,Friday,10TH ST,FOLSOM ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+3538759,37.78943368,-122.406957,20071214,30,Friday,SUTTER ST,STOCKTON ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3538909,37.76853739,-122.4156138,20071221,1722,Friday,FOLSOM ST,14TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3538913,37.78764185,-122.4034308,20071221,1328,Friday,MARKET ST,3RD ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,Not Stated
+3538949,37.77014942,-122.4458215,20071221,1206,Friday,HAIGHT ST,MASONIC AV,140,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3539307,37.78426859,-122.4099455,20071123,1430,Friday,EDDY ST,MASON ST,186,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3540191,37.7833132,-122.4057429,20071214,2213,Friday,MISSION ST,5TH ST,300,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+3707731,37.78957192,-122.3884812,20080307,923,Friday,EMBARCADERO SOUTH ST,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Wrong Side of Road,No Unusual Condition
+3709522,37.77124087,-122.4302743,20080229,1535,Friday,FILLMORE ST,WALLER ST,25,North,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+3709576,37.77831208,-122.3996483,20080208,1217,Friday,BRYANT ST,5TH ST,265,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3716482,37.77388924,-122.4239471,20080208,1630,Friday,PAGE ST,OCTAVIA BL,0,"Not Stated, in Intersection",Clear,Injury (Severe),Automobile Right of Way,No Unusual Condition
+3716506,37.7831014,-122.4191817,20080208,1105,Friday,POLK ST,EDDY ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+3716529,37.76141728,-122.4834231,20080229,1807,Friday,25TH AV,JUDAH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3723451,37.76730689,-122.4531648,20080215,144,Friday,STANYAN ST,BEULAH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3724643,37.73069349,-122.4356408,20080314,1748,Friday,SAN JOSE AV,TINGLEY ST,0,North,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+3724671,37.77078113,-122.4538522,20080321,1840,Friday,STANYAN ST,OAK ST,100,South,Clear,Injury (Other Visible),Unsafe Starting or Backing,No Unusual Condition
+3727750,37.78908859,-122.4021098,20080404,1535,Friday,POST ST,MONTGOMERY ST,33,West,Clear,Injury (Complaint of Pain),Other Than Driver (or Pedestrian),No Unusual Condition
+3733895,37.71584003,-122.4414887,20080418,1223,Friday,MISSION,ROLPH ST,37,North,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+3733914,37.79696776,-122.4128857,20080425,1959,Friday,BROADWAY ST,LARKIN ST,2112,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3733918,37.79685078,-122.4138383,20080425,1945,Friday,BROADWAY TUNNEL LN,POWELL ST,1056,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3742383,37.75320106,-122.5000449,20080509,1225,Friday,NORIEGA ST,41ST AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3749041,37.7698677,-122.4223648,20080523,1050,Friday,VALENCIA ST,DUBOCE AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3749081,37.77293558,-122.4458902,20080509,1720,Friday,MASONIC AV,FELL ST,22,South,Clear,Injury (Other Visible),Wrong Side of Road,No Unusual Condition
+3749129,37.78223057,-122.410292,20080516,2027,Friday,MARKET ST,6TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+3749139,37.77107294,-122.4550565,20080516,1800,Friday,JOHN F KENNEDY DR,BOWLING GREEN DR,1220,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3749157,37.77458714,-122.4810305,20080523,1157,Friday,CABRILLO ST,22ND AV,24,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3749186,37.76156567,-122.4238007,20080516,2246,Friday,18TH ST,GUERRERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Driving or Bicycling Under the Influence of Alcohol or Drug,No Unusual Condition
+3767423,37.734278,-122.4257918,20080523,2030,Friday,MISSION ST,COLLEGE TER,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,Other
+3767926,37.77313349,-122.4374229,20080613,1829,Friday,OAK ST,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+3767974,37.76049887,-122.4148419,20080606,1246,Friday,19TH ST,FOLSOM ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unknown,No Unusual Condition
+3803067,37.78296973,-122.4126808,20080627,1315,Friday,TURK ST,JONES ST,79,West,Clear,Injury (Complaint of Pain),Impeding Traffic,No Unusual Condition
+3815670,37.76464569,-122.4263817,20080704,2207,Friday,16TH ST,DOLORES ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3825733,37.80571312,-122.4204213,20080718,1430,Friday,NORTHPOINT ST,HYDE ST,15,West,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3834857,37.78403764,-122.4080512,20080711,945,Friday,MARKET ST,5TH ST,20,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+3837537,37.74166521,-122.3858977,20080801,1535,Friday,EVANS AV,NEWHALL ST,215,East,Clear,Fatal,Unsafe Lane Change,No Unusual Condition
+3843214,37.77100577,-122.4196455,20080725,1219,Friday,MISSION ST,PLUM ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+3861727,37.72453317,-122.4592128,20080118,2219,Friday,OCEAN AV,CAPITOL AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,Not Stated
+3866604,37.76619864,-122.4276843,20080808,2020,Friday,15TH ST,LANDERS ST,21,East,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3866643,37.78962044,-122.4204934,20080801,1840,Friday,PINE ST,POLK ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+6059124,37.77239831,-122.4357164,20121102,814,Friday,PAGE ST,SCOTT ST,45,West,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3883797,37.76800643,-122.4244117,20080912,1315,Friday,GUERRERO ST,14TH AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3885045,37.76049101,-122.3885564,20080815,918,Friday,3RD ST,20TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+3892984,37.77842248,-122.4334073,20080905,1511,Friday,MCALLISTER,STEINER,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3892988,37.76840527,-122.4178022,20080905,2058,Friday,SOUTH VAN NESS AV,14TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3893028,37.77220371,-122.4372349,20080905,41,Friday,DIVISADERO ST,PAGE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3893032,37.78153561,-122.4239178,20080905,1556,Friday,GOUGH ST,TURK ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3893118,37.78216927,-122.4189933,20080912,1321,Friday,TURK ST,POLK ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+3902411,37.77499175,-122.4131611,20080815,1140,Friday,9TH ST,HOWARD ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3913862,37.75192901,-122.4206476,20081017,2039,Friday,VALENCIA ST,25TH ST,520,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3918482,37.77250282,-122.4226197,20080912,957,Friday,MARKET ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+3918494,37.78414101,-122.4109516,20080926,1800,Friday,EDDY ST,TAYLOR ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+3918513,37.78617547,-122.3974998,20080926,1100,Friday,2ND ST,TEHAMA ST,84,South,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3952980,37.77514707,-122.4192556,20081024,1307,Friday,MARKET ST,VAN NESS AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+3954741,37.79085772,-122.4527353,20081010,320,Friday,PACIFIC AV,LOCUST ST,34,West,Clear,Injury (Other Visible),Unsafe Speed,Loose Material on Roadway
+3954749,37.77250282,-122.4226197,20081010,912,Friday,MARKET ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+3954751,37.76904545,-122.4200321,20081017,2010,Friday,MISSION ST,ERIE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+3954755,37.77067287,-122.4341939,20081017,1938,Friday,WALLER,CARMELITA,62,East,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3954759,37.77914488,-122.435241,20081017,1645,Friday,GOLDEN GATE AV,PIERCE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3954760,37.76981508,-122.4177532,20081010,1302,Friday,13TH ST,SOUTH VAN NESS,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3964728,37.77949477,-122.3979735,20081017,2105,Friday,4TH ST,BRYANT ST,36,South,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+3964796,37.76329977,-122.4217315,20081017,42,Friday,VALENCIA ST,17TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3969741,37.77985971,-122.4132254,20081212,818,Friday,MARKET ST,7TH ST,305,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+3977873,37.76419571,-122.4330745,20081024,1620,Friday,MARKET ST,16TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+3977920,37.74917605,-122.4049642,20081017,1742,Friday,POTRERO AV,CESAR CHAVEZ ST,14,North,Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3979896,37.78223057,-122.410292,20081107,907,Friday,6TH ST,MARKET ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3979946,37.78962044,-122.4204934,20081107,1342,Friday,POLK ST,PINE ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+3981571,37.7698677,-122.4223648,20081114,1814,Friday,VALENCIA ST,DUBOCE AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+3990084,37.77301639,-122.4383451,20081205,1810,Friday,OAK ST,DIVISADELO ST,270,West,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
+3990104,37.76102131,-122.4327935,20081205,821,Friday,18TH ST,NOE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+3990108,37.76640577,-122.4242581,20081205,2345,Friday,GUERRERO ST,15TH ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Other Hazardous Violation,Not Stated
+3997275,37.78230838,-122.4784435,20081121,1500,Friday,CLEMENT ST,19TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+4039811,37.77331365,-122.4121884,20090109,935,Friday,FOLSOM ST,DORE ST,15,East,Clear,Injury (Other Visible),Pedestrian Violation,No Unusual Condition
+4041399,37.78676214,-122.4081069,20090102,1850,Friday,POWELL ST,OFARRELL ST,130,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4041435,37.77295728,-122.4458946,20090116,955,Friday,MASONIC AV,FELL ST,14,South,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4041439,37.77669061,-122.4394776,20090116,1748,Friday,FULTON ST,BRODERICK ST,107,East,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4041574,37.78388224,-122.4850109,20090116,2115,Friday,CALIFORNIA ST,25TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+4055211,37.76491092,-122.4219932,20090109,2020,Friday,16TH ST,VALENCIA ST,31,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4055235,37.77713966,-122.4247176,20090109,1745,Friday,OCTAVIA,IVY ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4074128,37.76358984,-122.4170151,20081212,1740,Friday,17TH ST,SOUTH VAN NESS,92,East,Clear,Injury (Complaint of Pain),Unsafe Starting or Backing,No Unusual Condition
+4076440,37.76484161,-122.4231404,20081219,1626,Friday,16TH ST,ALBION ST,8,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+4104150,37.7253861,-122.4809217,20090109,1740,Friday,STATE DR,LAKE MERCED,1035,East,Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+4107322,37.78472836,-122.4070455,20090220,1443,Friday,MARKET ST,5TH ST,398,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+4140486,37.78616672,-122.4250957,20090227,940,Friday,POST ST,GOUGH ST,69,West,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4140553,37.77880061,-122.4705676,20090227,2150,Friday,ANZA ST,12TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+4141625,37.76591859,-122.4017004,20090227,938,Friday,DE HARO ST,16TH ST,78,South,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4191149,37.79038564,-122.4000324,20090320,915,Friday,MARKET ST,SUTTER ST,27,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4195903,37.78176781,-122.4588956,20090227,830,Friday,ARGUELLO BL,GEARY BL,186,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4197152,37.72296132,-122.4495586,20090306,1718,Friday,OCEAN AV,HOWTH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+4197162,37.76224536,-122.4645775,20090327,1059,Friday,JUDAH ST,8TH AV,156,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4198997,37.78764185,-122.4034308,20090306,1045,Friday,MARKET ST,3RD ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4199346,37.75992738,-122.4747243,20090410,808,Friday,KIRKHAM ST,17TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4199350,37.75742952,-122.412348,20090410,1600,Friday,HARRISON ST,21ST ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4199485,37.78058849,-122.4389268,20090410,2016,Friday,DIVISADERO ST,EDDY ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+4199858,37.78784352,-122.4422046,20090403,940,Friday,CALIFORNIA ST,BRODERICK ST,28,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4199862,37.7342353,-122.4845345,20090403,935,Friday,SLOAT BL,MEADOWBROOK DR,35,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4199870,37.74675543,-122.4587285,20090403,917,Friday,WOODSIDE AV,LAGUNA HONDA BL,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+4199880,37.75876423,-122.4168725,20090403,1455,Friday,SOUTH VAN NESS AV,20TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Following Too Closely,No Unusual Condition
+4215496,37.77856573,-122.4148598,20090417,1345,Friday,MARKET ST,8TH ST,64,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4253380,37.72093047,-122.4795035,20090410,913,Friday,HALLOWAY AV,ARELLANO AV,150,West,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4254262,37.78316367,-122.4411582,20090327,730,Friday,GEARY BL,BRODERICK ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+6068166,37.77499175,-122.4131611,20120928,1219,Friday,HOWARD ST,9TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+4254812,37.75715681,-122.416883,20090529,1820,Friday,21ST ST,SOUTH VAN NESS,47,West,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4261280,37.78071918,-122.4153156,20090403,1312,Friday,HYDE ST,MCALLISTER ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4272244,37.79120035,-122.4157919,20090515,1445,Friday,CALIFORNIA ST,LEAVENWORTH,12,West,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+4315332,37.77569646,-122.4977338,20090710,1856,Friday,BALBOA ST,37TH AV,120,West,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4316814,37.71645955,-122.4410196,20090717,1700,Friday,MISSION ST,GENEVA AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Following Too Closely,No Unusual Condition
+4318595,37.78255359,-122.3973855,20090717,2026,Friday,3RD ST,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4318623,37.77876142,-122.4382611,20090717,1859,Friday,GOLDEN GATE AV,DIVISADERO ST,85,East,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+4347004,37.76392092,-122.4689533,20090807,1225,Friday,IRVING ST,11TH AV,145,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4352584,37.75233683,-122.4168261,20090814,1740,Friday,24TH ST,CYPRESS ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4395856,37.77745742,-122.4131577,20090904,2131,Friday,MISSION ST,8TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4401281,37.78628597,-122.4315699,20090911,830,Friday,WEBSTER ST,SUTTER ST,12,South,Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+4404943,37.77721781,-122.4503556,20090925,1359,Friday,GOLDEN GATE AV,KITTREDGE TER,30,East,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+4404948,37.78243108,-122.4168995,20090925,1733,Friday,TURK ST,DODGE PL,24,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+4404956,37.77220371,-122.4372349,20090925,1538,Friday,PAGE ST,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4407720,37.78971012,-122.4562408,20090918,1540,Friday,JACKSON ST,MAPLE ST,137,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,Not Stated
+4423135,37.76975128,-122.448944,20091009,902,Friday,HAIGHT ST,CLAYTON ST,107,West,Clear,Injury (Severe),Other Hazardous Violation,No Unusual Condition
+4427303,37.76813968,-122.4221992,20091009,1249,Friday,14TH ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4438252,37.78132126,-122.3958435,20091002,513,Friday,BRYANT ST,3RD ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+4438424,37.76977179,-122.4040104,20091016,848,Friday,DIVISION ST,HENRY ADAMS ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4439279,37.76978004,-122.4038694,20091002,755,Friday,DIVISION ST,HENRY ADAMS ST,41,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4445625,37.74239025,-122.490692,20091016,1839,Friday,TARAVAL ST,33RD AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4445753,37.7831014,-122.4191817,20091016,1939,Friday,POLK ST,EDDY ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Brakes,No Unusual Condition
+4456990,37.78272089,-122.4157214,20091030,325,Friday,HYDE ST,TURK ST,50,North,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+4483387,37.78216927,-122.4189933,20091113,749,Friday,POLK ST,TURK ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4483784,37.80655463,-122.4137867,20091106,1718,Friday,NORTH POINT ST,MASON ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4513064,37.78330849,-122.4394804,20091204,2040,Friday,GEARY BL,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4513429,37.77782686,-122.453385,20091204,2140,Friday,PARKER AV,TURK BL,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4513437,37.78456013,-122.4073371,20091204,1435,Friday,MARKET ST,5TH ST,295,East,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+4515922,37.77517401,-122.4681584,20091211,2249,Friday,10TH AV,CABRILLO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4548171,37.76394958,-122.4330789,20091218,2227,Friday,NOE ST,MARKET ST,90,South,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+4548190,37.7836289,-122.4084445,20091204,1400,Friday,MARKET ST,CYRIL MAGNIN ST,171,West,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4551475,37.76772648,-122.5018263,20091225,1202,Friday,JOHN F KENNEDY DR,CHAIN OF LAKES DR,0,"Not Stated, in Intersection",Clear,Injury (Severe),Traffic Signals and Signs,No Unusual Condition
+4585938,37.74847959,-122.3874767,20100129,337,Friday,3RD AV,MARIN ST,190,South,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4608353,37.77555816,-122.4186586,20100205,844,Friday,MARKET ST,11TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+4635427,37.74496061,-122.4202964,20100219,2315,Friday,MISSION ST,FAIR ST,260,South,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+4635442,37.78445309,-122.4177522,20100212,1400,Friday,LARKIN ST,ELLIS ST,80,North,Clear,Injury (Other Visible),Following Too Closely,No Unusual Condition
+4648480,37.77164775,-122.4018711,20100326,1445,Friday,TOWNSEND ST,7TH ST,87,West,Clear,Injury (Complaint of Pain),Not Stated,"Holes, Deep Ruts"
+4648638,37.79447972,-122.3947476,20100326,2255,Friday,MARKET,STEWART,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Starting or Backing,Construction or Repair Zone
+4656724,37.77715938,-122.4055679,20100319,1430,Friday,COLUMBIA ST,HARRISON ST,276,North,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4667833,37.74643816,-122.4477861,20100409,800,Friday,PORTOLA DR,GLENVIEW DR,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4668152,37.80709483,-122.4170802,20100409,1517,Friday,BEACH ST,JONES ST,53,East,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),Other
+4675807,37.726785,-122.4660732,20100416,1510,Friday,OCEAN AV,PINEHURST WY,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4689472,37.7858929,-122.4197387,20100423,1733,Friday,POLK ST,GEARY ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+4689512,37.80623864,-122.4162845,20100423,914,Friday,NORTH POINT ST,JONES ST,232,East,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4689521,37.78819562,-122.420205,20100423,2311,Friday,POLK ST,FERN ST,10,South,Clear,Injury (Complaint of Pain),Following Too Closely,No Unusual Condition
+4690282,37.78095164,-122.4475676,20100430,1851,Friday,MASONIC AV,ANZA ST,40,South,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4703156,37.76161712,-122.4229553,20100507,1154,Friday,18TH ST,LINDA ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Automobile Right of Way,No Unusual Condition
+4712397,37.76463804,-122.4954753,20100514,1910,Friday,36TH AV,LINCOLN WAY,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4739620,37.77241793,-122.4355633,20100611,1825,Friday,PAGE ST,SCOTT ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+4739648,37.78153561,-122.4239178,20100611,1634,Friday,GOUGH ST,TURK BL,0,"Not Stated, in Intersection",Clear,Injury (Severe),Automobile Right of Way,No Unusual Condition
+4766926,37.78593885,-122.419748,20100625,1400,Friday,POLK ST,GEARY ST,17,North,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4775240,37.78167869,-122.4155101,20100521,1034,Friday,HYDE ST,GOLDEN GATE AV,9,North,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+4775282,37.75664282,-122.5078079,20100521,1840,Friday,48TH AV,LAWTON ST,16,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4788413,37.76091027,-122.4110106,20100604,1850,Friday,FLORIDA ST,19TH ST,176,North,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4788450,37.79557767,-122.4351844,20100604,1539,Friday,FILLMORE ST,VALLEJO ST,130,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4803481,37.76760224,-122.3938044,20100716,1350,Friday,OWENS ST,C ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4805839,37.75217713,-122.4194638,20100716,1256,Friday,24TH ST,BARTLETT ST,27,East,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+4805910,37.75727588,-122.4178286,20100702,1620,Friday,CAPP ST,21ST ST,64,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4805911,37.78163383,-122.4006709,20100702,1516,Friday,4TH ST,HELEN MACINTOSH LN,70,North,Clear,Injury (Other Visible),Unsafe Starting or Backing,No Unusual Condition
+4816482,37.7897909,-122.4007858,20100723,1530,Friday,MARKET ST,2ND ST,256,East,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+4817392,37.74305181,-122.4756445,20100702,139,Friday,19TH AV,TARAVAL ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4822011,37.77654089,-122.4175015,20100730,115,Friday,MARKET ST,10TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,Other
+4822044,37.78393011,-122.4427323,20100730,1654,Friday,POST ST,BAKER ST,75,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4822072,37.74532555,-122.4104767,20100730,855,Friday,ALABAMA ST,NORWICH ST,10,North,Clear,Injury (Severe),Wrong Side of Road,No Unusual Condition
+4822502,37.77030315,-122.4446157,20100507,1747,Friday,HAIGHT ST,MASONIC ST,213,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+4840491,37.79373687,-122.3957764,20100813,830,Friday,MARKET ST,SPEAR ST,45,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4843606,37.77862231,-122.4470398,20100813,2239,Friday,MASONIC AV,TURK ST,0,"Not Stated, in Intersection",Clear,Fatal,Driving or Bicycling Under the Influence of Alcohol or Drug,No Unusual Condition
+4843837,37.79029016,-122.4001525,20100806,917,Friday,MARKET ST,SUTTER ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4843855,37.79059072,-122.4105637,20100813,1234,Friday,MASON ST,PINE ST,107,South,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4847809,37.74124835,-122.3871875,20100813,1820,Friday,NEWHALL ST,FAIRFAX AV,22,South,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4861872,37.77252644,-122.4100768,20100827,1215,Friday,HARRISON ST,9TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4861884,37.79062869,-122.3995605,20100827,909,Friday,MARKET ST,1ST ST,184,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4861892,37.73228371,-122.4644198,20100820,820,Friday,MONTEREY BL,SAN ALESO,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4866575,37.72099737,-122.3962767,20100903,1507,Friday,3RD ST,INGERSON AV,7,North,Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+4866612,37.76309169,-122.4835405,20100903,1515,Friday,25TH AV,IRVING ST,68,South,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4876716,37.76939226,-122.4302474,20100910,2312,Friday,DUBOCE AV,BELCHER ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4881960,37.72523511,-122.4026004,20100910,1834,Friday,SAN BRUNO AV,WOOLSEY ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4897729,37.72002987,-122.4572816,20101015,2130,Friday,GRAFTON AV,GRANADA AV,36,West,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+4901652,37.76945662,-122.4110792,20101008,1115,Friday,11TH ST,461 11TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+4901660,37.76474582,-122.4247253,20101008,1901,Friday,16TH ST,GUERRERO ST,180,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+4903811,37.79064197,-122.4489236,20101001,852,Friday,JACKSONN ST,WALNUT ST,78,East,Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+4915498,37.80398123,-122.4318217,20100924,1914,Friday,LAGUNA ST,NORTH POINT ST,97,South,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+4915629,37.7698677,-122.4223648,20100924,2359,Friday,DUBOCE AV,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4915657,37.72876998,-122.4313608,20100924,2240,Friday,SILVER AV,MISSION ST,24,West,Clear,Injury (Complaint of Pain),Unsafe Starting or Backing,No Unusual Condition
+4924594,37.73778405,-122.3959448,20101008,1554,Friday,OAKDALE AV,QUINT ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4924602,37.79057826,-122.4206874,20101001,2246,Friday,CALIFORNIA ST,POLK ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+4924783,37.80853693,-122.4132316,20101008,1452,Friday,JEFFERSON ST,POWELL ST,207,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4925185,37.7772727,-122.4040703,20101008,1615,Friday,6TH ST,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+4925612,37.7779193,-122.4298492,20101001,1703,Friday,WEBSTER ST,FULTON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4968211,37.77074775,-122.4248526,20101126,1930,Friday,MARKET ST,LAGUNA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+4968305,37.7665209,-122.4303128,20101119,731,Friday,MARKET ST,SANCHEZ ST,314,East,Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4968309,37.75782548,-122.4799451,20101112,1906,Friday,LAWTON ST,22ND AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+4987724,37.76507221,-122.3977374,20110114,1915,Friday,17TH ST,CONNECTICUT ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4989444,37.76637407,-122.452947,20101203,1658,Friday,FREDERICK ST,STANYAN ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5006397,37.75210365,-122.4206648,20101203,1811,Friday,VALENCIA ST,24TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5012817,37.74441199,-122.4206514,20101224,2313,Friday,MISSION ST,29TH ST,153,North,Clear,Injury (Other Visible),Unsafe Speed,"Holes, Deep Ruts"
+5055524,37.76956156,-122.4148498,20110107,1734,Friday,13TH ST,ISIS ST,8,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5076722,37.77845795,-122.4266675,20110114,1046,Friday,LAGUNA ST,FULTON AV,48,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5077373,37.75756512,-122.4211809,20110121,1113,Friday,VALENCIA ST,LIBERTY ST,50,South,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5097595,37.77910994,-122.4017448,20110211,822,Friday,HARRISON ST,5TH ST,40,North,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+5106111,37.78216927,-122.4189933,20110211,1815,Friday,POLK ST,TURK ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5106159,37.7666731,-122.3929617,20110211,2310,Friday,16TH ST,OWENS ST,87,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5107213,37.73034197,-122.3828879,20110304,2125,Friday,INGALLS ST,OAKDALE AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+5107217,37.79052845,-122.4206773,20110304,904,Friday,POLK ST,CALIFORNIA ST,18,South,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5107221,37.76544761,-122.4131052,20110304,1146,Friday,HARRISON,16TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+5107245,37.77975955,-122.4228863,20110304,1900,Friday,MCALLISTER ST,FRANKLIN ST,291,West,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5116262,37.76189547,-122.4372987,20110311,2039,Friday,MARKET ST,DIAMOND ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+5116270,37.75396777,-122.4164135,20110311,2321,Friday,23RD ST,VANNESS ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Lights,No Unusual Condition
+5116274,37.71136183,-122.4634729,20110311,800,Friday,ALEMANY,BROTHERHOOD,0,"Not Stated, in Intersection",Clear,Injury (Severe),Unknown,No Unusual Condition
+5116278,37.76637956,-122.4246917,20110311,104,Friday,15TH ST,GUERRERO ST,126,West,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+5116299,37.78026497,-122.4033872,20110304,1323,Friday,5TH ST,5TH ST 307,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5116303,37.77716445,-122.4433211,20110304,1935,Friday,MCALLISTER ST,LYON ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5116307,37.7565504,-122.4469504,20110304,2018,Friday,BURNETT AV,TWIN PEAKS BL,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5130473,37.76177724,-122.4203238,20110401,958,Friday,18TH ST,SAN CARLOS ST,57,West,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+5130477,37.77089457,-122.4898044,20110401,1330,Friday,JOHN F KENNEDY DR,30TH AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+6059235,37.73371752,-122.4349961,20121214,1530,Friday,BOSWORTH ST,BROMPTON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+5135600,37.77007722,-122.4130238,20110311,810,Friday,HARRISON ST,12TH ST,11,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5146517,37.790879,-122.4072367,20110325,2100,Friday,STOCKTON ST,SUTTER ST,532,North,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5146525,37.77871943,-122.4147412,20110325,2014,Friday,MARKET ST,8TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5153884,37.77220371,-122.4372349,20110401,1710,Friday,PAGE ST,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5161363,37.78689868,-122.3887794,20110429,1833,Friday,BRYANT ST,MAIN ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5161384,37.8049915,-122.410997,20110429,1545,Friday,FRANCISCO ST,POWELL ST,225,East,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5193460,37.77306975,-122.4379249,20110617,1615,Friday,OAK ST,DIVISADERO ST,147,West,Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+5204942,37.75305694,-122.405447,20110429,1216,Friday,24TH ST,UTAH ST,34,West,Clear,Injury (Complaint of Pain),Unknown,No Unusual Condition
+5204946,37.78362351,-122.4022475,20110429,845,Friday,HOWARD ST,4TH ST,188,East,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),No Unusual Condition
+5205351,37.79881758,-122.3974714,20110506,1320,Friday,EMBARCADERO NORTH,BROADWAY,157,South,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5205359,37.76613735,-122.4610879,20110506,1655,Friday,4TH AV,LINCOLN BL,9,South,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5208134,37.76875414,-122.4222582,20110527,1505,Friday,VALENCIA ST,BROSNAN ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5239001,37.75516979,-122.423181,20110617,900,Friday,22ND ST,GUERRERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5254270,37.77888384,-122.4144581,20110624,1713,Friday,MARKET ST,8TH ST,100,East,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+5254295,37.77749384,-122.4162917,20110624,1629,Friday,MARKET ST,9TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5254313,37.71421602,-122.4361718,20110624,1716,Friday,NAPLES ST,GENEVA AV,3,North,Clear,Injury (Severe),Traffic Signals and Signs,No Unusual Condition
+5272665,37.7800747,-122.4202472,20110708,131,Friday,VAN NESS,MCALLISTER,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5274335,37.79183896,-122.3918567,20110701,1320,Friday,HOWARD ST,STEUART ST,86,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5274336,37.77284502,-122.4222677,20110715,1454,Friday,MARKET ST,GOUGH ST,20,West,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5274340,37.7553934,-122.4194264,20110708,1627,Friday,22ND ST,BARTLETT ST,125,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5274347,37.78351564,-122.4158825,20110715,1730,Friday,EDDY ST,HYDE ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5274392,37.78431867,-122.4396847,20110715,2132,Friday,POST ST,DIVISADERO ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+5274410,37.80602914,-122.4179689,20110722,1133,Friday,NORTH POINT ST,COLUMBUS AV,120,East,Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+5274417,37.78581651,-122.4127554,20110708,57,Friday,OFARRELL ST,JONES ST,63,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5281288,37.73998957,-122.4240237,20110708,1010,Friday,SAN JOSE AV,RANDALL ST,50,North,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+5281504,37.77756338,-122.509266,20110805,2220,Friday,48TH AV,ANZA ST,189,North,Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+5300014,37.71010921,-122.4095838,20110902,1623,Friday,SUNNYDALE AV,CORA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Pedestrian Right of Way,No Unusual Condition
+5302596,37.77971392,-122.4134096,20110819,1701,Friday,MARKET ST,8TH ST,528,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+5303871,37.78576092,-122.4079064,20110812,1945,Friday,POWELL ST,ELLIS ST,99,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5316326,37.78688037,-122.4199386,20110916,1142,Friday,POLK ST,POST ST,20,North,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+5334777,37.78217978,-122.4189954,20110902,1030,Friday,POLK ST,TURK ST,4,North,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+5342112,37.71322943,-122.4440936,20110930,1945,Friday,MISSION ST,FLORENTINE ST,63,South,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+5342116,37.76190432,-122.4193659,20110923,1720,Friday,MISSION ST,18TH ST,25,North,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5347739,37.78439856,-122.4736254,20110916,856,Friday,CALIFORNIA ST,14TH AV,146,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5347760,37.77009808,-122.4537262,20110923,1232,Friday,STANYAN ST,PAGE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+5386350,37.79184209,-122.3949402,20111021,2003,Friday,MISSION ST,MAIN ST,0,West,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+5386353,37.77594122,-122.3979695,20111014,911,Friday,5TH ST,BLUXOME ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5386381,37.75273943,-122.4560266,20111007,700,Friday,CLARENDON AV,GALEWOOD CIR,139,East,Clear,Injury (Severe),Unsafe Speed,No Unusual Condition
+5387579,37.7482158,-122.4158631,20111021,1940,Friday,SOUTH VAN NESS,CESAR CHAVEZ ST,1,North,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5429134,37.76343112,-122.4217441,20111104,1855,Friday,VALENCIA ST,17TH ST,48,North,Clear,Injury (Complaint of Pain),Following Too Closely,No Unusual Condition
+5429186,37.78223057,-122.410292,20111125,1339,Friday,MARKET ST,TAYLOR ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Not Stated,No Unusual Condition
+5429187,37.78164558,-122.4306092,20111104,1658,Friday,EDDY ST,WEBSTER ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+5449730,37.77354113,-122.4266838,20111209,1419,Friday,PAGE ST,BUCHANAN ST,197,East,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5449731,37.78279445,-122.4140538,20111209,1228,Friday,TURK ST,LEAVENWORTH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,Not Stated
+5453549,37.71269649,-122.47098,20111202,1841,Friday,BROTHERHOOD WY,19TH AV,75,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5471003,37.77281805,-122.4472825,20111209,1230,Friday,FELL ST,ASHBURY ST,63,East,Clear,Injury (Complaint of Pain),Improper Passing,No Unusual Condition
+5477477,37.73778405,-122.3959448,20111216,1330,Friday,OAKDALE AV,QUINT ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+5477544,37.74180986,-122.3895088,20111202,1700,Friday,PHELPS ST,GALVEZ AV,36,North,Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+9009654,37.78402912,-122.4193642,20060728,1140,Friday,POLK ST,ELLIS ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Improper Turning,No Unusual Condition
+9015256,37.7755457,-122.4334651,20060901,1222,Friday,HAYES ST,STEINER ST,186,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+9015285,37.7309388,-122.410511,20060901,2140,Friday,SILVER AV,BOYLSTON ST,44,"Not Stated, in Intersection",Clear,Injury (Severe),Unsafe Speed,Loose Material on Roadway
+9015289,37.78910265,-122.4019975,20060901,2104,Friday,MONTGOMERY ST,POST ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Traffic Signals and Signs,No Unusual Condition
+9020822,37.76801903,-122.4242024,20060908,2210,Friday,14TH ST,GUERRERO ST,61,East,Clear,Injury (Other Visible),Lights,No Unusual Condition
+9020826,37.77779419,-122.4383655,20060908,2357,Friday,DIVISADERO ST,MCALLISTER,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Not Stated,No Unusual Condition
+5455842,37.78761924,-122.4514291,20120106,1400,Friday,SACRAMENTO ST,LOCUST ST,151,East,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5484397,37.76389449,-122.469555,20120113,1904,Friday,IRVING ST,12TH AV,10,West,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5553702,37.7663632,-122.431073,20120127,1709,Friday,SANCHES ST,15TH ST,134,North,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5584209,37.78925602,-122.4013651,20120224,1823,Friday,2ND ST,MARKET ST,4,South,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5584233,37.73660247,-122.4066783,20120224,1403,Friday,BAY SHORE BL,HELENA ST,106,North,Clear,Injury (Complaint of Pain),Unsafe Speed,Other
+5584888,37.77062985,-122.4124799,20120217,1826,Friday,HARRISON ST,11TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5584893,37.77119992,-122.437578,20120217,2050,Friday,HAIGHT ST,DIVISADERO ST,156,West,Clear,Injury (Other Visible),Unsafe Starting or Backing,No Unusual Condition
+5584897,37.72922785,-122.4308093,20120217,2245,Friday,MISSION ST,MAYNARD ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+5590755,37.79458048,-122.3932471,20120203,1710,Friday,EMBARCADERO SOUTH ST,DON CHEE WY,92,North,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5673800,37.7852651,-122.4052357,20120427,1557,Friday,4TH ST,STEVENSON,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Starting or Backing,No Unusual Condition
+5678677,37.77139745,-122.43602,20120330,2249,Friday,HAIGHT ST,DIVISADERO ST,300,East,Clear,Injury (Complaint of Pain),Wrong Side of Road,No Unusual Condition
+5678681,37.78175028,-122.3963795,20120330,1952,Friday,3RD ST,STILLMAN ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5689847,37.71156388,-122.4636248,20120420,2340,Friday,BROTHERHOOD WAY,ALEMANY BL,120,West,Clear,Injury (Other Visible),Other Than Driver (or Pedestrian),Loose Material on Roadway
+5689899,37.77918671,-122.4620024,20120420,1822,Friday,4TH AV,ANZA ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+5689904,37.775197,-122.4584323,20120420,1748,Friday,ARGUELLO BL,MCALLISTER ST,16,South,Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5692161,37.75543694,-122.4187476,20120406,545,Friday,MISSION ST,22ND ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+5724394,37.71827854,-122.4396833,20120427,1844,Friday,MISSION ST,ITALY AV,86,South,Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5724480,37.75849851,-122.4212717,20120420,804,Friday,VALENCIA ST,20TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+5730305,37.752327,-122.416261,20120525,1455,Friday,SOUTH VAN NESS,24TH ST,17,South,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5733212,37.76062927,-122.4126814,20120511,2343,Friday,HARRISON ST,19TH ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Automobile Right of Way,No Unusual Condition
+5733252,37.80518742,-122.4468369,20120511,837,Friday,MARINA BL,BAKER ST,130,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+5737908,37.79594276,-122.421789,20120518,1348,Friday,BROADWAY ST,POLK ST,6,West,Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+5762243,37.7850746,-122.4111398,20120615,2208,Friday,TAYLOR ST,ELLIS ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Traffic Signals and Signs,No Unusual Condition
+5762263,37.78328785,-122.4089522,20120615,955,Friday,MARKET ST,MASON ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5762345,37.77129635,-122.4054247,20120629,1629,Friday,8TH ST,BRANNAN ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+5762833,37.77869458,-122.4053754,20120713,1350,Friday,FOLSOM ST,6TH ST,98,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5777991,37.7786229,-122.4054661,20120810,1430,Friday,FOLSOM ST,6TH ST,61,East,Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+5780525,37.72474885,-122.4602345,20120720,804,Friday,OCEAN AV,FAXON AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+5794122,37.78369842,-122.3943943,20120720,1750,Friday,2ND ST,STILLMAN ST,100,North,Clear,Injury (Severe),Other Hazardous Violation,No Unusual Condition
+5865265,37.77077554,-122.4122954,20120921,1738,Friday,HARRISON ST,11TH ST,75,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+5868603,37.78092686,-122.4136764,20120706,2138,Friday,MCCALLISTER ST,LEAVENWORTH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+6054397,37.80089648,-122.3991302,20121207,1145,Friday,THE EMBARCADERO,GREEN ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+6058806,37.76181221,-122.4350856,20120302,2352,Friday,CASTRO ST,17TH ST,314,South,Clear,Injury (Other Visible),Wrong Side of Road,No Unusual Condition
+6058842,37.77912468,-122.4430068,20120330,31,Friday,TURK ST,BAKER ST,279,West,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+6059047,37.74965723,-122.4078844,20121012,845,Friday,26TH ST,YORK ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+6059054,37.76491738,-122.4218864,20121026,1818,Friday,VALENCIA ST,16TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+6059058,37.75742952,-122.412348,20121026,1918,Friday,HARRISON AV,21ST ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+6059066,37.76447227,-122.4076773,20121005,1413,Friday,17TH ST,POTRERO AV,75,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+6059068,37.76196753,-122.4171789,20121019,2104,Friday,S VAN NESS AV,18TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+6059072,37.77343533,-122.4213442,20121019,1707,Friday,MARKET ST,BRADY ST,45,West,Clear,Injury (Complaint of Pain),Unsafe Speed,No Unusual Condition
+1984660,37.76720157,-122.42892,20050422,1540,Friday,CHURCH ST,MARKET ST,111,South,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+6059093,37.78330849,-122.4394804,20121019,1151,Friday,DIVISADERO ST,GEARY ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Improper Turning,No Unusual Condition
+6059111,37.78393258,-122.4125953,20121012,1846,Friday,EDDY ST,JONES ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,Not Stated
+6059118,37.77241793,-122.4355633,20121012,1248,Friday,SCOTT ST,PAGE ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+6059128,37.79506633,-122.4032214,20121102,1030,Friday,MONTGOMERY ST,MERCHANT ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Unsafe Lane Change,No Unusual Condition
+6059155,37.76653958,-122.4220438,20121123,1806,Friday,VALENCIA ST,15TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+6059165,37.78957192,-122.3884812,20121109,1028,Friday,HARRISON,THE EMBARCADERO,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+6059177,37.77428026,-122.4047495,20121116,1126,Friday,7TH ST,BRYANT ST,85,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+6059192,37.80020625,-122.4260012,20121123,1922,Friday,GREENWICH ST,FRANKLIN ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+6059195,37.76532161,-122.415309,20121102,845,Friday,FOLSOM ST,16TH ST,3,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+6059199,37.78957192,-122.3884812,20121102,1811,Friday,EMBARCADERO,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Severe),Improper Turning,No Unusual Condition
+6067153,37.77297547,-122.3896756,20120817,902,Friday,3RD ST,MISSION ROCK RD,26,North,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+6068135,37.75162529,-122.4287555,20120831,1804,Friday,24TH ST,VICKSBURG ST,60,West,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+6068143,37.76518313,-122.4174866,20120824,1315,Friday,16TH ST,S VAN NESS AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+6068147,37.77250282,-122.4226197,20120824,1636,Friday,MARKET ST,VALENCIA ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+6068163,37.80161725,-122.3999487,20120907,745,Friday,EMBARCADERO,GREEN ST,350,North,Clear,Injury (Severe),Unsafe Lane Change,No Unusual Condition
+6068171,37.74931791,-122.4050215,20120907,1804,Friday,BAY SHORE BL,POTRERO AV,126,South,Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+6068178,37.77131427,-122.4591619,20120914,1615,Friday,JOHN F KENNEDY DR,JOHN F KENNEDY DR 300,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Wrong Side of Road,No Unusual Condition
+6068182,37.76732796,-122.4356241,20120921,2053,Friday,CASTRO ST,14TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+6068183,37.78869905,-122.4203069,20120907,1140,Friday,POLK ST,BUSH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Automobile Right of Way,No Unusual Condition
+6068195,37.76746158,-122.4334083,20120907,705,Friday,NOE ST,14TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+6068202,37.76260583,-122.4216651,20120914,114,Friday,VALENCIA ST,SYCAMORE,10,North,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+6068230,37.77077554,-122.4122954,20120921,1738,Friday,HARRISON ST,11TH ST,75,East,Clear,Injury (Complaint of Pain),Other Hazardous Violation,No Unusual Condition
+6070802,37.77399582,-122.4381219,20120406,1944,Friday,FELL ST,DIVISADERO ST,150,West,Clear,Injury (Other Visible),Unsafe Lane Change,No Unusual Condition
+6070849,37.77935459,-122.4335959,20120518,1320,Friday,STEINER ST,GOLDEN GATE AV,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+6070960,37.77074775,-122.4248526,20120629,751,Friday,MARKET ST,GUERRERO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+6073006,37.79689975,-122.4219609,20120511,110,Friday,POLK ST,VALLEJO ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+6076653,37.78088033,-122.4657593,20120608,1556,Friday,GEARY BL,7TH AV,119,West,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+6136702,37.79241819,-122.4228486,20120907,1628,Friday,VAN NESS AV,CLAY ST,95,North,Clear,Injury (Other Visible),Unknown,No Unusual Condition
+6221589,37.78399149,-122.4080665,20121026,707,Friday,MARKET ST,5TH ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Improper Turning,No Unusual Condition
+4055231,37.77950723,-122.4248571,20090109,1716,Friday,MCALLISTER ST,OCTAVIA ST,100,East,Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+6059073,37.75433723,-122.4054542,20121005,1740,Friday,23RD ST,UTAH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Improper Turning,No Unusual Condition
+5689903,37.77903213,-122.4018433,20120427,2223,Friday,5TH ST,HARRISON ST,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3235113,37.78026497,-122.4033872,20070608,1310,Friday,5TH ST,FOLSOM ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Traffic Signals and Signs,No Unusual Condition
+4513409,37.74044896,-122.4214175,20091204,1913,Friday,CORTLAND AV,COLERIDGE ST,105,East,Clear,Injury (Other Visible),Not Stated,No Unusual Condition
+2072426,37.76170091,-122.4215784,20050610,1152,Friday,VALENCIA ST,18TH ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Automobile Right of Way,No Unusual Condition
+5254246,37.79094026,-122.4023746,20110624,1441,Friday,MONTGOMERY ST,BUSH ST,10,South,Clear,Injury (Complaint of Pain),Other Improper Driving,No Unusual Condition
+2188566,37.76091073,-122.4346373,20050819,1740,Friday,18TH ST,CASTRO ST,105,East,Clear,Injury (Other Visible),Unsafe Speed,No Unusual Condition
+2972665,37.78574601,-122.4851479,20061124,950,Friday,LAKE ST,25TH AV,0,"Not Stated, in Intersection",Clear,Injury (Complaint of Pain),Traffic Signals and Signs,No Unusual Condition
+3216715,37.79080538,-122.3995045,20070511,1005,Friday,BATTERY ST,MARKET ST,0,"Not Stated, in Intersection",Clear,Injury (Other Visible),Other Hazardous Violation,No Unusual Condition
+1995290,37.78838083,-122.4024175,20050114,904,Friday,MARKET ST,NEW MONTGOMERY,159,West,Clear,Injury (Other Visible),Improper Passing,No Unusual Condition
