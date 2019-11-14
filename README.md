@@ -2,6 +2,7 @@
 1. Data
    <br/> &nbsp; A. download - GSV pictures
    <br/>&nbsp; B. data for models
+   <br/> &nbsp; C. collision_download - GSV pictures for collision
 2. Database - original collision data
 3. GSV_API - Google street view code
 4. Image_detect - CNN and object detection
