@@ -219,33 +219,7 @@
       map.on("moveend", update);
     }
 
-    // Update d3 shapes' positions to the map's current state
-    function update() {
-      console.log('update');
-      // get bounding box of data
-      var bounds = path.bounds(data),
-        topLeft = bounds[0],
-        bottomRight = bounds[1];
-      console.log(bounds);
-
-      var buffer = 50000;
-
-
-      // reposition the SVG to cover the features.
-      svg.attr("width", bottomRight[0] - topLeft[0] + (buffer * 2))
-        .attr("height", bottomRight[1] - topLeft[1] + (buffer * 2))
-        .style("left", (topLeft[0] - buffer) + "px")
-        .style("top", (topLeft[1] - buffer) + "px");
-      svg.attr("transform", "translate(" + (-topLeft[0] + buffer) + "," + (-topLeft[1] + buffer) + ")");
-      circles.attr('cx', function (d) {
-        var coords = project(d.geometry.coordinates)
-        return coords.x
-      })
-        .attr('cy', function (d) {
-          var coords = project(d.geometry.coordinates)
-          return coords.y
-        });
-    }
+   
 
 
 
