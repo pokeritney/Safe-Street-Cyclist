@@ -4,7 +4,7 @@
   <title>Safe Street</title>
 
   <!--add CSS Boostrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -15,7 +15,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"> -->
 
 
   <!-- mapbox GL -->
@@ -54,7 +54,8 @@
     }
 
     circle {
-      fill: #ff5065;
+      /* fill: #ff5065; */
+      fill:cyan;
       opacity: 0.5;
     }
 
@@ -179,28 +180,29 @@
 
     //D3 Stuff
     var circles;
-    function drawPoints(data) {
+    function drawPoints(data){
       console.log(data);
 
       //add points
 
       circles = svg.selectAll('circle')
-        .data(data.features)
-        .enter()
-        .append('circle')
-        .attr('r', 3);
+              .data(data.features)
+              .enter()
+              .append('circle')
+              .attr('r',3.5);
 
-      function update() {
+      // Update d3 shapes' positions to the map's current state
+      function update(){
         console.log('update');
 
-        circles.attr('cx', function (d) {
+        circles.attr('cx', function(d) {
           var coords = project(d.geometry.coordinates)
           return coords.x
         })
-          .attr('cy', function (d) {
-            var coords = project(d.geometry.coordinates)
-            return coords.y
-          });
+                .attr('cy', function(d) {
+          var coords = project(d.geometry.coordinates)
+          return coords.y
+        });
       }
       // call the update function
       update();
@@ -209,7 +211,8 @@
       map.on("moveend", update);
     }
 
-   
+
+
 
 
 
