@@ -18,12 +18,20 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
 
 
+
   <!-- mapbox GL -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
   <!-- D3 -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://d3js.org/queue.v1.min.js"></script>
+
+  <!-- scrollama -->
+	<!-- <script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script> -->
+	<!-- <script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script> -->
+	<script src='../lib/stickyfill.min.js'></script>
+	<script src='../lib/scrollama.min.js'></script>
+
 
   <style>
     em {
@@ -41,8 +49,75 @@
       color: black;
     }
 
-    html,
-    body,
+    #scrolly {
+			position: relative;
+			display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+			background-color: #f3f3f3;
+			padding: 1rem;
+		}
+
+		#scrolly > * {
+			-webkit-box-flex: 1;
+    	-ms-flex: 1;
+    	flex: 1;
+		}
+
+
+		article {
+			position: relative;
+			padding: 0 1rem;
+			max-width: 30rem;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #8a8a8a;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #fff;
+		}
+
+
+		.step {
+			margin: 0 auto 2rem auto;
+			background-color: #3b3b3b;
+			color: #fff;
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active {
+			background-color: goldenrod;
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+
     #map {
       height: 100%;
     }
@@ -102,47 +177,160 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-    <form class="form-inline" method="POST" action="{{ url_for('query_user') }}">
-      <div class="form-group">
-        <div class="col-md-5 columns">
-          <label>Select to Visualize Collision Data </label>
-        </div>
-        <div class="col-md-3 columns">
-          <div class="input-group">
-            <label>Day of Week: </label>
-            <select name="day" class="selectpicker form-control" id="dayOfWeek">
-              <option value="All">All</option>
-              <option value="Sunday">Sunday</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-3 columns">
-          <div class="input-group">
-            <label>Weather: </label>
-            <select name="weather" class="selectpicker form-control" id="weatherCat">
-              <option value="All">All</option>
-              <option value="Clear">Clear</option>
-              <option value="Cloudy">Cloudy</option>
-              <option value="Fog">Fog</option>
-              <option value="Raining">Raining</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-default"> Go </button>
-      </div>
-    </form>
-  </nav>
+   <main>
+     <section id='Intro'>
+      <h1 class='intro__hed'>Safe Street for Cyclists</h1>
+			<p class='intro__dek'>
+				Start scrolling to see how it works.
+			</p>
+     </section>
+     <section id='scrolly'>
 
-  <div id='map' style='width: 100%; height: 100%;'></div>
+     	<!--  step/text container  -->
+      <article>
+				<div class='step' data-step='1'>
+					<p>Motivation</p>
+				</div>
+				<div class='step' data-step='2'>
+					<p>Collision Findings</p>
+				</div>
+				<div class='step' data-step='3'>
+					<p>Identify Visual features</p>
+				</div>
+				<div class='step' data-step='4'>
+					<p>How the model performs</p>
+				</div>
+			</article>
+      <!--  graphic container  -->
+      <figure>
+        <p>0</p>
+      </figure>
+
+
+     </section>
+
+     <section id='outro'>
+       <div id='map' style='width: 100%; height: 100%;'>
+         <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+           <form class="form-inline" method="POST" action="{{ url_for('query_user') }}">
+             <div class="form-group">
+               <div class="col-md-5 columns">
+                 <label>Select to Visualize Collision Data </label>
+               </div>
+               <div class="col-md-3 columns">
+                 <div class="input-group">
+                   <label>Day of Week: </label>
+                   <select name="day" class="selectpicker form-control" id="dayOfWeek">
+                     <option value="All">All</option>
+                     <option value="Sunday">Sunday</option>
+                     <option value="Monday">Monday</option>
+                     <option value="Tuesday">Tuesday</option>
+                     <option value="Wednesday">Wednesday</option>
+                     <option value="Thursday">Thursday</option>
+                     <option value="Friday">Friday</option>
+                     <option value="Saturday">Saturday</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="col-md-3 columns">
+                 <div class="input-group">
+                   <label>Weather: </label>
+                   <select name="weather" class="selectpicker form-control" id="weatherCat">
+                     <option value="All">All</option>
+                     <option value="Clear">Clear</option>
+                     <option value="Cloudy">Cloudy</option>
+                     <option value="Fog">Fog</option>
+                     <option value="Raining">Raining</option>
+                     <option value="Other">Other</option>
+                   </select>
+                 </div>
+               </div>
+               <button type="submit" class="btn btn-default"> Go </button>
+             </div>
+           </form>
+         </nav>
+
+
+       </div>
+
+     </section>
+   </main>
+
   <script>
+
+    //scroll figures
+    // using d3 for convenience
+    var main = d3.select('main')
+    var scrolly = main.select('#scrolly');
+    var figure = scrolly.select('figure');
+    var article = scrolly.select('article');
+    var step = article.selectAll('.step');
+
+    // initialize the scrollama
+    var scroller = scrollama();
+
+    // generic window resize listener event
+    function handleResize() {
+      // 1. update height of step elements
+      var stepH = Math.floor(window.innerHeight * 0.75);
+      step.style('height', stepH + 'px');
+
+      var figureHeight = window.innerHeight / 2
+      var figureMarginTop = (window.innerHeight - figureHeight) / 2
+
+      figure
+        .style('height', figureHeight + 'px')
+        .style('top', figureMarginTop + 'px');
+
+
+      // 3. tell scrollama to update new element dimensions
+      scroller.resize();
+    }
+
+    // scrollama event handlers
+    function handleStepEnter(response) {
+      console.log(response)
+      // response = { element, direction, index }
+
+      // add color to current step only
+      step.classed('is-active', function (d, i) {
+        return i === response.index;
+      })
+
+      // update graphic based on step
+      figure.select('p').text('Chart'+(response.index + 1));
+    }
+
+    function setupStickyfill() {
+      d3.selectAll('.sticky').each(function () {
+        Stickyfill.add(this);
+      });
+    }
+
+    function init() {
+      setupStickyfill();
+
+      // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+      handleResize();
+
+      // 2. setup the scroller passing options
+      // 		this will also initialize trigger observations
+      // 3. bind scrollama event handlers (this can be chained like below)
+      scroller.setup({
+        step: '#scrolly article .step',
+        offset: 0.33,
+        debug: false,//set to true to show trigger line
+      })
+        .onStepEnter(handleStepEnter)
+
+
+      // setup resize event
+      window.addEventListener('resize', handleResize);
+    }
+
+    // kick things off
+    init();
+
 
 
     // reference: https://github.com/jorditost/mapboxgl-d3-playground/blob/master/02-mapbox-d3-points.html
@@ -211,6 +399,7 @@
       map.on("move", update);
       map.on("moveend", update);
     }
+
 
 
 
