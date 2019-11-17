@@ -172,6 +172,7 @@
       width: 200px;
       height: 700px;
       background: rgba(255, 255, 255, .8);
+
     }
   </style>
 </head>
@@ -179,7 +180,7 @@
 <body>
    <main>
      <section id='Intro'>
-      <h1 class='intro__hed'>Safe Street for Cyclists</h1>
+      <h1 class='intro__hed'>Safe Street for Cyclists (background change to SF Flag or something)</h1>
 			<p class='intro__dek'>
 				Start scrolling to see how it works.
 			</p>
@@ -189,17 +190,53 @@
      	<!--  step/text container  -->
       <article>
 				<div class='step' data-step='1'>
-					<p>Motivation</p>
+					<h1>Motivation</h1>
+          <p>With its plan for a Net Zero Emissions in 2050, San Fransisco is the second most bike friendly city in the United States.
+            <br>
+            <br>The volume of non-alcohol involved accidents have almost doubled by between 2005 (~300 per year) and 2012 (~600 per year). The increase is primarily seen in the volume of injuries (v.s cases involving fatality).
+            <br>
+            <br> Even though there are political will and cycling facilities across the US to improve policy environment, cyclists are still extremely vulnerable compare to other road users.
+            <br>
+            <br> There is an urgent need to identify and prioritize the area where changes would result the greatest improvement in safety.
+            <br>
+            <br> Our solution Safe Street would be the one stop shop that provides the key contributors of accidents and identify where the stakeholders should focus their resources and guide them with budget decisions. While the platform provides infinite support to planners, it serves as educational pathway and provide rich insight into San Fransisco for rest of the world.
+            <br>
+            <br> (a graph of increasing accidents over year)
+          </p>
 				</div>
 				<div class='step' data-step='2'>
-					<p>Collision Findings</p>
+					<h1>Collision Findings #1 </h1>
+          <p>The accident volume is higher on weekdays than weekend days, this could be due to the fact that there is more traffic on weekdays.
+          <br>
+          <br>(a graph of by day, click on it takes to the rush hour chart for that day)
+          </p>
 				</div>
-				<div class='step' data-step='3'>
-					<p>Identify Visual features</p>
-				</div>
-				<div class='step' data-step='4'>
-					<p>How the model performs</p>
-				</div>
+        <div class='step' data-step='3'>
+          <h1>Collision Findings #2</h1>
+          <p>The collision volume is much higher during rush hours (8am – 10am; 2pm – 7pm), possible due to the fact that traffic is heavy to begin with.
+          <br>
+          <br>(a graph of by hour)
+          </p>
+        </div>
+        <div class='step' data-step='4'>
+          <h1>Collision Findings #3</h1>
+          <p>The dangrious combination of day/time to be out.
+          <br>
+          <br>(a heatmap? http://bl.ocks.org/tjdecke/5558084)
+          <br>
+          </p>
+        </div>
+        <div class='step' data-step='5'>
+          <h1>Collision Findings #4</h1>
+          <p>Top 4 out of the 5 violation categories involve driver/human factors.
+          <br>
+          <br>The only street-level feature that is a major contributor to collision is traffic signals & signs.
+          <br>
+          <br>Weather is not correlated to the collision volume. Most of the cases have weather = 'clear'
+          <br>
+          <br>(a bar chart)click on the left side text for words, it will highlight on right?
+          </p>
+        </div>
 			</article>
       <!--  graphic container  -->
       <figure>
@@ -272,7 +309,7 @@
     // generic window resize listener event
     function handleResize() {
       // 1. update height of step elements
-      var stepH = Math.floor(window.innerHeight * 0.75);
+      var stepH = Math.floor(window.innerHeight * 1.1);
       step.style('height', stepH + 'px');
 
       var figureHeight = window.innerHeight / 2
@@ -299,6 +336,7 @@
 
       // update graphic based on step
       figure.select('p').text('Chart'+(response.index + 1));
+
     }
 
     function setupStickyfill() {
@@ -306,6 +344,27 @@
         Stickyfill.add(this);
       });
     }
+
+    function handleContainerEnter(response) {
+    	// response = { direction }
+
+    	// sticky the graphic
+    	$graphic.classed('is-fixed', true);
+    	$graphic.classed('is-bottom', false);
+    }
+
+    function handleContainerExit(response) {
+    	// response = { direction }
+
+    	// un-sticky the graphic, and pin to top/bottom of container
+    	$graphic.classed('is-fixed', false);
+    	$graphic.classed('is-bottom', response.direction === 'down');
+    }
+
+
+
+
+
 
     function init() {
       setupStickyfill();
@@ -322,7 +381,8 @@
         debug: false,//set to true to show trigger line
       })
         .onStepEnter(handleStepEnter)
-
+        .onContainerEnter(handleContainerEnter)
+    		.onContainerExit(handleContainerExit);
 
       // setup resize event
       window.addEventListener('resize', handleResize);
