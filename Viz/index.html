@@ -173,6 +173,7 @@
       height: 700px;
       background: rgba(255, 255, 255, .8);
     }
+    
     #toggleContainer {
     text-align: center;
     position: relative;
@@ -489,6 +490,7 @@
 
     //load map and dataset
     map.on('load', function () {
+
       d3.json('/sample_transbase_collisions_11082019.json').then(function (data) {
         drawPoints(data);
       });

@@ -348,7 +348,7 @@
           </div>
         </form>
       </nav>
-      </div>
+
 
       <!---- map------>
       <div id="container">
@@ -501,8 +501,8 @@
       container: 'map', //container id
       //need to go to mapbox studio to design map styles
       // style: 'mapbox://styles/ivriel501/ck2wbr6tv1ayy1cpapltmttq3',
-      style: 'mapbox://styles/mapbox/light-v10',
-      center: [-122.47, 37.76],
+      style:'mapbox://styles/ivriel501/ck2yd2ebr37ce1cnss7fftrd3',
+      center: [-122.358600, 37.748874],
       zoom: 11.5
     });
 
@@ -578,6 +578,9 @@
 
 
     });
+
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
 
 
 
