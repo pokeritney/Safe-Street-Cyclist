@@ -27,8 +27,8 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
 
   <!-- scrollama -->
-	<!-- <script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script> -->
-	<!-- <script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
 	<script src='../lib/stickyfill.min.js'></script>
 	<script src='../lib/scrollama.min.js'></script>
 
@@ -108,7 +108,7 @@
 		}
 
 		.step.is-active {
-			background-color: goldenrod;
+			background-color: white;
 			color: #3b3b3b;
 		}
 
@@ -172,7 +172,70 @@
       width: 200px;
       height: 700px;
       background: rgba(255, 255, 255, .8);
+    }
+    #toggleContainer {
+    text-align: center;
+    position: relative;
+    top: 5px;
+    left: 450px;
+    }
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 28px;
+      height: 15px;
+    }
 
+    /* Hide default HTML checkbox */
+    .switch input {display:none;}
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 12px;
+      width: 12px;
+      left: 1.5px;
+      bottom: 1.5px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #99cc66;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #900;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(14px);
+      -ms-transform: translateX(14px);
+      transform: translateX(14px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 4px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -285,11 +348,27 @@
                <button type="submit" class="btn btn-default"> Go </button>
              </div>
            </form>
+           <div id="toggleContainer">
+            <table>
+                <tr>
+                    <td><label class="switch">
+                        <input id="collision_toggle" type="checkbox">
+                        <div class="slider round"></div>
+                    </label></td>
+                    <td>Show Collisions</td>
+                </tr>
+                <tr>
+                    <td><label class="switch">
+                        <input id="streets_toggle" type="checkbox">
+                        <div class="slider round"></div>
+                    </label></td>
+                    <td>Show Streets Risk</td>
+                </tr>
+            </table>
+          </div>
          </nav>
 
-
        </div>
-
      </section>
    </main>
 
@@ -326,7 +405,7 @@
 
     // scrollama event handlers
     function handleStepEnter(response) {
-      console.log(response)
+      // console.log(response)
       // response = { element, direction, index }
 
       // add color to current step only
@@ -361,11 +440,6 @@
     	$graphic.classed('is-bottom', response.direction === 'down');
     }
 
-
-
-
-
-
     function init() {
       setupStickyfill();
 
@@ -381,8 +455,7 @@
         debug: false,//set to true to show trigger line
       })
         .onStepEnter(handleStepEnter)
-        .onContainerEnter(handleContainerEnter)
-    		.onContainerExit(handleContainerExit);
+
 
       // setup resize event
       window.addEventListener('resize', handleResize);
@@ -416,10 +489,13 @@
 
     //load map and dataset
     map.on('load', function () {
-      d3.json('static/res/sample_transbase_collisions_11082019.json').then(function (data) {
+      d3.json('/sample_transbase_collisions_11082019.json').then(function (data) {
         drawPoints(data);
       });
     });
+
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
 
     // Project GeoJSON coordinate to the map's current state
     function project(d) {
@@ -430,16 +506,26 @@
     //D3 Stuff
     var circles;
     function drawPoints(data){
-      console.log(data);
+      // console.log(data);
 
       //add points
-
       circles = svg.selectAll('circle')
               .data(data.features)
               .enter()
               .append('circle')
-              .attr('r',3.5);
+              .attr('r',3.5)
+              .attr('class','collision');
+      //add layer toggle
+      var pointsCheckbox = document.querySelector('input[id="collision_toggle"]');
 
+
+      pointsCheckbox.onchange = function() {
+        if(this.checked) {
+          d3.selectAll(".collision").attr("visibility", "visible");
+        } else {
+          d3.selectAll(".collision").attr("visibility", "hidden");
+        }
+      };
       // Update d3 shapes' positions to the map's current state
       function update(){
         console.log('update');
