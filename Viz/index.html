@@ -8,19 +8,14 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
-    rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css"
-    rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
-
 
   <!-- mapbox GL -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
   <!-- D3 -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://d3js.org/queue.v1.min.js"></script>
@@ -41,7 +36,7 @@
     body {
       padding: 0;
       margin: 0;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
       font-size: 12px;
       font-style: bold;
       line-height: 18px;
@@ -53,7 +48,7 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      background-color: #f3f3f3;
+      background-color: white;
       padding: 1rem;
     }
 
@@ -173,7 +168,7 @@
     /*map------------------------------------*/
     #container {
       width: 100%;
-      height: 700;
+      height: 100%;
       position: relative;
     }
 
@@ -186,46 +181,85 @@
 
     h1 {
       font-size: 20px;
-      line-height: 30px;
+      line-height: 25px;
+      font-weight: bold;
     }
 
     h2 {
       font-size: 14px;
-      line-height: 20px;
+      line-height: 15px;
       margin-bottom: 10px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #2dc4b2;
+      font-weight: bold;
     }
 
     #console {
       position: absolute;
-      width: 300px;
-      margin: 10px;
+      top: 3px;
+      right: 3px;
+      width: 320px;
+      margin: 3px;
       padding: 10px 20px;
       background-color: white;
     }
 
     .session {
-      margin-bottom: 20px;
+      font-size: 13px;
+      margin-bottom: 15px;
     }
 
     .row {
+      margin: 5px;
       height: 12px;
-      width: 100%;
+      width: 97%;
     }
 
     .colors {
-      background: linear-gradient(to right, #2dc4b2, #669ec4, #8b88b6, #aa5e79);
-      margin-bottom: 5px;
+      background: linear-gradient(to right, #00008B, #FFD700, #FF4500, #808000, #6495ED);
+      margin-bottom: 8px;
     }
 
-    .label {
-      width: 25%;
-      display: inline-block;
+    /*layer menu-----------------------------------*/
+    #menu {
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+      top: 80px;
+      left: 100px;
+      border-radius: 3px;
+      width: 120px;
+      border: 1px solid black;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    #menu a {
+      font-size: 13px;
+      font-weight: bold;
+      color: #404040;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid black;
       text-align: center;
+    }
+
+    #menu a:last-child {
+      border: none;
+    }
+
+    #menu a:hover {
+      background-color: #f8f8f8;
+      color: #404040;
+    }
+
+    #menu a.active {
+      background-color: #23699b;
+      color: #ffffff;
+    }
+
+    #menu a.active:hover {
+      background: #76a1c0;
     }
   </style>
 </head>
@@ -309,80 +343,36 @@
 
     </section>
 
+    <!---- map------>
     <section id='outro'>
-      <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-        <form class="form-inline" method="POST" action="{{ url_for('query_user') }}">
-          <div class="form-group">
-            <div class="col-md-5 columns">
-              <label>Select to Visualize Collision Data </label>
-            </div>
-            <div class="col-md-3 columns">
-              <div class="input-group">
-                <label>Day of Week: </label>
-                <select name="day" class="selectpicker form-control" id="dayOfWeek">
-                  <option value="All">All</option>
-                  <option value="Sunday">Sunday</option>
-                  <option value="Monday">Monday</option>
-                  <option value="Tuesday">Tuesday</option>
-                  <option value="Wednesday">Wednesday</option>
-                  <option value="Thursday">Thursday</option>
-                  <option value="Friday">Friday</option>
-                  <option value="Saturday">Saturday</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-3 columns">
-              <div class="input-group">
-                <label>Weather: </label>
-                <select name="weather" class="selectpicker form-control" id="weatherCat">
-                  <option value="All">All</option>
-                  <option value="Clear">Clear</option>
-                  <option value="Cloudy">Cloudy</option>
-                  <option value="Fog">Fog</option>
-                  <option value="Raining">Raining</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-default"> Go </button>
-          </div>
-        </form>
-      </nav>
 
-
-      <!---- map------>
       <div id="container">
-        <div id='map' style='width: 100%; height: 100%'></div>
+        <div id='map' class="mapboxgl-map" style='width: 100%; height: 100%'></div>
+        <div>
+          <nav id="menu"></nav>
+        </div>
 
         <div id='console'>
-          <h1>Historical Bike Collision Data</h1>
-          <p>Location: San Francisco, CA</p>
+          <h1>Cycling Safety Map & Historical Collision Data</h1>
+          <h1 style="font-size:16px; font-weight: normal; margin-bottom: 25px">Location: San Francisco, CA</h1>
+
+          <h1 style="font-size:17px; font-family:Noto;color:#3887be">Toggle to Visualize Collision Data:</h1>
 
           <div class='session'>
-            <h2>Severity</h2>
-            <div class='row colors'></div>
-            <div class='row labels'>
-              <div class='label'>0</div>
-              <div class='label'>1</div>
-              <div class='label'>2</div>
-              <div class='label'>3</div>
-            </div>
-          </div>
-
-          <div class='session' id='sliderbar'>
             <h2>Hour: <label id='active-hour'>12PM</label></h2>
+            <div class='row colors'></div>
             <input id='slider' class='row' type='range' min='0' max='23' step='1' value='12' />
           </div>
 
           <div class='session'>
             <h2>Bike Facility</h2>
             <div class='row' id='filters'>
-              <input id='all' type='radio' name='toggle' value='all' checked='checked'>
-              <label for='all'>All</label>
-              <input id='yes' type='radio' name='toggle' value='yes'>
-              <label for='yes'>Bike Lane</label>
-              <input id='no' type='radio' name='toggle' value='no'>
-              <label for='no'>No Bike Lane</label>
+              <input id='all' type='radio' name='toggle' value='all' checked='checked'></input>
+              <label for='all'>&nbsp; All &nbsp; </label>
+              <input id='yes' type='radio' name='toggle' value='yes'></input>
+              <label for='yes'>&nbsp; Bike Lane &nbsp;</label>
+              <input id='no' type='radio' name='toggle' value='no'></input>
+              <label for='no'>&nbsp; No Bike Lane</label>
             </div>
           </div>
 
@@ -488,11 +478,11 @@
 
     // kick things off
     init();
-    //---------------End of part I---------------------------------------------------
+    //---------------End of part I-----------------------------------------------------------------
 
 
 
-    //---------------part II Map------------------------------------------------------
+    //---------------part II Map-------------------------------------------------------------------
     // reference: https://github.com/jorditost/mapboxgl-d3-playground/blob/master/02-mapbox-d3-points.html
     // mapbox initialization
     mapboxgl.accessToken = 'pk.eyJ1IjoiaXZyaWVsNTAxIiwiYSI6ImNqeW9uejl4dTE2dTkzY2xpdjkyZ2VpdHUifQ.OY_j0gmu8ib1A3wS6bsEHQ';
@@ -501,27 +491,30 @@
       container: 'map', //container id
       //need to go to mapbox studio to design map styles
       // style: 'mapbox://styles/ivriel501/ck2wbr6tv1ayy1cpapltmttq3',
-      style:'mapbox://styles/ivriel501/ck2yd2ebr37ce1cnss7fftrd3',
-      center: [-122.358600, 37.748874],
-      zoom: 11.5
+      style: 'mapbox://styles/ivriel501/ck2yd2ebr37ce1cnss7fftrd3',
+      center: [-122.418600, 37.760874],
+      zoom: 11.73
     });
 
     //load map and dataset
     map.on('load', function () {
 
+      //filter function
       var filterHour = ['==', ['number', ['get', 'Hour']], 12];
       var filterLane = ['!=', ['string', ['get', 'Lane']], 'placeholder'];
 
-      //load data
-      map.addSource('collisions', {
+      //Collision data - layer 1 ---------------------------------
+      map.addSource('Collision', {
         type: 'geojson',
-        data: 'static/res/collision_simple.geojson'
+        data: 'static/res/collision_simple.geojson' //data source
       });
       map.addLayer({
-        id: 'collisions',
+        id: 'Collision',
         type: 'circle',
-        filter: ['all', filterHour, filterLane],
-        source: 'collisions',
+        'source': 'Collision',
+        'layout': {
+          'visibility': 'visible'
+        },
         paint: {
           'circle-radius': [
             'interpolate',
@@ -533,15 +526,20 @@
           'circle-color': [
             'interpolate',
             ['linear'],
-            ['number', ['get', 'Severity']],
-            0, '#2DC4B2',
-            1, '#669EC4',
-            2, '#8B88B6',
-            3, '#AA5E79'
+            ['number', ['get', 'Hour']],
+            0, '#00008B',
+            6, '#FFD700',
+            12, '#FF4500',
+            18, '#808000',
+            23, '#6495ED'
           ],
-          'circle-opacity': 0.8
-        }
+          'circle-opacity': 0.9
+        },
+        'filter': ['all', filterHour, filterLane]
       });
+
+      //Append intersection map - layer 2------------------------------
+   
       //add intersection points
       map.addSource('intersections', {
         type: 'geojson',
@@ -551,6 +549,11 @@
         id: 'intersections',
         type: 'circle',
         source: 'intersections',
+        'layout': {
+          'visibility': 'visible',
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
         paint: {
           'circle-radius': 3,
           'circle-color': '#2DC4B2',
@@ -559,12 +562,13 @@
       });
 
 
-      //time slider
+
+      //hour filter
       document.getElementById('slider').addEventListener('input', function (e) {
         var hour = parseInt(e.target.value);
         // update the map
         filterHour = ['==', ['number', ['get', 'Hour']], hour];
-        map.setFilter('collisions', ['all', filterHour, filterLane]);
+        map.setFilter('Collision', ['all', filterHour, filterLane]);
 
         // converting 0-23 hour to AMPM format
         var ampm = hour >= 12 ? 'PM' : 'AM';
@@ -581,20 +585,49 @@
         if (lane === 'all') {
           filterLane = ['!=', ['string', ['get', 'Lane']], 'placeholder'];
         } else if (lane === 'yes') {
-          filterLane = ['match', ['get', 'Lane'], ['Yes'], false, true];
+          filterLane = ['match', ['get', 'Lane'], ['No'], false, true];
         } else if (lane === 'no') {
           filterLane = ['match', ['get', 'Lane'], ['No'], true, false];
         } else {
           console.log('error');
-        }
-        map.setFilter('collisions', ['all', filterHour, filterLane]);
+        };
+        map.setFilter('Collision', ['all', filterHour, filterLane]);
       });
 
 
-
-
-
     });
+
+
+    //Layer toggle
+    var toggleableLayerIds = ['Map', 'Collision'];
+
+    for (var i = 0; i < toggleableLayerIds.length; i++) {
+      var id = toggleableLayerIds[i];
+
+      var link = document.createElement('a');
+      link.href = '#';
+      link.className = 'active';
+      link.textContent = id;
+
+      link.onclick = function (e) {
+        var clickedLayer = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+        if (visibility === 'visible') {
+          map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+          this.className = '';
+        } else {
+          this.className = 'active';
+          map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+        }
+      };
+
+      var layers = document.getElementById('menu');
+      layers.appendChild(link);
+    }
 
     // disable map zoom when using scroll
     // map.scrollZoom.disable();

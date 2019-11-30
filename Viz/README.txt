@@ -1,23 +1,18 @@
 ============Below is a draft for TA, feel free to add===========
-1. Please ensure flask is installed in your python library
-$pip install flask
+1. Navigate to the project directory, 
+In the command shell, run the following command
+$ python -m http.server
 
-2. Navigate to the project directory, 
-In the command shell/ bash, run the following command
-$ python app.py
-
-This will set up a local host in your computer
+2. This will set up a local host in your computer
 A local server address will appear in the shell, copy that address and paste it into your browser
-In case no address is displayed, enter http://127.0.0.1:5000/
+In case no address is displayed, enter http://0.0.0.0:8000/index.html
 Hit okay, you are then in Safe Street for Cyclist's interface
 
 
 =========Below is for team 64 members===========
-1. app.py - run this script to access local server
+1. Use python to set up local host
 
--Templates - .html file MUST be stored in this folder
--Data - this is the folder to store temporary csv file by user query
-       Use Data/output.csv to visualize collision data
+-Static - All static files
+        -css style
+        -res: data files to load in html file
 -Lib - d3 file folder
-
-Collision.db - collision database

@@ -8,14 +8,14 @@
 4. Image_detect - CNN and object detection
 5. Metric LR - References for our model
 6. Script - codes
-7. Viz - frontend & backend
-   <br/> &nbsp;**folder name & file name CANNOT be changed in this folder, otherwise the app will crash**
+7. Viz - frontend
+   Use python to set up local host
    <br/> &nbsp; A. static - store static data files
    <br/> &nbsp;&nbsp;&nbsp; css - css style
-   <br/> &nbsp;&nbsp;&nbsp; res - geojson file, temporary output.csv
-   <br/> &nbsp; B. templates - index.html
-   <br/> &nbsp;readme - setup draft for TA
-   <br/> &nbsp;app.py - run this to set up local host
-   <br/> &nbsp;collision.db - collision database
+   <br/> &nbsp;&nbsp;&nbsp; res - all csv & GeoJSON files
+   <br/> &nbsp; B. lib - library files
+   <br/> &nbsp; index.html - Final html file
+   <br/> &nbsp;readme.txt - setup draft for TA
+8. Archive - archived files
 
 Note: Please submit a **PULL REQUEST** when significant changes are to be made. Thanks!
