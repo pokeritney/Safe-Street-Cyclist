@@ -513,14 +513,15 @@
       var filterLane = ['!=', ['string', ['get', 'Lane']], 'placeholder'];
 
       //load data
+      map.addSource('collisions', {
+        type: 'geojson',
+        data: 'static/res/collision_simple.geojson'
+      });
       map.addLayer({
         id: 'collisions',
         type: 'circle',
         filter: ['all', filterHour, filterLane],
-        source: {
-          type: 'geojson',
-          data: 'static/res/collision_simple.geojson'
-        },
+        source: 'collisions',
         paint: {
           'circle-radius': [
             'interpolate',
@@ -541,6 +542,22 @@
           'circle-opacity': 0.8
         }
       });
+      //add intersection points
+      map.addSource('intersections', {
+        type: 'geojson',
+        data: 'static/res/intersection.geojson'
+      });
+      map.addLayer({
+        id: 'intersections',
+        type: 'circle',
+        source: 'intersections',
+        paint: {
+          'circle-radius': 3,
+          'circle-color': '#2DC4B2',
+          'circle-opacity': 0.8
+        }
+      });
+
 
       //time slider
       document.getElementById('slider').addEventListener('input', function (e) {
@@ -580,7 +597,7 @@
     });
 
     // disable map zoom when using scroll
-    map.scrollZoom.disable();
+    // map.scrollZoom.disable();
 
 
 
