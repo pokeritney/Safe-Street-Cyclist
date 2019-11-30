@@ -538,26 +538,29 @@
         'filter': ['all', filterHour, filterLane]
       });
 
-      //Append safety map - layer 2------------------------------
-      map.addSource('Map', {
+      //Append intersection map - layer 2------------------------------
+   
+      //add intersection points
+      map.addSource('intersections', {
         type: 'geojson',
-        url: 'static/res/collision_simple.geojson' //data source
+        data: 'static/res/intersection.geojson'
       });
       map.addLayer({
-        'id': 'Map',
-        'type': 'line',
-        'source': 'Map',
-        'source-layer': 'contour',
+        id: 'intersections',
+        type: 'circle',
+        source: 'intersections',
         'layout': {
           'visibility': 'visible',
           'line-join': 'round',
           'line-cap': 'round'
         },
-        'paint': {
-          'line-color': '#877b59',
-          'line-width': 1
+        paint: {
+          'circle-radius': 3,
+          'circle-color': '#2DC4B2',
+          'circle-opacity': 0.8
         }
       });
+
 
 
       //hour filter
@@ -627,7 +630,7 @@
     }
 
     // disable map zoom when using scroll
-    map.scrollZoom.disable();
+    // map.scrollZoom.disable();
 
 
 
