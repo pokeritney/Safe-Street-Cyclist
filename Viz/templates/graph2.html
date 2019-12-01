@@ -1,0 +1,133 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<svg width="900" height="500"></svg>
+</head>
+
+<body>
+	<script>
+		var data = [{ 'hour': '0', 'no': 45, 'yes': 28 },
+		{ 'hour': '1', 'no': 39, 'yes': 26 },
+		{ 'hour': '2', 'no': 29, 'yes': 15 },
+		{ 'hour': '3', 'no': 11, 'yes': 2 },
+		{ 'hour': '4', 'no': 4, 'yes': 7 },
+		{ 'hour': '5', 'no': 15, 'yes': 4 },
+		{ 'hour': '6', 'no': 30, 'yes': 18 },
+		{ 'hour': '7', 'no': 74, 'yes': 78 },
+		{ 'hour': '8', 'no': 129, 'yes': 154 },
+		{ 'hour': '9', 'no': 109, 'yes': 140 },
+		{ 'hour': '10', 'no': 92, 'yes': 69 },
+		{ 'hour': '11', 'no': 92, 'yes': 80 },
+		{ 'hour': '12', 'no': 121, 'yes': 83 },
+		{ 'hour': '13', 'no': 127, 'yes': 104 },
+		{ 'hour': '14', 'no': 110, 'yes': 109 },
+		{ 'hour': '15', 'no': 131, 'yes': 99 },
+		{ 'hour': '16', 'no': 163, 'yes': 144 },
+		{ 'hour': '17', 'no': 171, 'yes': 153 },
+		{ 'hour': '18', 'no': 186, 'yes': 130 },
+		{ 'hour': '19', 'no': 135, 'yes': 78 },
+		{ 'hour': '20', 'no': 96, 'yes': 56 },
+		{ 'hour': '21', 'no': 82, 'yes': 58 },
+		{ 'hour': '22', 'no': 71, 'yes': 49 },
+		{ 'hour': '23', 'no': 64, 'yes': 42 }];
+
+		var series = d3.stack()
+			.keys(["no", "yes"])
+			.offset(d3.stackOffsetDiverging)
+			(data);
+
+		var svg = d3.select("svg"),
+			margin = { top: 50, right: 30, bottom: 30, left: 60 },
+			width = 900 - margin.left - margin.right,
+			height = 500 - margin.top - margin.bottom;
+
+		var x = d3.scaleBand()
+			.domain(data.map(function (d) { return d.hour; }))
+			.rangeRound([margin.left, width - margin.right])
+			.padding(0.1);
+
+		var y = d3.scaleLinear()
+			.domain([d3.min(series, stackMin), d3.max(series, stackMax)])
+			.rangeRound([height - margin.bottom, margin.top]);
+
+		var z = d3.scaleOrdinal(["darkorange", "steelblue"]);
+
+		svg.append("g")
+			.selectAll("g")
+			.data(series)
+			.enter().append("g")
+			.attr("fill", function (d) { return z(d.key); })
+			.selectAll("rect")
+			.data(function (d) { return d; })
+			.enter().append("rect")
+			.attr("width", x.bandwidth)
+			.attr("x", function (d) { return x(d.data.hour); })
+			.attr("y", function (d) { return y(d[1]); })
+			.attr("height", function (d) { return y(d[0]) - y(d[1]); })
+
+		svg.append("g")
+			.attr("transform", "translate(0," + y(0) + ")")
+			.call(d3.axisBottom(x));
+
+		svg.append("g")
+			.attr("transform", "translate(" + margin.left + ",0)")
+			.call(d3.axisLeft(y));
+
+		function stackMin(serie) {
+			return d3.min(serie, function (d) { return d[0]; });
+		}
+
+		function stackMax(serie) {
+			return d3.max(serie, function (d) { return d[1]; });
+		}
+
+		svg.append("text")
+			.attr("transform",
+				"translate(" + (width / 2) + " ," +
+				(height + margin.top / 3) + ")")
+			.style("text-anchor", "middle")
+			.attr("font-size", 18)
+			.text("Hour")
+
+		svg.append("text")
+			.attr("transform", "translate(" + 270 + "," + 35 + ")")
+			.text("Bike Collision Counts by Hour")
+			.style("font-weight", "bold")
+			.attr("font-size", "20");
+
+		//4.Legends    
+		var legend = ["Bike Lane", "Non Bike Lane"];
+		var color = ["steelblue", "darkorange"];
+
+		svg.selectAll("circle")
+			.data(color)
+			.enter()
+			.append("circle")
+			.attr("cx", 95)
+			.attr("cy", function (d, i) {
+				return 65 + i * 25;
+			})
+			.attr("r", 8)
+			.attr("fill", function (d) { return d });
+
+		svg.selectAll("mylabels")
+			.data(legend)
+			.enter()
+			.append("text")
+			.attr("x", 110)
+			.attr("y", function (d, i) { return 67 + i * 25 })
+			.text(function (d) { return d })
+			.attr("text-anchor", "left")
+			.attr("font-size", "14")
+			.style("alignment-baseline", "middle")
+
+
+
+
+	</script>
+
+</body>
+
+</html>
