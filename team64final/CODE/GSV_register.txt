@@ -1,0 +1,17 @@
+Google Maps Platform documents ways of accessing Street View data
+https://developers.google.com/maps/documentation/
+e.g., Directly Accessing Street View Data
+https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/streetview-service
+
+Accessing Google Maps Platform REQUIRES Google Platform Account which comes with 12 months free trial
+
+Platform Account
+
+Terms & Conditions: https://cloud.google.com/terms/free-trial/
+
+Maps pricing: https://cloud.google.com/maps-platform/pricing/
+ 
+12-month free trial includes $300 in credit to spend over the next 12 months. 
+If you run out of credit, don’t worry — you won’t be billed without your permission.
+
+Once you sign up for a platform account, you can create API keys for Google Maps Platform.
