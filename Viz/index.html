@@ -266,6 +266,24 @@
     #menu a.active:hover {
       background: #76a1c0;
     }
+
+    /* additional for d3 viz------------------------------------*/
+
+    .line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 2;
+    }
+
+    .dot {
+    fill: #ffab00;
+    stroke: #fff;
+    }
+
+    #container {
+    float: left;
+    }
+
   </style>
 </head>
 
@@ -274,7 +292,7 @@
     <section id='Intro'>
       <h1 class='intro__hed'>Safe Street for Cyclists (background change to SF Flag or something)</h1>
       <p class='intro__dek'>
-        Start scrolling to see how it works.
+        Start scrolling to see how it works. 
       </p>
     </section>
     <section id='scrolly'>
@@ -301,7 +319,7 @@
             platform provides infinite support to planners, it serves as educational pathway and provide rich insight
             into San Fransisco for rest of the world.
             <br>
-            <br> (a graph of increasing accidents over year)
+            <br> (a graph of increasing accidents over year) 
           </p>
         </div>
         <div class='step' data-step='2'>
@@ -341,10 +359,147 @@
         </div>
       </article>
       <!--  graphic container  -->
+      <!-- <div class='figure'> -->
       <figure>
-        <p>0</p>
-      </figure>
+        <p>
+          <!-- Chart 1: Number of collisions by year, 2005-2012 -->
+          <div id="chart1"></div>
+           <script>
 
+            var margin = {top: 200, right: 400, bottom: 200, left: 100}
+              , width = window.innerWidth - margin.left - margin.right // Use the window's width
+              , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
+
+            var parseDate = d3.timeParse("%Y")
+
+
+            var xScale = d3.scaleTime()
+                    .range([0, width]);
+
+            var yScale = d3.scaleLinear()
+                    .range([height, 0]);
+
+            var color = d3.scaleOrdinal()
+                    .domain(["5_5.9", "6_6.9", "7_7.9", "8.0+"])
+                    .range(["#FFC300", "#FF5733", "#C70039", "#900C3F"]);
+
+            var line1 = d3.line()
+                .x(function(d) { return xScale(d.year); }) // set the x values for the line generator
+                .y(function(d) { return yScale(d.volume); }) // set the y values for the line generator
+                .curve(d3.curveMonotoneX) // apply smoothing to the line
+
+            // Add the SVG to the page and employ margin setting
+            var svg1 = d3.select("#chart1").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+
+            var g1 = svg1.append("g") // g element is used to group SVG shapes together
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            // load the data
+            d3.csv("static/res/transbase_collision_year.csv").then(function(data) {
+
+              // console.log(data);
+
+              color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year" }));
+              // map magnitude (keys) to color
+
+              data.forEach(function(d) {
+
+                d.year = parseDate(d.year);
+                d["volume"] = parseInt(d["volume"]);
+
+              });
+
+
+              var levels = color.domain().map(function(name) {
+                return {
+                  name: name,
+                  values: data.map(function(d) {
+                    return {year: d.year,
+                            volume: +d[name]
+                           };
+                  })
+                };
+
+
+              });
+
+
+              // set domain for x & y scalers
+              xScale.domain(d3.extent(data, function(d) { return d.year; }));
+
+              yScale.domain([
+                d3.min(levels, function(c) { return d3.min(c.values, function(v) { return v.volume; }); }),
+                d3.max(levels, function(c) { return d3.max(c.values, function(v) { return v.volume; }); })
+              ]);
+
+
+            // chart 1
+
+              g1.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(xScale))
+
+              // add x axis title
+              g1.append("text")
+                  .attr("transform",
+                        "translate(" + (width/2) + " ," +
+                                       (height + margin.top - 150) + ")")
+                  .style("text-anchor", "middle")
+                  .text("Year");
+
+
+              // Call the y axis in a group tag
+              g1.append("g")
+                  .attr("class", "y axis")
+                  .call(d3.axisLeft(yScale))
+
+
+              // add y axis title
+              g1.append("text")
+                  .attr("transform", "rotate(-90)")
+                  .attr("y", 0 - margin.left + 40)
+                  .attr("x", 0 - (height / 2))
+                  .attr("dy", "1em")
+                  .style("text-anchor", "middle")
+                  .text("Num of Collisions");
+
+
+              // add chart title
+              g1.append("text")
+                    .attr("x", (width / 2))
+                    .attr("y", 0 - (margin.top / 2))
+                    .attr("text-anchor", "middle")
+                    .style("font-size", "20px")
+                    .text("Number of collisions by year, 2005-2012");
+
+
+                var magnitude = g1.selectAll(".magnitude")
+                  .data(levels)
+                .enter().append("g")
+                  .attr("class", "level");
+
+                  magnitude.append("path")
+                      .attr("class", "line")
+                      .attr("d", function(d) { return line1(d.values); })
+                      .style("stroke", function(d) { return color(d.name); });
+
+                  magnitude.selectAll("circle")
+                      .data(function(d){return d.values})
+                      .enter()
+                      .append("circle")
+                      .attr("r", 8)
+                      .attr("cx", function(d) { return xScale(d.year); })
+                      .attr("cy", function(d) { return yScale(d.volume); })
+                      .style("fill", function(d){return color(this.parentNode.__data__.name)});
+
+            });
+          </script>
+        </p>
+      <!-- </div> -->
+      </figure>
 
     </section>
 
@@ -435,7 +590,7 @@
       })
 
       // update graphic based on step
-      figure.select('p').text('Chart' + (response.index + 1));
+      figure.select('p').text('Chart-test' + (response.index + 1));
 
     }
 
@@ -543,39 +698,31 @@
             18, '#808000',
             23, '#6495ED'
           ],
-          'circle-opacity': 1.0
+          'circle-opacity': 0.9
         },
         'filter': ['all', filterHour, filterLane]
       });
 
       //Append intersection map - layer 2------------------------------
-
+   
       //add intersection points
-      map.addSource('Map', {
+      map.addSource('intersections', {
         type: 'geojson',
-        data: 'static/res/segment_latlon.geojson'
+        data: 'static/res/intersection.geojson'
       });
       map.addLayer({
-        id: 'Map',
-        type: 'line',
-        source: 'Map',
+        id: 'intersections',
+        type: 'circle',
+        source: 'intersections',
         'layout': {
           'visibility': 'visible',
-          "line-join": "round",
-          "line-cap": "round"
+          'line-join': 'round',
+          'line-cap': 'round'
         },
         paint: {
-          'line-color': [
-            'interpolate',
-            ['linear'],
-            ['number', ['get', 'score']],
-            50, '#7CFC00',
-            60, '#1E90FF',
-            70, '#DEB887',
-            80, '#FF8C00',
-            100, '#DC143C'
-          ],
-          'line-width': 1
+          'circle-radius': 3,
+          'circle-color': '#2DC4B2',
+          'circle-opacity': 0.8
         }
       });
 
@@ -648,7 +795,7 @@
     }
 
     // disable map zoom when using scroll
-    map.scrollZoom.disable();
+    // map.scrollZoom.disable();
 
 
 
