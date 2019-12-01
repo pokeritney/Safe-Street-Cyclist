@@ -102,7 +102,7 @@
     }
 
     .step.is-active {
-      background-color: goldenrod;
+      background-color: white;
       color: #3b3b3b;
     }
 
@@ -670,6 +670,38 @@
       var filterHour = ['==', ['number', ['get', 'Hour']], 12];
       var filterLane = ['!=', ['string', ['get', 'Lane']], 'placeholder'];
 
+      //Append intersection map - layer 2------------------------------
+
+      //add intersection points
+      map.addSource('Map', {
+        type: 'geojson',
+        data: 'static/res/segment_latlon.geojson'
+      });
+      map.addLayer({
+        id: 'Map',
+        type: 'line',
+        source: 'Map',
+        'layout': {
+          'visibility': 'visible',
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        paint: {
+          'line-color': [
+            'interpolate',
+            ['linear'],
+            ['number', ['get', 'score']],
+            50, '#7CFC00',
+            60, '#1E90FF',
+            70, '#DEB887',
+            80, '#FF8C00',
+            100, '#DC143C'
+          ],
+          'line-width': 1
+        }
+      });
+
+
       //Collision data - layer 1 ---------------------------------
       map.addSource('Collision', {
         type: 'geojson',
@@ -704,38 +736,6 @@
         },
         'filter': ['all', filterHour, filterLane]
       });
-
-      //Append intersection map - layer 2------------------------------
-
-      //add intersection points
-      map.addSource('Map', {
-        type: 'geojson',
-        data: 'static/res/segment_latlon.geojson'
-      });
-      map.addLayer({
-        id: 'Map',
-        type: 'line',
-        source: 'Map',
-        'layout': {
-          'visibility': 'visible',
-          "line-join": "round",
-          "line-cap": "round"
-        },
-        paint: {
-          'line-color': [
-            'interpolate',
-            ['linear'],
-            ['number', ['get', 'score']],
-            50, '#7CFC00',
-            60, '#1E90FF',
-            70, '#DEB887',
-            80, '#FF8C00',
-            100, '#DC143C'
-          ],
-          'line-width': 1
-        }
-      });
-
 
 
       //hour filter
