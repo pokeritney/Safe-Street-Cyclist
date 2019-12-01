@@ -533,31 +533,39 @@
             18, '#808000',
             23, '#6495ED'
           ],
-          'circle-opacity': 0.9
+          'circle-opacity': 1.0
         },
         'filter': ['all', filterHour, filterLane]
       });
 
       //Append intersection map - layer 2------------------------------
-   
+
       //add intersection points
-      map.addSource('intersections', {
+      map.addSource('Map', {
         type: 'geojson',
-        data: 'static/res/intersection.geojson'
+        data: 'static/res/segment_latlon.geojson'
       });
       map.addLayer({
-        id: 'intersections',
-        type: 'circle',
-        source: 'intersections',
+        id: 'Map',
+        type: 'line',
+        source: 'Map',
         'layout': {
           'visibility': 'visible',
-          'line-join': 'round',
-          'line-cap': 'round'
+          "line-join": "round",
+          "line-cap": "round"
         },
         paint: {
-          'circle-radius': 3,
-          'circle-color': '#2DC4B2',
-          'circle-opacity': 0.8
+          'line-color': [
+            'interpolate',
+            ['linear'],
+            ['number', ['get', 'score']],
+            50, '#7CFC00',
+            60, '#1E90FF',
+            70, '#DEB887',
+            80, '#FF8C00',
+            100, '#DC143C'
+          ],
+          'line-width': 1
         }
       });
 
@@ -630,7 +638,7 @@
     }
 
     // disable map zoom when using scroll
-    // map.scrollZoom.disable();
+    map.scrollZoom.disable();
 
 
 
