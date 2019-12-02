@@ -1,0 +1,402 @@
+import numpy as np
+import pandas as pd
+from keras.layers import Input, Dense, Activation, ZeroPadding2D, Flatten, Conv2D
+from keras.layers import MaxPooling2D
+from keras.models import Model
+from keras.preprocessing import image
+from keras.models import load_model
+from keras import metrics
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+from keras.applications.imagenet_utils import preprocess_input
+from IPython.display import SVG
+from keras.utils.vis_utils import model_to_dot
+from keras.utils import plot_model
+from PIL import Image
+import keras.backend as K
+import tensorflow as tf
+import keras
+from keras.wrappers.scikit_learn import KerasClassifier
+import csv
+K.set_image_data_format('channels_last')
+from matplotlib.pyplot import imshow
+import os
+import sys
+import matplotlib.pyplot as plt
+
+img_width = 300
+img_height = 600
+VECTOR_SIZE = 128
+features_SIZE = 7
+BATCH_SIZE = 8
+EPOCHS = 1000
+TRAIN_EXAMPLES = 3849
+TEST_EXAMPLES = 10000
+LR = 0.00001
+def mean_pred(y_true, y_pred):
+    return K.mean(y_pred)
+
+
+# If images have different sizes, we will crop and rotate images. The images are all 300*600, so we don't need this step.
+'''def getCropImgs(img, needRotations=False):
+    # img = img.convert('L')
+    z = np.asarray(img, dtype=np.int8)
+    c = []
+    for i in range(3):
+        for j in range(4):
+            crop = z[512 * i:512 * (i + 1), 512 * j:512 * (j + 1), :]
+
+            c.append(crop)
+            if needRotations:
+                c.append(np.rot90(np.rot90(crop)))
+
+    # os.system('cls')
+    # print("Crop imgs", c[2].shape)
+
+    return c '''
+
+# Get the softmax from folder name
+def getAsSoftmax(fname):
+    if (fname == 'b'):
+        return [1, 0, 0, 0]
+    elif (fname == 'is'):
+        return [0, 1, 0, 0]
+    elif (fname == 'iv'):
+        return [0, 0, 1, 0]
+    else:
+        return [0, 0, 0, 1]
+
+def plot_cdf(data):
+    data.sort()
+    plotDataset = [[],[]]
+    count = len(data)
+    for i in range(count):
+
+        plotDataset[0].append(float(data[i]))
+        plotDataset[1].append((i+1)/count)
+    plt.figure(figsize=(20,10))
+    plt.plot(plotDataset[0], plotDataset[1], '-', linewidth=2)
+    plt.show()
+
+
+# Return all images as numpy array, labels
+def get_imgs_frm_folder(path):
+    
+   
+
+    x_image = []
+    y_image = []
+
+    cnt = 0
+    for filename in os.listdir(path):
+        image_path = os.path.join(path, filename)
+        img = Image.open(image_path)
+        #print(img.size)
+        img = img.convert('RGB')
+        img = np.asarray(img, np.float16) #(300, 600, 3)
+        #print(img.shape)
+        '''
+        if len(img.shape) == 2:
+            img = np.concatenate((img, img, img), axis=-1)
+            #img = np.reshape(img,(min_width,min_height,1))
+        print
+        '''
+        x_image.append(np.divide(img, 255.))
+        y_image.append(filename)
+        cnt += 1
+
+        '''
+        crpImgs = getCropImgs(img)
+        cnt += 1
+        if cnt % 10 == 0:
+            print(str(cnt) + " Images loaded")
+        for im in crpImgs:
+            x.append(np.divide(np.asarray(im, np.float16), 255.))
+            # Image.fromarray(np.divide(np.asarray(im, np.float16), 255.), 'RGB').show()
+            y.append( (foldname))
+            # print(getAsSoftmax(foldname))
+        '''
+    print("Images cropped")
+    print("Loading as array")
+    print("count: ",cnt)
+    return x_image, y_image, cnt
+
+def get_one_hot(data, index):
+    for i in index:
+        tempdata = data[:,i].reshape(-1, 1)
+        enc = OneHotEncoder()
+        enc.fit(tempdata)
+        tempdata = enc.transform(tempdata).toarray()
+        data = np.concatenate((data,tempdata),axis=1)
+    for i in reversed(index):
+        data = np.delete(data,i,axis=1)
+    return data
+
+# Load the dataset
+def load_dataset(image_path,feats_path, ntype):
+    print("Loading images..")
+
+    train_set_x_orig, train_set_y_orig, cnt = get_imgs_frm_folder(image_path)
+
+    feats_train = pd.read_csv(feats_path)
+    
+    feats_train = feats_train.fillna(method='backfill') #handle the NAN
+    print(feats_train.head())
+    X_img = []
+    #X_fea = []
+    Y = []
+    cnt = 0
+    for i in range(len(train_set_y_orig)):
+        sample = []
+        cnt += 1
+        try: 
+            seg_id = train_set_y_orig[i].split('_')[1].split('.')[0]
+        except:
+            X_img.append(train_set_x_orig[i])
+            continue
+        if len(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])]) == 0:
+            continue
+        X_img.append(train_set_x_orig[i])
+        
+        '''
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['num_collisions'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['num_cases_injury_other_visible'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['num_cases_complaint_of_pain'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['num_cases_severe'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['num_cases_fatal'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['cyc_ntwrk_yn'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['speed_limit'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['pk_metered_cnt'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['pk_on_st_cnt'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['oneway_yn'] )
+        sample.append( float(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['daily_ride_qrt'] ))
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['facility_type'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['surface_type'] )
+        sample.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['sharrow'] )
+        X_fea.append(sample)
+        '''
+        Y.append(feats_train[feats_train['f_node_cnn_intrsctn_fkey'].isin([seg_id])].iloc[0]['y'])
+        
+    
+    X_img = np.array(X_img,dtype = np.float)
+    if ntype != "train":
+        return X_img, 0, 0, 0,train_set_y_orig
+    print("Y < 0.1 ", len([i for i in Y if i > 0 and i < 0.001]))
+    print("Y < 0.2 ", len([i for i in Y if i > 0.001 and i < 0.002]))
+    print("Y < 0.4 ", len([i for i in Y if i > 0.002 and i < 0.004]))
+    print("Y < 0.6 ", len([i for i in Y if i > 0.004 and i < 0.006]))
+    print("Y < 0.8 ", len([i for i in Y if i > 0.06 and i < 0.008]))
+    print("Y < 1.0 ", len([i for i in Y if i > 0.08]))
+    print("Y max: ",max(Y))
+    plot_cdf(Y)
+    Y = Y / max(Y)
+    print("Y < 0.1 ", len([i for i in Y if i > 0 and i < 0.01]))
+    print("Y < 0.2 ", len([i for i in Y if i > 0.01 and i < 0.02]))
+    print("Y < 0.4 ", len([i for i in Y if i > 0.02 and i < 0.04]))
+    print("Y < 0.6 ", len([i for i in Y if i > 0.04 and i < 0.06]))
+    print("Y < 0.8 ", len([i for i in Y if i > 0.06 and i < 0.08]))
+    print("Y < 1.0 ", len([i for i in Y if i > 0.08]))
+    print("Y max: ",max(Y))
+    Y = np.array(Y,dtype = np.float).reshape((-1,1))
+
+    '''
+    X_fea = np.array(X_fea)
+    #X_fea[:,10] = X_fea[:,10]/X_fea[:,10].max()
+    X_fea = get_one_hot(X_fea,index = [5,9,11,12,13])
+    X_fea = np.array(X_fea,dtype = np.float)
+    X_fea[:,8] = X_fea[:,8]/X_fea[:,8].max()
+    print(X_fea.shape)
+    '''
+    
+    print(X_img.shape)
+    
+    print(Y.shape)
+    x_img_train, x_img_test, y_train, y_test = train_test_split(X_img, Y, train_size=0.90, random_state=33)
+    #y_train, y_test = train_test_split(Y,train_size=0.70, random_state=33)
+    #x_fea_train, x_fea_test = train_test_split(X_fea, train_size=0.70, random_state=33)
+    TRAIN_EXAMPLES = len(x_img_train)
+    TEST_EXAMPLES = len(x_img_test)
+
+    
+    print("Data load complete")
+
+    return x_img_train, x_img_test, y_train, y_test, train_set_y_orig
+
+
+
+def weight_variable(shape):
+    initial = tf.truncated_normal(shape, mean=0.0, stddev=0.01)
+    return tf.Variable(initial)
+
+def bias_variable(shape):
+    initial = tf.constant(0.1, shape = shape)
+    return tf.Variable(initial)
+
+def conv2d(x, W):
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding = 'SAME')
+
+def max_pool_2x2(x):
+    return tf.nn.max_pool(x, ksize = [1, 2, 2, 1],
+                          strides = [1, 2, 2, 1], padding = 'SAME')
+
+
+def train(BATCH_SIZE, epochs,x_img_train, x_img_test, y_train, y_test, name, train_type):#BATCH_SIZE, EPOCHS,x_img_train, x_img_test, y_train, y_test, x_fea_train, x_fea_test
+    x_img = tf.placeholder(tf.float32,[None, img_width,img_height,3])
+    #x_fea = tf.placeholder(tf.float32,[None, x_fea_train.shape[1]])
+    keep_prob = tf.placeholder("float")
+    y_ = tf.placeholder("float", [None, 1])
+    
+    x_image = tf.reshape(x_img, [-1, img_width, img_height, 3])  
+    W_conv1 = weight_variable([3, 3, 3, 16])
+    b_conv1 = bias_variable([16])
+    h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
+    h_pool1 = max_pool_2x2(h_conv1)
+    
+    W_conv2 = weight_variable([3, 3, 16, 32])
+    b_conv2 = bias_variable([32])
+    h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
+    h_pool2 = max_pool_2x2(h_conv2)
+
+    W_conv3 = weight_variable([3, 3, 32, 64])
+    b_conv3 = bias_variable([64])
+    h_conv3 = tf.nn.relu(conv2d(h_pool2, W_conv3) + b_conv3)
+    h_pool3 = max_pool_2x2(h_conv3)
+
+    W_conv4 = weight_variable([3, 3, 64, 128])
+    b_conv4 = bias_variable([128])
+    h_conv4 = tf.nn.relu(conv2d(h_pool3, W_conv4) + b_conv4)
+    h_pool4 = max_pool_2x2(h_conv4)
+
+    W_conv5 = weight_variable([3, 3, 128, 256])
+    b_conv5 = bias_variable([256])
+    h_conv5 = tf.nn.relu(conv2d(h_pool4, W_conv5) + b_conv5)
+    h_pool5 = max_pool_2x2(h_conv5)
+
+
+    print("h_pool5:",h_pool5.shape)
+
+    W_fc1 = weight_variable([10 * 19 * 256, 2048])
+    b_fc1 = bias_variable([2048])
+
+    h_pool5_flat = tf.reshape(h_pool5, [-1, 10 * 19 * 256])
+    h_fc1 = tf.nn.relu(tf.matmul(h_pool5_flat, W_fc1) + b_fc1)
+    print("h_fc1:",h_fc1.shape)
+    h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
+
+    W_fc0 = weight_variable([2048, 4096])
+    b_fc0 = bias_variable([4096])
+    cnn_out =  tf.matmul(h_fc1_drop, W_fc0) + b_fc0
+    
+    W_fc2 = weight_variable([4096, 2048])
+    b_fc2 = bias_variable([2048])
+    h_fc2 = tf.nn.relu(tf.matmul(cnn_out, W_fc2) + b_fc2)
+    h_fc2 = tf.nn.dropout(h_fc2, keep_prob)
+
+    W_fc3 = weight_variable([2048, 1024])
+    b_fc3 = bias_variable([1024])
+    h_fc3 = tf.nn.relu(tf.matmul(h_fc2, W_fc3) + b_fc3)
+    h_fc3 = tf.nn.dropout(h_fc3, keep_prob)
+
+    W_fc4 = weight_variable([1024, 512])
+    b_fc4 = bias_variable([512])
+    h_fc4 = tf.nn.relu(tf.matmul(h_fc3, W_fc4) + b_fc4)
+    h_fc4 = tf.nn.dropout(h_fc4, keep_prob)
+
+    W_fc5 = weight_variable([512, 256])
+    b_fc5 = bias_variable([256])
+    h_fc5 = tf.nn.relu(tf.matmul(h_fc4, W_fc5) + b_fc5)
+    h_fc5 = tf.nn.dropout(h_fc5, keep_prob)
+
+    W_fc6 = weight_variable([256, 128])
+    b_fc6 = bias_variable([128])
+    h_fc6 = tf.nn.relu(tf.matmul(h_fc5, W_fc6) + b_fc6)
+    h_fc6 = tf.nn.dropout(h_fc6, keep_prob)
+
+
+    W_fc_out = weight_variable([128, 1])
+    b_fc_out = bias_variable([1])
+    y_pred = tf.nn.relu(tf.matmul(h_fc6, W_fc_out) + b_fc_out)
+
+    print("y_pred:",y_pred.shape)
+
+    loss = tf.reduce_mean(tf.square(y_pred - y_))
+
+    train_step = tf.train.AdamOptimizer(LR).minimize(loss)
+
+
+    x_img_train = np.array(x_img_train)
+    print(x_img_train.shape)
+
+
+    saver = tf.train.Saver()
+    sess = tf.Session() 
+    #sess.run(tf.initialize_all_variables()) 
+    sess.run(tf.global_variables_initializer()) 
+
+    if train_type == "train":
+        results_train = []
+        results_test = []
+        for i in range(epochs): 
+            print("epoch:",i)
+            test_losses=[]
+            train_losses = []
+
+            for j in range(TRAIN_EXAMPLES//BATCH_SIZE):
+                _,train_loss = sess.run(fetches = (train_step,loss),
+                                               feed_dict = {x_img:x_img_train[j*BATCH_SIZE:(j+1)*BATCH_SIZE], y_:y_train[j*BATCH_SIZE:(j+1)*BATCH_SIZE], keep_prob:0.2})
+                train_losses.append(train_loss)
+            print("step %d, train_loss %g" %(i, sum(train_losses) / len(train_losses)))
+            results_train.append(sum(train_losses) / len(train_losses))
+            for j in range(TEST_EXAMPLES//BATCH_SIZE):
+
+                test_loss = sess.run(fetches = (loss),  feed_dict = {x_img:x_img_test[j*BATCH_SIZE:(j+1)*BATCH_SIZE], y_:y_test[j*BATCH_SIZE:(j+1)*BATCH_SIZE],
+                           keep_prob:1.0}) 
+                test_losses.append(test_loss)
+
+            print("step %d, test_loss %g" %(i, sum(test_losses) / len(test_losses)))
+            results_test.append(sum(test_losses) / len(test_losses))
+        
+        save_path_name = "save_model_collision/CNN.ckpt"
+        saver.save(sess, save_path_name)
+
+        x_img_train,y1,y2,y3,name = load_dataset("/home/DVA_Group_Project-master/Data/collision_downloads","/home/DVA_Group_Project-master/Data/model_data_segment_full_20191109.csv", "sys.argv[1]")
+        f = open("result.txt",'w')
+        BATCH_SIZE = 1
+        for j in range(x_img_train.shape[0]//BATCH_SIZE):
+            pred = sess.run(fetches = (y_pred),  feed_dict = {x_img:x_img_train[j*BATCH_SIZE:(j+1)*BATCH_SIZE],
+                                   keep_prob:1.0}) 
+            f.write(name[j]+": ")
+            f.write(str(pred[0,0])+"\t")
+            f.write("\n")
+        f.close()
+
+    else:
+        model_path = "save_model_collision/CNN.ckpt"
+        # Restore model weights from previously saved model
+        load_path = saver.restore(sess, model_path)
+        print("Model restored from file: %s" % model_path)
+
+        f = open("result.txt",'w')
+        BATCH_SIZE = 1
+        for j in range(x_img_train.shape[0]//BATCH_SIZE):
+            pred = sess.run(fetches = (y_pred),  feed_dict = {x_img:x_img_train[j*BATCH_SIZE:(j+1)*BATCH_SIZE],
+                                   keep_prob:1.0}) 
+            f.write(name[j]+": ")
+            f.write(str(pred[0,0])+"\t")
+            f.write("\n")
+        f.close()
+
+    return 
+
+
+
+
+#######################################################################
+
+if __name__ == '__main__':
+    image_path = "/home/DVA_Group_Project-master/Data/collision_downloads"
+    feats_path = "/DVA_Group_Project-master/Data/model_data_segment_full_20191109.csv"
+    if sys.argv[1] != "train":
+        image_path = "/home/DVA_Group_Project-master/Data/NewData_1"
+    x_img_train, x_img_test, y_train, y_test, filename = load_dataset(image_path,feats_path, sys.argv[1])
+    model = train(BATCH_SIZE, EPOCHS,x_img_train, x_img_test, y_train, y_test,filename, sys.argv[1])
