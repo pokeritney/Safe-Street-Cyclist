@@ -362,7 +362,7 @@
           <div id="chart1"></div>
           <script>
             function redraw(idx) {
-              var margin = { top: 200, right: 200, bottom: 300, left: 200 }
+              var margin = { top: 100, right: 400, bottom: 400, left: 100}
                 , width = window.innerWidth - margin.left - margin.right // Use the window's width
                 , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
 
@@ -473,7 +473,7 @@
                   .attr("x", (width / 2))
                   .attr("y", 0 - (margin.top / 2))
                   .attr("text-anchor", "middle")
-                  .style("font-size", "50px")
+                  .style("font-size", "30x")
                   .text(chart_num + ": Number of collisions by year, 2005-2012");
 
 
@@ -613,7 +613,7 @@
       })
 
       // update graphic based on step
-      figure.select('p').text('Chart-test' + (response.index + 1));
+      figure.select('p').text('Chart' + (response.index + 1));
       remove_();
       redraw();
 
