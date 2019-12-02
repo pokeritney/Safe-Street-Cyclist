@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Load in the d3 library -->
+<!-- <script src="../lib/d3.v5.min.js"></script> -->
+<script src="../lib/d3.v5.min.js"></script>
+
+<style type="text/css">
+/* 13. Basic Styling with CSS */
+
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 2;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+
+
+#container {
+    float: left;
+}
+
+#legend {
+    float: left;
+}
+
+.pagebreak { page-break-before: always; }
+
+</style>
+<!-- Body tag is where we will append our SVG and SVG objects-->
+<body>
+
+
+
+  <p>The volume of non-alcohol involved accidents have almost doubled by between 2005 (~300 per year) and 2012 (~600 per year). The increase is primarily seen in the volume of injuries (v.s cases involving fatality). </p>
+  <div id="container1"></div>
+  <!-- <div class="pagebreak"> </div>
+  <p>Figure 3b: line chart with symbols</p>
+  <div id="container2"></div>
+  <div class="pagebreak"> </div>
+  <p>Figure 3c-1: line chart using square root scale</p>
+  <div id="container3"></div>
+  <div class="pagebreak"> </div>
+  <p>Figure 3c-2: line chart using log scale</p>
+  <div id="container4"></div>
+  <div class="pagebreak"> </div> -->
+
+
+
+</body>
+
+
+<script>
+
+
+
+var margin = {top: 50, right: 200, bottom: 100, left: 100}
+  , width = window.innerWidth - margin.left - margin.right // Use the window's width
+  , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
+
+var parseDate = d3.timeParse("%Y")
+
+
+var xScale = d3.scaleTime()
+        .range([0, width]);
+
+
+var yScale = d3.scaleLinear()
+        .range([height, 0]);
+
+
+// var sqrtScale = d3.scaleSqrt()
+//   .domain([0, 300000])
+//   .range([3, 10.5]);
+//
+//
+// var sqrtScale_y = d3.scaleSqrt()
+//   .range([height, 0])
+//
+//
+// var logScale_y = d3.scaleLog().clamp(true)
+//   .range([height, 0])
+
+
+var color = d3.scaleOrdinal()
+        .domain(["5_5.9", "6_6.9", "7_7.9", "8.0+"])
+        .range(["#FFC300", "#FF5733", "#C70039", "#900C3F"]);
+
+
+// elements by container
+// var line4 = d3.line()
+//     .x(function(d) { return xScale(d.year); }) // set the x values for the line generator
+//     .y(function(d) { return logScale_y(d.volume); }) // set the y values for the line generator
+//     .curve(d3.curveMonotoneX) // apply smoothing to the line
+//
+// // Add the SVG to the page and employ margin setting
+// var svg4 = d3.select("#container4").append("svg")
+//     .attr("width", width + margin.left + margin.right)
+//     .attr("height", height + margin.top + margin.bottom)
+//
+// var g4 = svg4.append("g") // g element is used to group SVG shapes together
+//     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//
+//
+//
+// var line3 = d3.line()
+//     .x(function(d) { return xScale(d.year); }) // set the x values for the line generator
+//     .y(function(d) { return sqrtScale_y(d.volume); }) // set the y values for the line generator
+//     .curve(d3.curveMonotoneX) // apply smoothing to the line
+//
+// // Add the SVG to the page and employ margin setting
+// var svg3 = d3.select("#container3").append("svg")
+//     .attr("width", width + margin.left + margin.right)
+//     .attr("height", height + margin.top + margin.bottom)
+//
+// var g3 = svg3.append("g") // g element is used to group SVG shapes together
+//     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//
+//
+//
+// var line2 = d3.line()
+//     .x(function(d) { return xScale(d.year); }) // set the x values for the line generator
+//     .y(function(d) { return yScale(d.volume); }) // set the y values for the line generator
+//     .curve(d3.curveMonotoneX) // apply smoothing to the line
+//
+// // Add the SVG to the page and employ margin setting
+// var svg2 = d3.select("#container2").append("svg")
+//     .attr("width", width + margin.left + margin.right)
+//     .attr("height", height + margin.top + margin.bottom)
+//
+// var g2 = svg2.append("g") // g element is used to group SVG shapes together
+//     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+var line1 = d3.line()
+    .x(function(d) { return xScale(d.year); }) // set the x values for the line generator
+    .y(function(d) { return yScale(d.volume); }) // set the y values for the line generator
+    .curve(d3.curveMonotoneX) // apply smoothing to the line
+
+// Add the SVG to the page and employ margin setting
+var svg1 = d3.select("#container1").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+
+var g1 = svg1.append("g") // g element is used to group SVG shapes together
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+// load the data
+d3.csv("../static/res/transbase_collision_year.csv").then(function(data) {
+
+  // console.log(data);
+
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year" }));
+  // map magnitude (keys) to color
+
+  data.forEach(function(d) {
+
+    d.year = parseDate(d.year);
+    d["volume"] = parseInt(d["volume"]);
+    // d["8.0+"] = parseInt(d["8.0+"]);
+    // d["7_7.9"] = parseInt(d["7_7.9"]);
+    // d['6_6.9'] = parseInt(d['6_6.9']);
+    // d['5_5.9'] = parseInt(d['5_5.9']);
+    // d['volume'] = + d['volume'];
+
+    //console.log(d['Estimated Deaths']);
+
+  });
+
+
+  var levels = color.domain().map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+        return {year: d.year,
+                volume: +d[name]
+                // death: +d['volume']
+               };
+      })
+    };
+
+
+  });
+
+
+  // set domain for x & y scalers
+  xScale.domain(d3.extent(data, function(d) { return d.year; }));
+
+  yScale.domain([
+    d3.min(levels, function(c) { return d3.min(c.values, function(v) { return v.volume; }); }),
+    d3.max(levels, function(c) { return d3.max(c.values, function(v) { return v.volume; }); })
+  ]);
+
+
+  // sqrtScale_y.domain([
+  //   d3.min(levels, function(c) { return d3.min(c.values, function(v) { return v.volume; }); }),
+  //   d3.max(levels, function(c) { return d3.max(c.values, function(v) { return v.volume; }); })
+  // ]);
+  //
+  //
+  // logScale_y.domain([
+  //   d3.min(levels, function(c) { return 1 + d3.min(c.values, function(v) { return v.volume; }); }),
+  //   d3.max(levels, function(c) { return d3.max(c.values, function(v) { return v.volume; }); })
+  // ]);
+
+
+// // chart 4
+//
+//   // 3. Call the x axis in a group tag
+//     g4.append("g")
+//       .attr("class", "x axis")
+//       .attr("transform", "translate(0," + height + ")")
+//       .call(d3.axisBottom(xScale))
+//
+//   // add x axis title
+//     g4.append("text")
+//       .attr("transform",
+//             "translate(" + (width/2) + " ," +
+//                            (height + margin.top - 10) + ")")
+//       .style("text-anchor", "middle")
+//       .text("Year");
+//
+//   // Call the y axis in a group tag
+//     g4.append("g")
+//       .attr("class", "y axis")
+//       .call(d3.axisLeft(logScale_y))
+//
+//   // add y axis title
+//     g4.append("text")
+//       .attr("transform", "rotate(-90)")
+//       .attr("y", 0 - margin.left + 40)
+//       .attr("x", 0 - (height / 2))
+//       .attr("dy", "1em")
+//       .style("text-anchor", "middle")
+//       .text("Num of Earthquakes");
+//
+//   // add legend
+//
+//         // create a list of keys
+//         var keys = ["8.0+", "7_7.9", "6_6.9", "5_5.9"]
+//
+//         // Add one dot in the legend for each name.
+//         var size = 20
+//         g4.selectAll("mydots")
+//           .data(keys)
+//           .enter()
+//           .append("rect")
+//             .attr("x", 1200)
+//             .attr("y", function(d,i){ return 100 + i * (size+3) - 100}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .attr("width", size)
+//             .attr("height", size)
+//             .style("fill", function(d){ return color(d)})
+//
+//         // Add one dot in the legend for each name.
+//         g4.selectAll("mylabels")
+//           .data(keys)
+//           .enter()
+//           .append("text")
+//             .attr("x", 1200 + size*1.2)
+//             .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2) - 98}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .style("fill", function(d){ return color(d)})
+//             .text(function(d){ return d})
+//             .attr("text-anchor", "left")
+//             .style("alignment-baseline", "middle")
+//
+//   // add chart title
+//       g4.append("text")
+//         .attr("x", (width / 2))
+//         .attr("y", 0 - (margin.top / 2))
+//         .attr("text-anchor", "middle")
+//         .style("font-size", "20px")
+//         .text("Worldwide Earthquake stats 2000-2015 log scale");
+//
+//
+//     var magnitude = g4.selectAll(".magnitude")
+//       .data(levels)
+//     .enter().append("g")
+//       .attr("class", "level");
+//
+//       magnitude.append("path")
+//           .attr("class", "line")
+//           .attr("d", function(d) { return line4(d.values); })
+//           .style("stroke", function(d) { return color(d.name); });
+//
+//       magnitude.selectAll("circle")
+//         .data(function(d){return d.values})
+//         .enter()
+//         .append("circle")
+//         .attr("r", function(d) { return sqrtScale(d.death); })
+//         .attr("cx", function(d) { return xScale(d.year); })
+//         .attr("cy", function(d) { return logScale_y(d.volume); })
+//         .style("fill", function(d){return color(this.parentNode.__data__.name)});
+//
+//
+//
+// // chart 3
+//       g3.append("g")
+//       .attr("class", "x axis")
+//       .attr("transform", "translate(0," + height + ")")
+//       .call(d3.axisBottom(xScale))
+//
+//   // add x axis title
+//   g3.append("text")
+//       .attr("transform",
+//             "translate(" + (width/2) + " ," +
+//                            (height + margin.top - 10) + ")")
+//       .style("text-anchor", "middle")
+//       .text("Year");
+//
+//   // Call the y axis in a group tag
+//   g3.append("g")
+//       .attr("class", "y axis")
+//       .call(d3.axisLeft(sqrtScale_y))
+//
+//   // add y axis title
+//   g3.append("text")
+//       .attr("transform", "rotate(-90)")
+//       .attr("y", 0 - margin.left + 40)
+//       .attr("x", 0 - (height / 2))
+//       .attr("dy", "1em")
+//       .style("text-anchor", "middle")
+//       .text("Num of Earthquakes");
+//
+//   // add legend
+//
+//         // create a list of keys
+//         var keys = ["8.0+", "7_7.9", "6_6.9", "5_5.9"]
+//
+//         // Add one dot in the legend for each name.
+//         var size = 20
+//         g3.selectAll("mydots")
+//           .data(keys)
+//           .enter()
+//           .append("rect")
+//             .attr("x", 1200)
+//             .attr("y", function(d,i){ return 100 + i * (size+3) - 100}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .attr("width", size)
+//             .attr("height", size)
+//             .style("fill", function(d){ return color(d)})
+//
+//         // Add one dot in the legend for each name.
+//         g3.selectAll("mylabels")
+//           .data(keys)
+//           .enter()
+//           .append("text")
+//             .attr("x", 1200 + size*1.2)
+//             .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2) - 98}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .style("fill", function(d){ return color(d)})
+//             .text(function(d){ return d})
+//             .attr("text-anchor", "left")
+//             .style("alignment-baseline", "middle")
+//
+//   // add chart title
+//   g3.append("text")
+//         .attr("x", (width / 2))
+//         .attr("y", 0 - (margin.top / 2))
+//         .attr("text-anchor", "middle")
+//         .style("font-size", "20px")
+//         .text("Worldwide Earthquake stats 2000-2015 square root scale");
+//
+//
+//     var magnitude = g3.selectAll(".magnitude")
+//       .data(levels)
+//     .enter().append("g")
+//       .attr("class", "level");
+//
+//       magnitude.append("path")
+//           .attr("class", "line")
+//           .attr("d", function(d) { return line3(d.values); })
+//           .style("stroke", function(d) { return color(d.name); });
+//
+//       magnitude.selectAll("circle")
+//         .data(function(d){return d.values})
+//         .enter()
+//         .append("circle")
+//         .attr("r", function(d) { return sqrtScale(d.death); })
+//         .attr("cx", function(d) { return xScale(d.year); })
+//         .attr("cy", function(d) { return sqrtScale_y(d.volume); })
+//         .style("fill", function(d){return color(this.parentNode.__data__.name)});
+//
+// // chart 2
+//
+//   g2.append("g")
+//       .attr("class", "x axis")
+//       .attr("transform", "translate(0," + height + ")")
+//       .call(d3.axisBottom(xScale))
+//
+//   // add x axis title
+//   g2.append("text")
+//       .attr("transform",
+//             "translate(" + (width/2) + " ," +
+//                            (height + margin.top - 10) + ")")
+//       .style("text-anchor", "middle")
+//       .text("Year");
+//
+//   // Call the y axis in a group tag
+//   g2.append("g")
+//       .attr("class", "y axis")
+//       .call(d3.axisLeft(yScale))
+//
+//   // add y axis title
+//   g2.append("text")
+//       .attr("transform", "rotate(-90)")
+//       .attr("y", 0 - margin.left + 40)
+//       .attr("x", 0 - (height / 2))
+//       .attr("dy", "1em")
+//       .style("text-anchor", "middle")
+//       .text("Num of Earthquakes");
+//
+//   // add legend
+//
+//         // create a list of keys
+//         var keys = ["8.0+", "7_7.9", "6_6.9", "5_5.9"]
+//
+//         // Add one dot in the legend for each name.
+//         var size = 20
+//         g2.selectAll("mydots")
+//           .data(keys)
+//           .enter()
+//           .append("rect")
+//             .attr("x", 1200)
+//             .attr("y", function(d,i){ return 100 + i * (size+3) - 100}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .attr("width", size)
+//             .attr("height", size)
+//             .style("fill", function(d){ return color(d)})
+//
+//         // Add one dot in the legend for each name.
+//         g2.selectAll("mylabels")
+//           .data(keys)
+//           .enter()
+//           .append("text")
+//             .attr("x", 1200 + size*1.2)
+//             .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2) - 98}) // 100 is where the first dot appears. 25 is the distance between dots
+//             .style("fill", function(d){ return color(d)})
+//             .text(function(d){ return d})
+//             .attr("text-anchor", "left")
+//             .style("alignment-baseline", "middle")
+//
+//   // add chart title
+//   g2.append("text")
+//         .attr("x", (width / 2))
+//         .attr("y", 0 - (margin.top / 2))
+//         .attr("text-anchor", "middle")
+//         .style("font-size", "20px")
+//         .text("Worldwide Earthquake stats 2000-2015 with symbols");
+//
+//
+//     var magnitude = g2.selectAll(".magnitude")
+//       .data(levels)
+//     .enter().append("g")
+//       .attr("class", "level");
+//
+//       magnitude.append("path")
+//           .attr("class", "line")
+//           .attr("d", function(d) { return line2(d.values); })
+//           .style("stroke", function(d) { return color(d.name); });
+//
+//       magnitude.selectAll("circle")
+//         .data(function(d){return d.values})
+//         .enter()
+//         .append("circle")
+//         .attr("r", function(d) { return sqrtScale(d.death); })
+//         .attr("cx", function(d) { return xScale(d.year); })
+//         .attr("cy", function(d) { return yScale(d.volume); })
+//         .style("fill", function(d){return color(this.parentNode.__data__.name)});
+
+// chart 1
+
+  g1.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale))
+
+  // add x axis title
+  g1.append("text")
+      .attr("transform",
+            "translate(" + (width/2) + " ," +
+                           (height + margin.top - 10) + ")")
+      .style("text-anchor", "middle")
+      .text("Year");
+
+
+  // Call the y axis in a group tag
+  g1.append("g")
+      .attr("class", "y axis")
+      .call(d3.axisLeft(yScale))
+
+
+  // add y axis title
+  g1.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left + 40)
+      .attr("x", 0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Num of Collisions");
+
+  // // add legend
+  //
+  //       // create a list of keys
+  //       var keys = ["8.0+", "7_7.9", "6_6.9", "5_5.9"]
+  //
+  //       // Add one dot in the legend for each name.
+  //       var size = 20
+  //       g1.selectAll("mydots")
+  //         .data(keys)
+  //         .enter()
+  //         .append("rect")
+  //           .attr("x", 1200)
+  //           .attr("y", function(d,i){ return 100 + i * (size+3) - 50}) // 100 is where the first dot appears. 25 is the distance between dots
+  //           .attr("width", size)
+  //           .attr("height", size)
+  //           .style("fill", function(d){ return color(d)})
+  //
+  //       // Add one dot in the legend for each name.
+  //       g1.selectAll("mylabels")
+  //         .data(keys)
+  //         .enter()
+  //         .append("text")
+  //           .attr("x", 1200 + size*1.2)
+  //           .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2) - 48}) // 100 is where the first dot appears. 25 is the distance between dots
+  //           .style("fill", function(d){ return color(d)})
+  //           .text(function(d){ return d})
+  //           .attr("text-anchor", "left")
+  //           .style("alignment-baseline", "middle")
+
+
+
+  // add chart title
+  g1.append("text")
+        .attr("x", (width / 2))
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "20px")
+        .text("Number of collisions by year, 2005-2012");
+
+
+    var magnitude = g1.selectAll(".magnitude")
+      .data(levels)
+    .enter().append("g")
+      .attr("class", "level");
+
+      magnitude.append("path")
+          .attr("class", "line")
+          .attr("d", function(d) { return line1(d.values); })
+          .style("stroke", function(d) { return color(d.name); });
+
+
+
+});
+
+
+</script>

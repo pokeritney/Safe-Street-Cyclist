@@ -279,6 +279,24 @@
       fill: #ffab00;
       stroke: #fff;
     }
+
+    .parent {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .image1 {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .image2 {
+      position: absolute;
+      top: 30px;
+      left: 70px;
+    }
   </style>
 </head>
 
@@ -328,17 +346,17 @@
       <!--  graphic container  -->
       <!-- <div class='figure'> -->
       <figure>
-          <div class="row">
-              <div class="column">
-                <img src="pic1.png"  style="width:300">
-              </div>
-              <div class="column">
-                <img src="pic2.png"  style="width:300">
-              </div>
-              <div class="column">
-                <img src="pic3.png"  style="width:300">
-              </div>
-            </div>
+        <div class="row">
+          <div class="column">
+            <img src="pic1.png" style="width:300">
+          </div>
+          <div class="column">
+            <img src="pic2.png" style="width:300">
+          </div>
+          <div class="column">
+            <img src="pic3.png" style="width:300">
+          </div>
+        </div>
         <!-- </div> -->
       </figure>
 
@@ -433,7 +451,7 @@
       })
 
       // update graphic based on step
-      figure.attr('src','response.index'+'.png');
+      figure.attr('src', 'response.index' + '.png');
 
 
     }
