@@ -93,8 +93,7 @@
 
     .step {
       margin: 0 auto 2rem auto;
-      background-color: #3b3b3b;
-      color: #fff;
+      opacity: .3;
     }
 
     .step:last-child {
@@ -104,6 +103,7 @@
     .step.is-active {
       background-color: white;
       color: #3b3b3b;
+      opacity: 1;
     }
 
     .step p {
@@ -297,228 +297,48 @@
       <article>
         <div class='step' data-step='1'>
           <h1>Motivation</h1>
-          <p>With its plan for a Net Zero Emissions in 2050, San Fransisco is the second most bike friendly city in the
-            United States.
-            <br>
-            <br>The volume of non-alcohol involved accidents have almost doubled by between 2005 (~300 per year) and
+          <br>
+          <p>The volume of non-alcohol involved accidents have almost doubled by between 2005 (~300 per year) and
             2012 (~600 per year). The increase is primarily seen in the volume of injuries (v.s cases involving
             fatality).
-            <br>
-            <br> Even though there are political will and cycling facilities across the US to improve policy
-            environment, cyclists are still extremely vulnerable compare to other road users.
-            <br>
-            <br> There is an urgent need to identify and prioritize the area where changes would result the greatest
-            improvement in safety.
-            <br>
-            <br> Our solution Safe Street would be the one stop shop that provides the key contributors of accidents and
-            identify where the stakeholders should focus their resources and guide them with budget decisions. While the
-            platform provides infinite support to planners, it serves as educational pathway and provide rich insight
-            into San Fransisco for rest of the world.
-            <br>
-            <br> (a graph of increasing accidents over year)
           </p>
         </div>
         <div class='step' data-step='2'>
-          <h1>Collision Findings #1 </h1>
-          <p>The accident volume is higher on weekdays than weekend days, this could be due to the fact that there is
-            more traffic on weekdays.
+          <p>Do bike lane/route/sharrows contribute to improving the safety condition for cyclists? What kind of cycling
+            facilities do we need to invest in?
             <br>
-            <br>(a graph of by day, click on it takes to the rush hour chart for that day)
           </p>
         </div>
         <div class='step' data-step='3'>
-          <h1>Collision Findings #2</h1>
-          <p>The collision volume is much higher during rush hours (8am – 10am; 2pm – 7pm), possible due to the fact
-            that traffic is heavy to begin with.
-            <br>
-            <br>(a graph of by hour)
-          </p>
-        </div>
-        <div class='step' data-step='4'>
-          <h1>Collision Findings #3</h1>
-          <p>The dangrious combination of day/time to be out.
-            <br>
-            <br>(a heatmap? http://bl.ocks.org/tjdecke/5558084)
+          <p>The accident volume is higher on weekdays than weekend days, this could be due to the fact that there
+            is more traffic on weekdays.
             <br>
           </p>
         </div>
         <div class='step' data-step='5'>
-          <h1>Collision Findings #4</h1>
           <p>Top 4 out of the 5 violation categories involve driver/human factors.
             <br>
             <br>The only street-level feature that is a major contributor to collision is traffic signals & signs.
             <br>
             <br>Weather is not correlated to the collision volume. Most of the cases have weather = 'clear'
             <br>
-            <br>(a bar chart)click on the left side text for words, it will highlight on right?
           </p>
         </div>
       </article>
       <!--  graphic container  -->
       <!-- <div class='figure'> -->
       <figure>
-        <p>
-          <!-- Chart 1: Number of collisions by year, 2005-2012 -->
-          <div id="chart1"></div>
-          <script>
-            function redraw(idx) {
-              var margin = { top: 100, right: 400, bottom: 400, left: 100}
-                , width = window.innerWidth - margin.left - margin.right // Use the window's width
-                , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
-
-              var parseDate = d3.timeParse("%Y")
-
-
-              var xScale = d3.scaleTime()
-                .range([0, width]);
-
-              var yScale = d3.scaleLinear()
-                .range([height, 0]);
-
-              var color = d3.scaleOrdinal()
-                .domain(["5_5.9", "6_6.9", "7_7.9", "8.0+"])
-                .range(["#FFC300", "#FF5733", "#C70039", "#900C3F"]);
-
-              var line1 = d3.line()
-                .x(function (d) { return xScale(d.year); }) // set the x values for the line generator
-                .y(function (d) { return yScale(d.volume); }) // set the y values for the line generator
-                .curve(d3.curveMonotoneX) // apply smoothing to the line
-
-              // Add the SVG to the page and employ margin setting
-              var svg1 = d3.select("#chart1").append("svg")
-                .attr("id", '#svg1')
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom);
-              //.attr("preserveAspectRatio", "xMinYMin meet")
-              //.attr("viewBox", "0 0 600 400")
-              //class to make it responsive
-
-              var g1 = svg1.append("g") // g element is used to group SVG shapes together
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-              // load the data
-              d3.csv("static/res/transbase_collision_year.csv").then(function (data) {
-
-                // console.log(data);
-
-                color.domain(d3.keys(data[0]).filter(function (key) { return key !== "year" }));
-                // map magnitude (keys) to color
-
-                data.forEach(function (d) {
-
-                  d.year = parseDate(d.year);
-                  d["volume"] = parseInt(d["volume"]);
-
-                });
-
-                var levels = color.domain().map(function (name) {
-                  return {
-                    name: name,
-                    values: data.map(function (d) {
-                      return {
-                        year: d.year,
-                        volume: +d[name]
-                      };
-                    })
-                  };
-
-                });
-
-
-                // set domain for x & y scalers
-                xScale.domain(d3.extent(data, function (d) { return d.year; }));
-
-                yScale.domain([
-                  d3.min(levels, function (c) { return d3.min(c.values, function (v) { return v.volume; }); }),
-                  d3.max(levels, function (c) { return d3.max(c.values, function (v) { return v.volume; }); })
-                ]);
-
-
-                // chart 1
-                g1.append("g")
-                  .attr("class", "x axis")
-                  .attr("transform", "translate(0," + height + ")")
-                  .call(d3.axisBottom(xScale))
-
-                // add x axis title
-                g1.append("text")
-                  .attr("transform",
-                    "translate(" + (width / 2) + " ," +
-                    (height + margin.top - 150) + ")")
-                  .style("text-anchor", "middle")
-                  .text("Year");
-
-
-                // Call the y axis in a group tag
-                g1.append("g")
-                  .attr("class", "y axis")
-                  .call(d3.axisLeft(yScale))
-
-
-                g1.append("text")
-                  .attr("transform", "rotate(-90)")
-                  .attr("y", 0 - margin.left + 40)
-                  .attr("x", 0 - (height / 2))
-                  .attr("dy", "1em")
-                  .style("text-anchor", "middle")
-                  .text("Num of Collisions");
-
-                // add chart title
-                var chart_num = d3.select("body").select("main")
-                  .select("#scrolly").select("figure")
-                  .select("p").text();
-
-
-                g1.append("text")
-                  .attr("x", (width / 2))
-                  .attr("y", 0 - (margin.top / 2))
-                  .attr("text-anchor", "middle")
-                  .style("font-size", "30x")
-                  .text(chart_num + ": Number of collisions by year, 2005-2012");
-
-
-                var magnitude = g1.selectAll(".magnitude")
-                  .data(levels)
-                  .enter().append("g")
-                  .attr("class", "level");
-
-                magnitude.append("path")
-                  .attr("class", "line")
-                  .attr("d", function (d) { return line1(d.values); })
-                  .style("stroke", function (d) { return color(d.name); });
-
-                magnitude.selectAll("circle")
-                  .data(function (d) { return d.values })
-                  .enter()
-                  .append("circle")
-                  .attr("r", 8)
-                  .attr("cx", function (d) { return xScale(d.year); })
-                  .attr("cy", function (d) { return yScale(d.volume); })
-                  .style("fill", function (d) { return color(this.parentNode.__data__.name) });
-
-              });
-
-            }
-
-            redraw();
-            var remove_ = function () {
-
-              //d3.select("#svg1").remove(); //use to remove when mouse is out
-
-              d3.select("body").select("main")
-                .select("#scrolly").select("figure")
-                .select("#chart1")
-                .select('svg')
-                .remove();
-              //
-              //  .attr("width"));
-              //alert(1);
-
-            }
-            window.addEventListener("resize", remove_);
-            window.addEventListener("resize", redraw);
-          </script>
-        </p>
+          <div class="row">
+              <div class="column">
+                <img src="pic1.png"  style="width:300">
+              </div>
+              <div class="column">
+                <img src="pic2.png"  style="width:300">
+              </div>
+              <div class="column">
+                <img src="pic3.png"  style="width:300">
+              </div>
+            </div>
         <!-- </div> -->
       </figure>
 
@@ -613,30 +433,8 @@
       })
 
       // update graphic based on step
-      figure.select('p').text('Chart' + (response.index + 1));
-      remove_();
-      redraw();
+      figure.attr('src','response.index'+'.png');
 
-      // if (response.index == 0){
-      //   remove_();
-      //   redraw_graph1();
-      // }
-      // if (response.index == 1){
-      //   remove_();
-      //   redraw_graph2();
-      // }
-      // if (response.index == 2){
-      //   remove_();
-      //   redraw_graph3();
-      // }
-      // if (response.index == 3){
-      //   remove_();
-      //   redraw_graph4();
-      // }
-      // if (response.index == 4){
-      //   remove_();
-      //   redraw_graph5();
-      // }
 
     }
 
