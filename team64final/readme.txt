@@ -15,7 +15,7 @@
    In the command shell, run the following command:
    $ python -m http.server
 
-   B. This will set up a local host in your computer. A local server address will appear in the shell, copy that address and paste it into your browser address. In case no address is displayed, enter http://0.0.0.0:8000/index.html. Hit enter, you are then in Safe Street for Cyclist's interface.
+   B. This will set up a local host in your computer. A local server address will appear in the shell, copy that address and paste it into your browser address. (Note: Please use Firefox to view this website). In case no address is displayed, enter http://0.0.0.0:8000/index.html. Hit enter, you are then in Safe Street for Cyclist's interface.
 
 
 3. EXECUTION - How to run a demo on your code
