@@ -73,7 +73,7 @@
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
-      background-color: #8a8a8a;
+      background-color: white;
     }
 
     figure p {
@@ -208,8 +208,8 @@
     }
 
     .row {
-      margin: 5px;
-      height: 12px;
+      margin: 3px;
+      height: 16px;
       width: 97%;
     }
 
@@ -279,20 +279,17 @@
       fill: #ffab00;
       stroke: #fff;
     }
-
-    #container {
-      float: left;
-    }
   </style>
 </head>
 
 <body>
   <main>
     <section id='Intro'>
-      <h1 class='intro__hed'>Safe Street for Cyclists (background change to SF Flag or something)</h1>
-      <p class='intro__dek'>
-        Start scrolling to see how it works.
+      <h1 class='intro__hed' style="text-align:center; font-size: 30px;">Safe Street for Cyclists</h1>
+      <p class='intro__dek' style="text-align:center; font-size: 12px;">
+        Start scrolling to see the story.
       </p>
+
     </section>
     <section id='scrolly'>
 
@@ -364,138 +361,162 @@
           <!-- Chart 1: Number of collisions by year, 2005-2012 -->
           <div id="chart1"></div>
           <script>
+            function redraw(idx) {
+              var margin = { top: 200, right: 200, bottom: 300, left: 200 }
+                , width = window.innerWidth - margin.left - margin.right // Use the window's width
+                , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
 
-            var margin = { top: 200, right: 400, bottom: 200, left: 100 }
-              , width = window.innerWidth - margin.left - margin.right // Use the window's width
-              , height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
-
-            var parseDate = d3.timeParse("%Y")
+              var parseDate = d3.timeParse("%Y")
 
 
-            var xScale = d3.scaleTime()
-              .range([0, width]);
+              var xScale = d3.scaleTime()
+                .range([0, width]);
 
-            var yScale = d3.scaleLinear()
-              .range([height, 0]);
+              var yScale = d3.scaleLinear()
+                .range([height, 0]);
 
-            var color = d3.scaleOrdinal()
-              .domain(["5_5.9", "6_6.9", "7_7.9", "8.0+"])
-              .range(["#FFC300", "#FF5733", "#C70039", "#900C3F"]);
+              var color = d3.scaleOrdinal()
+                .domain(["5_5.9", "6_6.9", "7_7.9", "8.0+"])
+                .range(["#FFC300", "#FF5733", "#C70039", "#900C3F"]);
 
-            var line1 = d3.line()
-              .x(function (d) { return xScale(d.year); }) // set the x values for the line generator
-              .y(function (d) { return yScale(d.volume); }) // set the y values for the line generator
-              .curve(d3.curveMonotoneX) // apply smoothing to the line
+              var line1 = d3.line()
+                .x(function (d) { return xScale(d.year); }) // set the x values for the line generator
+                .y(function (d) { return yScale(d.volume); }) // set the y values for the line generator
+                .curve(d3.curveMonotoneX) // apply smoothing to the line
 
-            // Add the SVG to the page and employ margin setting
-            var svg1 = d3.select("#chart1").append("svg")
-              .attr("width", width + margin.left + margin.right)
-              .attr("height", height + margin.top + margin.bottom)
+              // Add the SVG to the page and employ margin setting
+              var svg1 = d3.select("#chart1").append("svg")
+                .attr("id", '#svg1')
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom);
+              //.attr("preserveAspectRatio", "xMinYMin meet")
+              //.attr("viewBox", "0 0 600 400")
+              //class to make it responsive
 
-            var g1 = svg1.append("g") // g element is used to group SVG shapes together
-              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+              var g1 = svg1.append("g") // g element is used to group SVG shapes together
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            // load the data
-            d3.csv("static/res/transbase_collision_year.csv").then(function (data) {
+              // load the data
+              d3.csv("static/res/transbase_collision_year.csv").then(function (data) {
 
-              // console.log(data);
+                // console.log(data);
 
-              color.domain(d3.keys(data[0]).filter(function (key) { return key !== "year" }));
-              // map magnitude (keys) to color
+                color.domain(d3.keys(data[0]).filter(function (key) { return key !== "year" }));
+                // map magnitude (keys) to color
 
-              data.forEach(function (d) {
+                data.forEach(function (d) {
 
-                d.year = parseDate(d.year);
-                d["volume"] = parseInt(d["volume"]);
+                  d.year = parseDate(d.year);
+                  d["volume"] = parseInt(d["volume"]);
+
+                });
+
+                var levels = color.domain().map(function (name) {
+                  return {
+                    name: name,
+                    values: data.map(function (d) {
+                      return {
+                        year: d.year,
+                        volume: +d[name]
+                      };
+                    })
+                  };
+
+                });
+
+
+                // set domain for x & y scalers
+                xScale.domain(d3.extent(data, function (d) { return d.year; }));
+
+                yScale.domain([
+                  d3.min(levels, function (c) { return d3.min(c.values, function (v) { return v.volume; }); }),
+                  d3.max(levels, function (c) { return d3.max(c.values, function (v) { return v.volume; }); })
+                ]);
+
+
+                // chart 1
+                g1.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(xScale))
+
+                // add x axis title
+                g1.append("text")
+                  .attr("transform",
+                    "translate(" + (width / 2) + " ," +
+                    (height + margin.top - 150) + ")")
+                  .style("text-anchor", "middle")
+                  .text("Year");
+
+
+                // Call the y axis in a group tag
+                g1.append("g")
+                  .attr("class", "y axis")
+                  .call(d3.axisLeft(yScale))
+
+
+                g1.append("text")
+                  .attr("transform", "rotate(-90)")
+                  .attr("y", 0 - margin.left + 40)
+                  .attr("x", 0 - (height / 2))
+                  .attr("dy", "1em")
+                  .style("text-anchor", "middle")
+                  .text("Num of Collisions");
+
+                // add chart title
+                var chart_num = d3.select("body").select("main")
+                  .select("#scrolly").select("figure")
+                  .select("p").text();
+
+
+                g1.append("text")
+                  .attr("x", (width / 2))
+                  .attr("y", 0 - (margin.top / 2))
+                  .attr("text-anchor", "middle")
+                  .style("font-size", "50px")
+                  .text(chart_num + ": Number of collisions by year, 2005-2012");
+
+
+                var magnitude = g1.selectAll(".magnitude")
+                  .data(levels)
+                  .enter().append("g")
+                  .attr("class", "level");
+
+                magnitude.append("path")
+                  .attr("class", "line")
+                  .attr("d", function (d) { return line1(d.values); })
+                  .style("stroke", function (d) { return color(d.name); });
+
+                magnitude.selectAll("circle")
+                  .data(function (d) { return d.values })
+                  .enter()
+                  .append("circle")
+                  .attr("r", 8)
+                  .attr("cx", function (d) { return xScale(d.year); })
+                  .attr("cy", function (d) { return yScale(d.volume); })
+                  .style("fill", function (d) { return color(this.parentNode.__data__.name) });
 
               });
 
+            }
 
-              var levels = color.domain().map(function (name) {
-                return {
-                  name: name,
-                  values: data.map(function (d) {
-                    return {
-                      year: d.year,
-                      volume: +d[name]
-                    };
-                  })
-                };
+            redraw();
+            var remove_ = function () {
 
+              //d3.select("#svg1").remove(); //use to remove when mouse is out
 
-              });
+              d3.select("body").select("main")
+                .select("#scrolly").select("figure")
+                .select("#chart1")
+                .select('svg')
+                .remove();
+              //
+              //  .attr("width"));
+              //alert(1);
 
-
-              // set domain for x & y scalers
-              xScale.domain(d3.extent(data, function (d) { return d.year; }));
-
-              yScale.domain([
-                d3.min(levels, function (c) { return d3.min(c.values, function (v) { return v.volume; }); }),
-                d3.max(levels, function (c) { return d3.max(c.values, function (v) { return v.volume; }); })
-              ]);
-
-
-              // chart 1
-
-              g1.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(xScale))
-
-              // add x axis title
-              g1.append("text")
-                .attr("transform",
-                  "translate(" + (width / 2) + " ," +
-                  (height + margin.top - 150) + ")")
-                .style("text-anchor", "middle")
-                .text("Year");
-
-
-              // Call the y axis in a group tag
-              g1.append("g")
-                .attr("class", "y axis")
-                .call(d3.axisLeft(yScale))
-
-
-              // add y axis title
-              g1.append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 0 - margin.left + 40)
-                .attr("x", 0 - (height / 2))
-                .attr("dy", "1em")
-                .style("text-anchor", "middle")
-                .text("Num of Collisions");
-
-
-              // add chart title
-              g1.append("text")
-                .attr("x", (width / 2))
-                .attr("y", 0 - (margin.top / 2))
-                .attr("text-anchor", "middle")
-                .style("font-size", "20px")
-                .text("Number of collisions by year, 2005-2012");
-
-
-              var magnitude = g1.selectAll(".magnitude")
-                .data(levels)
-                .enter().append("g")
-                .attr("class", "level");
-
-              magnitude.append("path")
-                .attr("class", "line")
-                .attr("d", function (d) { return line1(d.values); })
-                .style("stroke", function (d) { return color(d.name); });
-
-              magnitude.selectAll("circle")
-                .data(function (d) { return d.values })
-                .enter()
-                .append("circle")
-                .attr("r", 8)
-                .attr("cx", function (d) { return xScale(d.year); })
-                .attr("cy", function (d) { return yScale(d.volume); })
-                .style("fill", function (d) { return color(this.parentNode.__data__.name) });
-
-            });
+            }
+            window.addEventListener("resize", remove_);
+            window.addEventListener("resize", redraw);
           </script>
         </p>
         <!-- </div> -->
@@ -592,7 +613,30 @@
       })
 
       // update graphic based on step
-      figure.select('p').text('Chart' + (response.index + 1));
+      figure.select('p').text('Chart-test' + (response.index + 1));
+      remove_();
+      redraw();
+
+      // if (response.index == 0){
+      //   remove_();
+      //   redraw_graph1();
+      // }
+      // if (response.index == 1){
+      //   remove_();
+      //   redraw_graph2();
+      // }
+      // if (response.index == 2){
+      //   remove_();
+      //   redraw_graph3();
+      // }
+      // if (response.index == 3){
+      //   remove_();
+      //   redraw_graph4();
+      // }
+      // if (response.index == 4){
+      //   remove_();
+      //   redraw_graph5();
+      // }
 
     }
 
