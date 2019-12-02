@@ -1,6 +1,6 @@
 1. DESCRIPTION - Describe the package in a few paragraphs
    
-   All of our data used to display the final findings are preprocessed. The original data files used to train our model are in /CODE/Data folder. Since the street view pictures used to train the model are too big, we only show a few samples in /CODE/Data/GSV_downloads. Besides, we saved all the steps to process our data in /CODE/Scripts folder. 
+   All of our data used to display the final findings are preprocessed. The original data files used to train our model are in /CODE/Data folder. Since the street view pictures used to train the model are too big, we only show a few samples in /CODE/Data/Google_Street_View_Examples. Besides, we saved all the steps to process our data in /CODE/Scripts folder. 
 
    Our dataset of bicycle collisions are downloaded from TIMS & Transbase Database.They are saved under /CODE/Data. Our Google Street View pictures of San Francisco, CA are downloaded from Google Cloud API. The code used to obtain GSV pictures is in /CODE/Scripts/streetViewAPI.py. And the step to register for Google Cloud API is in /CODE/Scripts/GSV_register.txt.
 
@@ -22,6 +22,3 @@
    (Note: Please use Firefox to view this website).
    A local server address will appear in the shell, copy that address and paste it into your browser address. In case no address is displayed, enter http://0.0.0.0:8000/index.html. Hit enter, you are then in Safe Street for Cyclist's website.
 
-
-3. EXECUTION - How to run a demo on your code
-[Optional, but recommended] DEMO VIDEO - Include the URL of a 1-minute *unlisted* YouTube video in this txt file. The video would show how to install and execute your system/tool/approach (e.g, from typing the first command to compile, to system launching, and running some examples). Feel free to speed up the video if needed (e.g., remove less relevant video segments). This video is optional (i.e., submitting a video does not increase scores; not submitting one does not decrease scores). However, we recommend teams to try and create such a video, because making the video helps teams better think through what they may want to write in the README.txt, and generally how they want to "sell" their work.
