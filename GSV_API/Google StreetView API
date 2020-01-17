@@ -5,7 +5,7 @@ params = [{
 	'location': '46.414382,10.013988',
 	'heading': '151.78',
 	'pitch': '-0.76',
-	'key': 'AIzaSyB0NpeNQgVuTxfHdkxw2lhl7WCvpWN6GXc'
+	'key': 'xxx'
 }]
 
 # Create a results object
