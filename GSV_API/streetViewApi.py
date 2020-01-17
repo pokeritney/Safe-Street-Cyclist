@@ -14,7 +14,7 @@ for index, rows in csvExport.iterrows():
 	'location': ''+str(latitude)+','+str(longitude)+'',
 	'heading': '151.78',
 	'pitch': '-0.76',
-	'key': 'AIzaSyB0NpeNQgVuTxfHdkxw2lhl7WCvpWN6GXc'
+	'key': 'xxx'
 }
    count+=1
    print(count)
@@ -43,7 +43,7 @@ results.save_metadata('metadata.json')
 #	'location': ''+str(latitude)+','+str(longitude)+'',
 #	'heading': '151.78',
 #	'pitch': '-0.76',
-#	'key': 'AIzaSyB0NpeNQgVuTxfHdkxw2lhl7WCvpWN6GXc'
+#	'key': ''
 #}
 #params.append(input_array)
 
@@ -55,7 +55,7 @@ results.save_metadata('metadata.json')
 #    ##'46.414382,10.013988',
 #	'heading': '151.78',
 #	'pitch': '-0.76',
-#	'key': 'AIzaSyB0NpeNQgVuTxfHdkxw2lhl7WCvpWN6GXc'
+#	'key': ''
 #}]
 #
 #results = google_streetview.api.results(params)
