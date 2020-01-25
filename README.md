@@ -1,4 +1,7 @@
 # DVA Group Project
+
+![Map](map.jpeg)
+
 1. Data
    <br/> &nbsp; A. download - GSV pictures
    <br/>&nbsp; B. data for models
@@ -20,4 +23,3 @@
 
 Note: Please submit a **PULL REQUEST** when significant changes are to be made. Thanks!
 
-![Map](map.jpeg)
