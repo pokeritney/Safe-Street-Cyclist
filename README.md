@@ -19,3 +19,5 @@
 8. Archive - archived files
 
 Note: Please submit a **PULL REQUEST** when significant changes are to be made. Thanks!
+
+![Map](map.jpeg)
