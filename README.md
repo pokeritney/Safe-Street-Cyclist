@@ -1,6 +1,6 @@
 # DVA Group Project
 
-![Map](map.jpeg)
+![SF_Map](map.jpeg)
 
 1. Data
    <br/> &nbsp; A. download - GSV pictures
