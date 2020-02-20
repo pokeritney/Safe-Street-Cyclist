@@ -1,4 +1,4 @@
-# DVA Group Project
+# Group Project
 
 ![SF_Map](sfmap.jpeg)
 
